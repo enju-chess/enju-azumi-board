@@ -1,0 +1,36 @@
+name: テレビアプリをビルド
+
+on:
+  push:
+    branches: [main]
+    paths: ["android/**", ".github/workflows/build-tv-app.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.7"
+      - name: Build APK
+        working-directory: android
+        run: gradle assembleDebug --no-daemon
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk futari-board.apk
+      - name: Publish to release "latest"
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: 今週のふたり テレビアプリ（最新）
+          body: テレビにインストールするアプリです。futari-board.apk をダウンロードしてください。
+          files: futari-board.apk
+          make_latest: true
