@@ -1,13 +1,58 @@
 {
   "local_events": [
-    { "name": "ながさき旅ネット", "url": "https://www.nagasaki-tabinet.com/event", "area": "長崎県", "images": true, "note": "個別ページにメイン画像あり" },
-    { "name": "あそぼーさが", "url": "https://www.asobo-saga.jp/events/", "area": "佐賀県", "images": true, "note": "グルメ・物産などジャンル分類あり。個別ページにメイン画像あり" },
-    { "name": "日本旅行 長崎県のイベント", "url": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm", "area": "長崎県", "images": false, "note": "一覧性が高い。漏れ確認用" },
-    { "name": "日本旅行 佐賀県のイベント", "url": "https://www.nta.co.jp/kokunai/special/eventinfo/saga.htm", "area": "佐賀県", "images": false, "note": "一覧性が高い。漏れ確認用" },
-    { "name": "長崎市 まちなかイベントカレンダー", "url": "https://www.city.nagasaki.lg.jp/", "area": "長崎市中心部", "images": false, "note": "月ごとのPDF。小さなマルシェやまち歩き向け" },
-    { "name": "長崎スタジアムシティ", "url": "https://www.nagasakistadiumcity.com/", "area": "長崎市", "images": true, "note": "クラフトビールなど食イベントあり" }
+    {
+      "name": "ながさき旅ネット",
+      "url": "https://www.nagasaki-tabinet.com/event",
+      "area": "長崎県",
+      "images": true,
+      "note": "個別ページにメイン画像あり"
+    },
+    {
+      "name": "あそぼーさが",
+      "url": "https://www.asobo-saga.jp/events/",
+      "area": "佐賀県",
+      "images": true,
+      "note": "グルメ・物産などジャンル分類あり。個別ページにメイン画像あり"
+    },
+    {
+      "name": "日本旅行 長崎県のイベント",
+      "url": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm",
+      "area": "長崎県",
+      "images": false,
+      "note": "一覧性が高い。漏れ確認用"
+    },
+    {
+      "name": "日本旅行 佐賀県のイベント",
+      "url": "https://www.nta.co.jp/kokunai/special/eventinfo/saga.htm",
+      "area": "佐賀県",
+      "images": false,
+      "note": "一覧性が高い。漏れ確認用"
+    },
+    {
+      "name": "長崎市 まちなかイベントカレンダー",
+      "url": "https://www.city.nagasaki.lg.jp/",
+      "area": "長崎市中心部",
+      "images": false,
+      "note": "月ごとのPDF。小さなマルシェやまち歩き向け"
+    },
+    {
+      "name": "長崎スタジアムシティ",
+      "url": "https://www.nagasakistadiumcity.com/",
+      "area": "長崎市",
+      "images": true,
+      "note": "クラフトビールなど食イベントあり"
+    }
   ],
   "tv": [
-    { "name": "クランクイン！ドラマ一覧", "url": "https://www.crank-in.net/drama/", "note": "主要キャスト4人まで。脇役は人物ページで補う" }
+    {
+      "name": "クランクイン！ドラマ一覧",
+      "url": "https://www.crank-in.net/drama/",
+      "note": "主要キャスト4人まで。脇役は人物ページで補う。作品ページのog:imageを録画候補カードの写真に使う（放送局の公式サイトは取得できない）"
+    },
+    {
+      "name": "クランクイン！アニメ一覧",
+      "url": "https://www.crank-in.net/animation/",
+      "note": "作品ページのog:imageを配信カードの写真に使う"
+    }
   ]
 }

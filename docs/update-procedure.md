@@ -15,7 +15,10 @@
 - **discovery は毎週1本だけ**：好みと関係なく、その週に話題の番組を選ぶ。前週と同じものは避ける
 - いつもの番組（regular_programs）は、期間内に放送がある回だけ放送日を入れる。なければ status に「今週の放送なし」
 
+- 写真：クランクイン！の作品ページ（crank-in.net/drama/…）のog:image（メイン画像）URLを `image` に入れる。放送局の公式サイトは取得できないので使わない
+
 ## 2. 配信（streaming）
+- 写真：アニメはクランクイン！の作品ページ（crank-in.net/animation/…）のog:imageを使う
 - Prime Video（契約中）：新作アニメ、お気に入りの人の作品
 - その他のサービスは subscribed: false で、お気に入りの人の作品だけ「参考」として載せる
 
