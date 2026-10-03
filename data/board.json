@@ -7,7 +7,7 @@
   },
   "notes": [
     "写真は取れたイベントのみ（取れないものはimage: null）",
-    "放送時間は全国の時間。長崎の系列局（KTN・NIBなど）で同時放送でない場合あり"
+    "放送時間は全国の時間。KTN（フジ系）・NIB（日テレ系）は各系列のフルネット局なので、ゴールデン帯のドラマは通常同時放送。特番などで時間がずれる場合あり"
   ],
   "recording": [
     {
@@ -69,7 +69,10 @@
   "regular_programs": [
     {
       "title": "ブラタモリ",
-      "status": "今週の放送予定は確認できず"
+      "channel": "NHK総合",
+      "slot": "土曜（毎週ではなく不定期に放送）",
+      "status": "2026年は9/26の奈良・飛鳥SPまで放送済み。次回は未確認",
+      "source": "https://thetvdb.com/series/tamori-bra/seasons/official/2026"
     }
   ],
   "streaming": [
@@ -119,7 +122,17 @@
       "source": "https://thetv.jp/news/detail/1433535/"
     }
   ],
-  "movies": [],
+  "movies": [
+    {
+      "title": "キングダム 魂の決戦",
+      "theater": "ローソン・ユナイテッドシネマ長崎",
+      "released": "2026-07-17",
+      "reason": "岡山天音",
+      "image": null,
+      "source": "https://www.crank-in.net/theater/search/all/42/80044",
+      "note": "7月公開のため上映終了が近い可能性"
+    }
+  ],
   "local": [
     {
       "date_from": "2026-10-03",
