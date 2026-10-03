@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-03T21:30:00+09:00",
+  "period": { "from": "2026-10-03", "to": "2026-10-18" },
+  "notes": [
+    "初回は手作業で収集。写真URLは未取得（image は null）",
+    "放送時間は全国の時間。長崎の系列局（KTN・NIBなど）で同時放送でない場合あり"
+  ],
+
+  "recording": [
+    {
+      "kind": "favorite",
+      "title": "ポリティカルパン",
+      "start": "2026-10-07T22:00:00+09:00",
+      "slot": "毎週水曜 22:00",
+      "channel": "フジテレビ系（長崎：KTN）",
+      "is_premiere": true,
+      "reason": "脚本 野木亜紀子／出演 石原さとみ・高橋一生",
+      "image": null,
+      "source": "https://www.crank-in.net/drama/autumn2026/2281"
+    },
+    {
+      "kind": "favorite",
+      "title": "豊臣兄弟！",
+      "start": null,
+      "slot": "毎週日曜 20:00",
+      "channel": "NHK総合",
+      "is_premiere": false,
+      "reason": "仲野太賀（主演）",
+      "image": null,
+      "source": "https://www.crank-in.net/drama/autumn2026/2195"
+    },
+    {
+      "kind": "favorite",
+      "title": "ブラッサム",
+      "start": null,
+      "slot": "月〜金 8:00",
+      "channel": "NHK総合",
+      "is_premiere": false,
+      "reason": "松たか子",
+      "image": null,
+      "source": "https://www.crank-in.net/drama/autumn2026/2259"
+    },
+    {
+      "kind": "local_interest",
+      "title": "青の花 器の森",
+      "start": "2026-10-26T22:45:00+09:00",
+      "slot": "月〜木 22:45",
+      "channel": "NHK総合",
+      "is_premiere": true,
+      "reason": "長崎・波佐見町が舞台（期間外だが予告として掲載）",
+      "image": null,
+      "source": "https://www.crank-in.net/drama/autumn2026/2260"
+    },
+    {
+      "kind": "discovery",
+      "title": "俺たちの箱根駅伝",
+      "start": "2026-10-10T21:00:00+09:00",
+      "slot": "毎週土曜 21:00（初回40分拡大）",
+      "channel": "日本テレビ系（長崎：NIB）",
+      "is_premiere": true,
+      "reason": "出会いの1本：池井戸潤原作×大泉洋主演の話題作",
+      "image": null,
+      "source": "https://www.crank-in.net/drama/autumn2026/2197"
+    }
+  ],
+
+  "regular_programs": [
+    { "title": "ブラタモリ", "status": "今週の放送予定は確認できず" }
+  ],
+
+  "streaming": [
+    { "service": "Prime Video", "subscribed": true, "title": "薬屋のひとりごと 第3期", "start": "2026-10-03", "reason": "秋アニメ・見放題", "image": null, "source": "https://gamebiz.jp/news/433270" },
+    { "service": "Prime Video", "subscribed": true, "title": "佐々木とピーちゃん Season2", "start": "2026-10-07", "reason": "秋アニメ・見放題", "image": null, "source": "https://gamebiz.jp/news/433270" },
+    { "service": "Prime Video", "subscribed": true, "title": "マロニエ王国の七人の騎士", "start": "2026-10-04", "reason": "秋アニメ・世界独占", "image": null, "source": "https://gamebiz.jp/news/433270" },
+    { "service": "Prime Video", "subscribed": true, "title": "TANK CHAIR-戦車椅子-", "start": "2026-10-04", "reason": "秋アニメ・見放題", "image": null, "source": "https://gamebiz.jp/news/433270" },
+    { "service": "Disney+", "subscribed": false, "title": "殺し屋たちの店 2", "start": "2026-07-22", "reason": "岡田将生（参考）", "image": null, "source": "https://thetv.jp/news/detail/1433535/" }
+  ],
+
+  "movies": [],
+
+  "local": [
+    { "date_from": "2026-10-03", "date_to": "2026-10-04", "category": "food", "genre": "グルメ・体験", "title": "ナガサキ護国神社の庭フェス", "place": "長崎護国神社（長崎市）", "image": null },
+    { "date_from": "2026-10-03", "date_to": "2026-10-03", "category": "other", "genre": "伝統芸能", "title": "島原城薪能", "place": "島原城天守閣前広場", "image": null },
+    { "date_from": "2026-10-03", "date_to": "2026-10-04", "category": "other", "genre": "フェス", "title": "TOSU NESTIVAL 2026", "place": "鳥栖市", "image": null },
+    { "date_from": "2026-10-03", "date_to": "2026-11-08", "category": "other", "genre": "展示", "title": "文化財未来継承プロジェクト『綴』", "place": "長崎歴史文化博物館", "image": null },
+    { "date_from": "2026-10-07", "date_to": "2026-10-09", "category": "other", "genre": "祭り", "title": "長崎くんち", "place": "諏訪神社・中央公園ほか", "image": null },
+    { "date_from": "2026-10-10", "date_to": "2026-10-10", "category": "other", "genre": "花火", "title": "九州花火大会", "place": "唐津市 松浦川右岸", "image": null },
+    { "date_from": "2026-10-14", "date_to": "2026-10-15", "category": "other", "genre": "伝統芸能", "title": "竹ン芸", "place": "若宮稲荷神社（長崎市）", "image": null },
+    { "date_from": "2026-10-16", "date_to": "2026-10-18", "category": "food", "genre": "グルメ", "title": "肉肉パーク佐世保", "place": "新みなとイベント広場（佐世保市）", "image": null },
+    { "date_from": "2026-10-16", "date_to": "2026-10-18", "category": "other", "genre": "祭り", "title": "YOSAKOIさせぼ祭り", "place": "佐世保市街地", "image": null },
+    { "date_from": "2026-10-17", "date_to": "2026-10-18", "category": "food", "genre": "グルメ・物産", "title": "島原城大手門市", "place": "島原市役所大手広場", "image": null },
+    { "date_from": "2026-10-17", "date_to": "2026-10-18", "category": "food", "genre": "グルメ・異国文化", "title": "タイフェスティバル in SAGA", "place": "佐賀城公園南濠", "image": null },
+    { "date_from": null, "date_to": null, "category": "day_trip", "genre": "日帰り定番", "title": "雲仙温泉", "place": "雲仙市", "image": null }
+  ],
+
+  "coming_soon": [
+    { "date_from": "2026-10-30", "date_to": "2026-11-03", "title": "佐賀インターナショナルバルーンフェスタ", "place": "嘉瀬川河川敷（佐賀市）" },
+    { "date_from": "2026-11-02", "date_to": "2026-11-04", "title": "唐津くんち", "place": "唐津市中心市街地" }
+  ],
+
+  "sources": [
+    "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm",
+    "https://www.nta.co.jp/kokunai/special/eventinfo/saga.htm",
+    "https://rurubu.jp/andmore/spot/20000210",
+    "https://www.crank-in.net/drama/autumn2026",
+    "https://gamebiz.jp/news/433270"
+  ]
+}
