@@ -52,6 +52,25 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
 .saver .it .x .n{font-size:54px;font-weight:700}
 .saver .foot{font-size:24px;color:#8C8A85}
 .err{padding:80px;font-size:32px}
+/* ---- tasks ---- */
+.tasks{position:absolute;inset:0;background:var(--bg);z-index:20;padding:40px 56px;display:flex;flex-direction:column;gap:22px}
+.tasks .th{display:flex;justify-content:space-between;align-items:baseline}
+.tasks .th h1{margin:0;font-size:52px;font-weight:900}
+.tasks .th span{font-size:22px;color:var(--mute)}
+.tasks .cols{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:24px;flex:1;min-height:0}
+.tasks .col{background:var(--card);border-radius:14px;padding:26px 28px;overflow:hidden;display:flex;flex-direction:column;gap:12px}
+.tasks .col h2{margin:0 0 6px;font-size:30px}
+.tasks .ti{font-size:24px;line-height:1.4;padding-left:34px;position:relative}
+.tasks .ti:before{content:'';position:absolute;left:0;top:7px;width:20px;height:20px;border:3px solid var(--sub);border-radius:5px}
+.tasks .ti.urgent{color:var(--amber);font-weight:700}
+.tasks .ti.urgent:before{border-color:var(--amber)}
+.tasks .ti small{display:block;font-size:18px;color:var(--mute);font-weight:400}
+.tasks .sc{display:flex;gap:16px;font-size:23px;line-height:1.35}
+.tasks .sc b{width:150px;flex-shrink:0;color:var(--teal)}
+.tasks .sc small{display:block;font-size:17px;color:var(--mute)}
+.tasks .lock{margin:auto;text-align:center;display:flex;flex-direction:column;gap:28px}
+.tasks .lock .code{font-size:96px;letter-spacing:.3em;font-weight:900;min-height:110px}
+.tasks .lock p{margin:0;font-size:28px;color:var(--sub)}
 /* ---- detail ---- */
 .detail{position:absolute;inset:0;background:rgba(8,9,12,.92);display:flex;align-items:center;justify-content:center;z-index:10}
 .detail .box{width:1500px;height:760px;border-radius:16px;overflow:hidden;display:flex;background:var(--card)}
@@ -150,7 +169,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     var u = d(data.updated_at);
     stage.innerHTML =
       '<div class="board">' +
-      '<div class="head"><div><h1 style="display:inline">今週のふたり</h1><span class="upd">' + esc(md(u) + '（' + DOW[u.getDay()] + '）更新') + (window.TV && window.TV.version ? '　｜　アプリ v' + window.TV.version() + '（9で更新）' : '') + '</span></div><div class="clock" id="clk">' + clock() + '</div></div>' +
+      '<div class="head"><div><h1 style="display:inline">今週のふたり</h1><span class="upd">' + esc(md(u) + '（' + DOW[u.getDay()] + '）更新') + (window.TV && window.TV.version ? '　｜　アプリ v' + window.TV.version() + '（9で更新）' : '') + '　｜　<b style="color:var(--teal)">1でタスク</b>' + '</span></div><div class="clock" id="clk">' + clock() + '</div></div>' +
       '<section><h2>録画候補<small>お気に入り・いつもの番組・出会いの1本' + (window.TV ? '　｜　決定で概要・番組表へ（0で番組表アプリを選び直し）' : '') + '</small></h2><div class="row">' + recordingCards(data) + '</div></section>' +
       '<section><h2>配信<small>プライムビデオ／他サービスは参考</small></h2><div class="row">' + streamingCards(data) + '</div></section>' +
       '<section><h2>長崎・佐賀<small>2週間分・日付順</small></h2><div class="row">' + localCards(data) + '</div></section>' +
@@ -167,7 +186,54 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     var rows = all.filter(function(r, i){ if(r.children.length){ rowMap.push(i); return true; } return false; });
     var detailEl = null, detailItem = null;
     function closeDetail(){ if(detailEl){ detailEl.remove(); detailEl = null; detailItem = null; return true; } return false; }
-    window.onBack = closeDetail;
+    window.onBack = function(){ return closeTasks() || closeDetail(); };
+
+    // ---- タスク画面（暗号化データを合言葉で復号して表示） ----
+    var tasksEl = null, codeBuf = '';
+    function b64(s){ return Uint8Array.from(atob(s), function(c){ return c.charCodeAt(0); }); }
+    function decrypt(enc, code){
+      var te = new TextEncoder();
+      return crypto.subtle.importKey('raw', te.encode(code), 'PBKDF2', false, ['deriveKey'])
+        .then(function(base){ return crypto.subtle.deriveKey({ name:'PBKDF2', salt:b64(enc.salt), iterations:enc.iter, hash:'SHA-256' }, base, { name:'AES-GCM', length:256 }, false, ['decrypt']); })
+        .then(function(key){ return crypto.subtle.decrypt({ name:'AES-GCM', iv:b64(enc.iv) }, key, b64(enc.ct)); })
+        .then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+    }
+    function getCode(){ try { return localStorage.getItem('tk'); } catch(e){ return null; } }
+    function setCode(c){ try { c ? localStorage.setItem('tk', c) : localStorage.removeItem('tk'); } catch(e){} }
+    function closeTasks(){ if(tasksEl){ tasksEl.remove(); tasksEl = null; codeBuf = ''; return true; } return false; }
+    function showLock(msg){
+      tasksEl.innerHTML = '<div class="lock"><p>' + esc(msg || 'タスクを見るための合言葉（数字）をリモコンで入力してください') + '</p>' +
+        '<div class="code">' + (codeBuf.replace(/./g, '●') || '　') + '</div><p style="font-size:22px;color:var(--mute)">決定で確定　／　←で1文字消す　／　戻るで閉じる</p></div>';
+    }
+    function renderTasks(t){
+      var today = new Date(); today.setHours(0,0,0,0);
+      var sch = (t.schedule || []).filter(function(s){ return d(s.date_to || s.date_from) >= today; }).slice(0, 9);
+      tasksEl.innerHTML = '<div class="th"><h1>ふたりのタスク</h1><span>' + esc(md(d(t.updated_at)) + ' 時点　｜　戻る・1で閉じる') + '</span></div><div class="cols">' +
+        '<div class="col"><h2>やること</h2>' + (t.tasks || []).map(function(x){ return '<div class="ti' + (x.urgent ? ' urgent' : '') + '">' + esc(x.title) + (x.detail ? '<small>' + esc(x.detail) + '</small>' : '') + '</div>'; }).join('') + '</div>' +
+        '<div class="col"><h2>これからの予定</h2>' + sch.map(function(s){ var p = dateParts(s.date_from, s.date_to); return '<div class="sc"><b>' + esc(p.main + ' ' + p.sub) + '</b><div>' + esc(s.title) + (s.status ? '<small>' + esc(s.status) + '</small>' : '') + '</div></div>'; }).join('') + '</div>' +
+        '<div class="col"><h2>行きたい場所</h2>' + (t.wishlist || []).map(function(w){ return '<div class="sc" style="display:block"><div>' + esc(w.title) + '</div>' + ((w.dates || w.memo) ? '<small>' + esc([w.dates, w.memo].filter(Boolean).join('　')) + '</small>' : '') + '</div>'; }).join('') + '</div>' +
+        '</div>';
+    }
+    function tryOpen(code){
+      tasksEl.innerHTML = '<div class="lock"><p>読み込み中…</p></div>';
+      fetch('../data/tasks.enc.json?t=' + Date.now()).then(function(r){ if(!r.ok) throw new Error('nodata'); return r.json(); })
+        .then(function(enc){ return decrypt(enc, code); })
+        .then(function(t){ setCode(code); renderTasks(t); })
+        .catch(function(err){ setCode(null); codeBuf = ''; showLock(err.message === 'nodata' ? 'タスクのデータがまだありません' : '合言葉が違うようです。もう一度入力してください'); });
+    }
+    function openTasks(){
+      closeDetail();
+      tasksEl = document.createElement('div'); tasksEl.className = 'tasks'; stage.appendChild(tasksEl);
+      var c = getCode();
+      if(c) tryOpen(c); else showLock();
+    }
+    function tasksKey(e){
+      var locked = !!tasksEl.querySelector('.lock .code');
+      if(locked && /^[0-9]$/.test(e.key)){ codeBuf += e.key; showLock(); return; }
+      if(locked && e.key === 'ArrowLeft'){ codeBuf = codeBuf.slice(0, -1); showLock(); return; }
+      if(locked && (e.key === 'Enter' || e.keyCode === 23)){ if(codeBuf) tryOpen(codeBuf); return; }
+      if(!locked && (e.key === '1' || e.key === 'Escape')) closeTasks();
+    }
     function openDetail(it){
       if(!it) return;
       closeDetail(); detailItem = it;
@@ -183,6 +249,8 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     if(!rows.length) return;
     focus();
     document.addEventListener('keydown', function(e){
+      if(tasksEl){ e.preventDefault(); tasksKey(e); return; }
+      if(e.key === '1' || e.keyCode === 186 || e.keyCode === 406){ e.preventDefault(); openTasks(); return; }
       if(detailEl){
         e.preventDefault();
         if((e.key === 'Enter' || e.keyCode === 23) && detailItem && detailItem.kind === 'rec' && window.TV){ closeDetail(); window.TV.openGuide(); }
