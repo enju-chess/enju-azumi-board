@@ -8,7 +8,16 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.webkit.JavascriptInterface;
+import android.net.Uri;
 import android.widget.Toast;
+
+import androidx.core.content.FileProvider;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,6 +45,47 @@ public class TvBridge {
             prefs().edit().remove(KEY_GUIDE).apply();
             showPicker();
         });
+    }
+
+    static final String APK_URL = "https://github.com/enju-chess/enju-azumi-board/releases/download/latest/futari-board.apk";
+
+    @JavascriptInterface
+    public String version() {
+        try { return activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0).versionName; }
+        catch (Exception e) { return ""; }
+    }
+
+    /** 最新版をダウンロードして、インストール画面を開く */
+    @JavascriptInterface
+    public void updateApp() {
+        activity.runOnUiThread(() -> Toast.makeText(activity, "最新版をダウンロードしています…", Toast.LENGTH_LONG).show());
+        new Thread(() -> {
+            try {
+                File dir = new File(activity.getCacheDir(), "apk");
+                dir.mkdirs();
+                File out = new File(dir, "futari-board.apk");
+                String url = APK_URL;
+                HttpURLConnection c = null;
+                for (int i = 0; i < 5; i++) {   // GitHubのリダイレクトをたどる
+                    c = (HttpURLConnection) new URL(url).openConnection();
+                    c.setInstanceFollowRedirects(false);
+                    int code = c.getResponseCode();
+                    if (code >= 300 && code < 400) { url = c.getHeaderField("Location"); c.disconnect(); continue; }
+                    break;
+                }
+                try (InputStream in = c.getInputStream(); FileOutputStream fo = new FileOutputStream(out)) {
+                    byte[] buf = new byte[16384]; int n;
+                    while ((n = in.read(buf)) > 0) fo.write(buf, 0, n);
+                }
+                Uri uri = FileProvider.getUriForFile(activity, "com.enju.futariboard.files", out);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setDataAndType(uri, "application/vnd.android.package-archive");
+                i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
+                activity.runOnUiThread(() -> activity.startActivity(i));
+            } catch (Exception e) {
+                activity.runOnUiThread(() -> Toast.makeText(activity, "更新に失敗しました：" + e.getMessage(), Toast.LENGTH_LONG).show());
+            }
+        }).start();
     }
 
     @JavascriptInterface

@@ -150,7 +150,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     var u = d(data.updated_at);
     stage.innerHTML =
       '<div class="board">' +
-      '<div class="head"><div><h1 style="display:inline">今週のふたり</h1><span class="upd">' + esc(md(u) + '（' + DOW[u.getDay()] + '）更新') + '</span></div><div class="clock" id="clk">' + clock() + '</div></div>' +
+      '<div class="head"><div><h1 style="display:inline">今週のふたり</h1><span class="upd">' + esc(md(u) + '（' + DOW[u.getDay()] + '）更新') + (window.TV && window.TV.version ? '　｜　アプリ v' + window.TV.version() + '（9で更新）' : '') + '</span></div><div class="clock" id="clk">' + clock() + '</div></div>' +
       '<section><h2>録画候補<small>お気に入り・いつもの番組・出会いの1本' + (window.TV ? '　｜　決定で概要・番組表へ（0で番組表アプリを選び直し）' : '') + '</small></h2><div class="row">' + recordingCards(data) + '</div></section>' +
       '<section><h2>配信<small>プライムビデオ／他サービスは参考</small></h2><div class="row">' + streamingCards(data) + '</div></section>' +
       '<section><h2>長崎・佐賀<small>2週間分・日付順</small></h2><div class="row">' + localCards(data) + '</div></section>' +
@@ -195,6 +195,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
       else if(e.key === 'ArrowUp'){ ri = Math.max(ri-1, 0); }
       else if(e.key === 'Enter' || e.keyCode === 23){ e.preventDefault(); openDetail(ROWS[rowMap[ri]] && ROWS[rowMap[ri]][ci[ri]]); return; }
       else if(e.key === '0' && window.TV){ e.preventDefault(); window.TV.chooseGuide(); return; }
+      else if(e.key === '9' && window.TV && window.TV.updateApp){ e.preventDefault(); window.TV.updateApp(); return; }
       else return;
       e.preventDefault(); focus();
     });

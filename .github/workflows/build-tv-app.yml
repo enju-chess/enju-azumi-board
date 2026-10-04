@@ -26,6 +26,14 @@ jobs:
         run: gradle assembleDebug --no-daemon
       - name: Rename APK
         run: cp android/app/build/outputs/apk/debug/app-debug.apk futari-board.apk
+      - name: Copy APK to the website (short URL)
+        run: |
+          cp futari-board.apk a.apk
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add a.apk
+          git commit -m "アプリを短いURLに配置 [skip ci]" || true
+          git pull --rebase origin main && git push
       - name: Publish to release "latest"
         uses: softprops/action-gh-release@v2
         with:
