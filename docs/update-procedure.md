@@ -33,6 +33,7 @@
 - **グルメ（category: food）は約半分**。残りは祭り・展示・音楽・伝統芸能・自然など幅広く
 - 普段選ばないジャンルを毎回1〜2件混ぜる
 - 日帰り（category: day_trip）は毎回2件：`favorites.json` の `day_trip.sightseeing` から1件、`day_trip.theme_parks` から1件（genre はそれぞれ「日帰り定番」「テーマパーク」）。`visited` の場所と前週と同じ場所は避ける。
+- `visited` の場所（ハウステンボス、バイオパーク、ペンギン水族館、パールシーなど）は日帰り枠には出さないが、**期間中に特別イベントがあれば local に載せる**。これらの公式サイトのイベント情報も毎週確認する
 - 情報源は `config/sources.json` の順に確認。写真は各イベント個別ページのメイン画像URLを `image` に入れ、取れなければ null
 - 期間外でも大型イベントは `coming_soon` に入れる
 
