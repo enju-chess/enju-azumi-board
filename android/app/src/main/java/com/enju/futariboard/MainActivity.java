@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         web = new WebView(this);
         Board.setup(web);
+        web.addJavascriptInterface(new TvBridge(this), "TV");
         setContentView(web);
         web.loadUrl(Board.BASE);
         web.requestFocus();
