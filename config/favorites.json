@@ -1,16 +1,39 @@
 {
-  "writers": ["坂元裕二", "野木亜紀子"],
-  "actors": [
-    "松田龍平", "仲野太賀", "岡田将生", "松たか子", "吉高由里子", "新垣結衣",
-    "岡山天音", "柳楽優弥", "石原さとみ", "高橋一生"
+  "writers": [
+    "坂元裕二",
+    "野木亜紀子"
   ],
-  "regular_programs": ["ブラタモリ"],
-  "subscriptions": ["Prime Video"],
-  "considering": ["Disney+"],
+  "actors": [
+    "松田龍平",
+    "仲野太賀",
+    "岡田将生",
+    "松たか子",
+    "吉高由里子",
+    "新垣結衣",
+    "岡山天音",
+    "柳楽優弥",
+    "石原さとみ",
+    "高橋一生"
+  ],
+  "regular_programs": [
+    "ブラタモリ"
+  ],
+  "subscriptions": [
+    "Prime Video"
+  ],
+  "considering": [
+    "Disney+"
+  ],
   "area": {
     "home": "長崎市",
-    "prefectures": ["長崎県", "佐賀県"],
-    "transport": ["車", "電車"]
+    "prefectures": [
+      "長崎県",
+      "佐賀県"
+    ],
+    "transport": [
+      "車",
+      "電車"
+    ]
   },
   "local_rules": {
     "items": "10〜15件、2週間分、日付順",
@@ -20,5 +43,15 @@
   },
   "extras": {
     "discovery_program": "好みと無関係な話題の番組を毎週1本"
+  },
+  "receivable": {
+    "broadcast": [
+      "地上波",
+      "BS"
+    ],
+    "streaming": [
+      "Prime Video"
+    ],
+    "note": "録画候補は地上波とBSで見られる番組だけ。CS・WOWOWなど有料チャンネルは載せない"
   }
 }

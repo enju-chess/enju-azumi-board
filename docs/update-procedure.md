@@ -9,6 +9,7 @@
 
 ## 1. 録画候補（recording）
 - お気に入りの脚本家・俳優について、期間内に放送がある地上波・BSの連続ドラマや特番を探す
+  - 見られるのは `favorites.json` の `receivable` にある地上波・BSだけ。CS・WOWOWなど有料チャンネルの番組は載せない
   - 番組一覧サイトは主要キャストしか載らないので、人物名でも検索して脇役出演を拾う
 - 新番組の初回（is_premiere: true）を優先し、続いている番組は slot に「毎週◯曜」と書く
 - `kind`: favorite / local_interest（長崎・佐賀が舞台など）/ discovery
