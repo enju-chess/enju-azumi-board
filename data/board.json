@@ -318,6 +318,17 @@
       "place": "雲仙市",
       "image": null,
       "source": null
+    },
+    {
+      "date_from": null,
+      "date_to": null,
+      "category": "day_trip",
+      "genre": "テーマパーク",
+      "title": "長崎バイオパーク",
+      "place": "西海市西彼町",
+      "image": null,
+      "summary": "動物が自然に近い状態で暮らす園内を歩き、直接ふれ合ったりエサやりができる動植物園。200種以上の動物がいて、特にカピバラが人気。温室では熱帯植物や蝶も。10〜17時（最終受付16時）、大人2,100円。",
+      "source": "https://rurubu.jp/andmore/spot/80039667"
     }
   ],
   "coming_soon": [
