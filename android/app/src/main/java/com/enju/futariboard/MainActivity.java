@@ -44,7 +44,13 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) { finish(); return true; }
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // 概要パネルが開いていれば閉じる。開いていなければアプリを終了
+            web.evaluateJavascript("(window.onBack && window.onBack()) ? 'closed' : 'none'", r -> {
+                if (r == null || !r.contains("closed")) finish();
+            });
+            return true;
+        }
         return super.onKeyDown(keyCode, event);
     }
 

@@ -19,7 +19,8 @@
       "is_premiere": true,
       "reason": "脚本 野木亜紀子／出演 石原さとみ・高橋一生",
       "image": "https://www.crank-in.net/img/db/269095242125380_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2281"
+      "source": "https://www.crank-in.net/drama/autumn2026/2281",
+      "summary": "『アンナチュラル』以来、約8年ぶりの石原さとみ×野木亜紀子。架空の国・ニッポニアの政界を舞台にした怪盗エンターテインメント。主人公は怪盗として政界へと潜り込み、“政治の金”を盗み出していく。"
     },
     {
       "kind": "favorite",
@@ -30,7 +31,8 @@
       "is_premiere": false,
       "reason": "仲野太賀（主演）",
       "image": "https://www.crank-in.net/img/db/251104059155135_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2195"
+      "source": "https://www.crank-in.net/drama/autumn2026/2195",
+      "summary": "「秀長が長生きしていれば豊臣家の天下は安泰だった」とまで言わしめた天下一の補佐役・秀長（仲野太賀）の目線で戦国時代を描く、下剋上サクセスストーリー。兄・秀吉は池松壮亮。"
     },
     {
       "kind": "favorite",
@@ -41,7 +43,8 @@
       "is_premiere": false,
       "reason": "松たか子",
       "image": "https://www.crank-in.net/img/db/255057293130191_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2259"
+      "source": "https://www.crank-in.net/drama/autumn2026/2259",
+      "summary": "明治・大正・昭和を駆け抜けた作家・宇野千代の生涯を大胆に再構成したフィクション。小説を書く夢をあきらめず、故郷の山口・岩国を飛び出した主人公・葉野珠（石橋静河）の姿を描く。"
     },
     {
       "kind": "local_interest",
@@ -52,7 +55,8 @@
       "is_premiere": true,
       "reason": "長崎・波佐見町が舞台（期間外だが予告として掲載）",
       "image": "https://www.crank-in.net/img/db/241033264180205_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2260"
+      "source": "https://www.crank-in.net/drama/autumn2026/2260",
+      "summary": "長崎県波佐見町の焼き物づくりが舞台の大人のラブストーリー。不器用な男女（松井玲奈ほか）が工房の仲間に支えられながら少しずつ心を開き、器と人生を創り出していく。"
     },
     {
       "kind": "discovery",
@@ -63,7 +67,8 @@
       "is_premiere": true,
       "reason": "出会いの1本：池井戸潤原作×大泉洋主演の話題作",
       "image": "https://www.crank-in.net/img/db/268080123186210_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2197"
+      "source": "https://www.crank-in.net/drama/autumn2026/2197",
+      "summary": "箱根駅伝をテーマに、池井戸潤が十余年をかけて執筆した同名小説を映像化。人々が箱根駅伝に懸ける青春とプライドを、選手側とテレビ局側の目線から描き出す。主演は大泉洋。"
     }
   ],
   "regular_programs": [
@@ -83,7 +88,8 @@
       "start": "2026-10-03",
       "reason": "秋アニメ・見放題",
       "image": "https://www.crank-in.net/img/db/267082176166206_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270"
+      "source": "https://gamebiz.jp/news/433270",
+      "summary": "舞台を後宮から市井へと移し、猫猫と壬氏に待ち受ける新たな試練が描かれる。"
     },
     {
       "service": "Prime Video",
@@ -92,7 +98,8 @@
       "start": "2026-10-07",
       "reason": "秋アニメ・見放題",
       "image": "https://www.crank-in.net/img/db/266095167101570_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270"
+      "source": "https://gamebiz.jp/news/433270",
+      "summary": "異世界から転生してきた賢者で文鳥のピーちゃんと、ピーちゃんをペットショップで買ったことから異世界を行き来できるようになった佐々木を軸に描かれるファンタジー。"
     },
     {
       "service": "Prime Video",
@@ -101,7 +108,8 @@
       "start": "2026-10-04",
       "reason": "秋アニメ・世界独占",
       "image": "https://www.crank-in.net/img/db/266085109149234_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270"
+      "source": "https://gamebiz.jp/news/433270",
+      "summary": "8つの国の中心に位置するマロニエ王国を舞台に、7人兄弟の騎士がそれぞれ7つの国へ大使として派遣され、運命の相手を見つけていく恋と冒険のファンタジーロマンス。"
     },
     {
       "service": "Prime Video",
@@ -110,7 +118,8 @@
       "start": "2026-10-04",
       "reason": "秋アニメ・見放題",
       "image": "https://www.crank-in.net/img/db/264086126165584_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270"
+      "source": "https://gamebiz.jp/news/433270",
+      "summary": "互いを支え合う兄妹と、個性豊かな敵との戦いを描くバイオレンスアクション。"
     },
     {
       "service": "Disney+",
@@ -119,7 +128,8 @@
       "start": "2026-07-22",
       "reason": "岡田将生（参考）",
       "image": null,
-      "source": "https://thetv.jp/news/detail/1433535/"
+      "source": "https://thetv.jp/news/detail/1433535/",
+      "summary": "世界的にヒットした韓国ドラマのシーズン2。岡田将生が韓国ドラマに初出演し、謎めいた傭兵“J”を演じる（全8話）。"
     }
   ],
   "movies": [
@@ -143,7 +153,8 @@
       "place": "長崎護国神社（長崎市）",
       "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/101112/responsive_images/6dK3GaU3dkbmkyraI6riTMZPVVgsFS4ZIlxvlj6y__1652_1239.jpeg",
       "source": "https://www.nagasaki-tabinet.com/event/101112",
-      "note": "約80店・10:00〜17:00頃"
+      "note": "約80店・10:00〜17:00頃",
+      "summary": "春と秋に開かれる人気マルシェ。約80店が手仕事の品や食べ物を出店し、神社の森の中でゆったり買い物を楽しめる。10:00〜17:00頃。"
     },
     {
       "date_from": "2026-10-03",
@@ -174,7 +185,8 @@
       "place": "呼子朝市通り（唐津市）",
       "image": "https://www.asobo-saga.jp/files/download/events/06b6b53c-5332-47ac-891d-d1f6f3b985c8/image/40ad4cedcd2a155e695a5c9078c29211.jpg",
       "source": "https://www.asobo-saga.jp/events/detail/06b6b53c-5332-47ac-891d-d1f6f3b985c8",
-      "note": "8:00〜14:00。10/17はナイトマルシェ"
+      "note": "8:00〜14:00。10/17はナイトマルシェ",
+      "summary": "新鮮な魚介や野菜、イカの一夜干しが並ぶ呼子朝市通りに、グルメや雑貨の出店者が集まる。8:00〜14:00。"
     },
     {
       "date_from": "2026-10-07",
@@ -185,7 +197,8 @@
       "place": "諏訪神社・中央公園ほか",
       "image": null,
       "source": "https://jal.japantravel.com/nagasaki/nagasaki-kunchi-festival/71927",
-      "note": "10/4は人数揃い"
+      "note": "10/4は人数揃い",
+      "summary": "諏訪神社の秋の大祭。諏訪神社・御旅所・八坂神社・中央公園の4会場のほか、市内各地で奉納踊りが見られる。"
     },
     {
       "date_from": "2026-10-10",
@@ -195,7 +208,8 @@
       "title": "九州花火大会",
       "place": "唐津市 松浦川右岸",
       "image": null,
-      "source": "https://www.asobo-saga.jp/events/detail/fee60902-0206-46b3-a6e0-9ddebbd91165"
+      "source": "https://www.asobo-saga.jp/events/detail/fee60902-0206-46b3-a6e0-9ddebbd91165",
+      "summary": "唐津・松浦川の右岸で行われる花火大会。今年で第74回。"
     },
     {
       "date_from": "2026-10-10",
@@ -206,7 +220,8 @@
       "place": "肥前吉田焼窯元会館周辺（嬉野市）",
       "image": "https://www.asobo-saga.jp/files/download/events/6e5f2ac4-79f4-4ac3-af1a-8870493187ad/image/6df3621eb9b9ab798dcea15406183854.jpg",
       "source": "https://www.asobo-saga.jp/events/detail/6e5f2ac4-79f4-4ac3-af1a-8870493187ad",
-      "note": "18:00〜21:30・入場500円"
+      "note": "18:00〜21:30・入場500円",
+      "summary": "肥前吉田焼の産地で開かれる夜のイベント。「ボシ」と呼ばれる窯道具に淡い光を灯し、幻想的な街並みに。夜間の工房見学や食とのコラボ企画も。18:00〜21:30・入場500円。"
     },
     {
       "date_from": "2026-10-14",
@@ -237,7 +252,8 @@
       "place": "佐世保市街地",
       "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/51727/responsive_images/yH8UEyR5vFUJjYOx9l4sqU09wEscholj76aSpsfi__1712_1241.jpeg",
       "source": "https://www.nagasaki-tabinet.com/event/51727",
-      "note": "16日は前夜祭"
+      "note": "16日は前夜祭",
+      "summary": "佐世保の市街地一帯でYOSAKOIチームが踊る大型の祭り。16日は前夜祭。"
     },
     {
       "date_from": "2026-10-17",
@@ -248,7 +264,8 @@
       "place": "呼子朝市通り（唐津市）",
       "image": "https://www.asobo-saga.jp/files/download/events/06b6b53c-5332-47ac-891d-d1f6f3b985c8/image/40ad4cedcd2a155e695a5c9078c29211.jpg",
       "source": "https://www.asobo-saga.jp/events/detail/06b6b53c-5332-47ac-891d-d1f6f3b985c8",
-      "note": "17:00〜21:00"
+      "note": "17:00〜21:00",
+      "summary": "呼子朝市通りに夜の出店が集まるナイトマルシェ。17:00〜21:00。"
     },
     {
       "date_from": "2026-10-17",
@@ -279,7 +296,8 @@
       "place": "佐賀県立博物館・美術館前",
       "image": "https://www.asobo-saga.jp/files/download/events/05fdb05e-836c-4dd1-934f-6a73fc2d206b/image/8caa6dad9dfc8efc095ee5494e19a681.jpg",
       "source": "https://www.asobo-saga.jp/events/detail/05fdb05e-836c-4dd1-934f-6a73fc2d206b",
-      "note": "入場無料（一部有料）"
+      "note": "入場無料（一部有料）",
+      "summary": "「文化・芸術のチカラで佐賀をもっと『さいこう』に」がテーマ。アーティストとのワークショップ、音楽ステージ、グルメなど。入場無料（一部有料）。"
     },
     {
       "date_from": null,

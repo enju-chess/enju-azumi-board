@@ -52,6 +52,16 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
 .saver .it .x .n{font-size:54px;font-weight:700}
 .saver .foot{font-size:24px;color:#8C8A85}
 .err{padding:80px;font-size:32px}
+/* ---- detail ---- */
+.detail{position:absolute;inset:0;background:rgba(8,9,12,.92);display:flex;align-items:center;justify-content:center;z-index:10}
+.detail .box{width:1500px;height:760px;border-radius:16px;overflow:hidden;display:flex;background:var(--card)}
+.detail .pic{width:640px;flex-shrink:0;background:#2a2e36 center/cover no-repeat}
+.detail .txt{padding:48px 56px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.detail .when2{font-size:40px;font-weight:900;color:var(--amber)}
+.detail .ttl{font-size:52px;font-weight:900;line-height:1.25}
+.detail .rsn{font-size:26px;color:var(--teal)}
+.detail .sum{font-size:30px;line-height:1.7;color:var(--ink);flex:1}
+.detail .hint{font-size:22px;color:var(--mute)}
 </style>
 </head>
 <body>
@@ -95,9 +105,11 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
   function clock(){ var n = new Date(); return n.getHours() + ':' + ('0' + n.getMinutes()).slice(-2); }
   function sortByDate(list, key){ return list.slice().sort(function(x,y){ var a = x[key] || '9999', b = y[key] || '9999'; return a < b ? -1 : a > b ? 1 : 0; }); }
 
+  var ROWS = [];
   function recordingCards(data){
     var list = sortByDate(data.recording || [], 'start');
-    (data.regular_programs || []).forEach(function(p){ if(p.start) list.push({ title:p.title, start:p.start, slot:p.slot, channel:p.channel, reason:'いつもの番組' }); });
+    (data.regular_programs || []).forEach(function(p){ if(p.start) list.push({ title:p.title, start:p.start, slot:p.slot, channel:p.channel, reason:'いつもの番組', summary:p.summary, image:p.image }); });
+    ROWS[0] = list.map(function(r){ var w = r.start ? (function(){ var x = d(r.start); return md(x) + '（' + DOW[x.getDay()] + '） ' + r.start.slice(11,16) + ' ' + shortCh(r.channel); })() : (r.slot || '') + ' ' + shortCh(r.channel); return { kind:'rec', when:w, title:r.title, reason:r.reason, summary:r.summary, image:r.image }; });
     return list.map(function(r, i){
       var w = r.start ? (function(){ var x = d(r.start); return md(x) + ' ' + DOW[x.getDay()]; })() : (r.slot || '').split(' ')[0];
       var time = r.start ? r.start.slice(11,16) + ' ' : '';
@@ -108,6 +120,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     }).join('');
   }
   function streamingCards(data){
+    ROWS[1] = (data.streaming || []).map(function(s){ return { kind:'vod', when:s.service + (s.start ? '　' + md(d(s.start)) + '〜配信' : ''), title:s.title, reason:s.reason, summary:s.summary, image:s.image }; });
     return (data.streaming || []).map(function(s, i){
       return '<div class="card' + (s.subscribed ? '' : ' dim') + '" tabindex="0" style="width:440px;height:170px;' + bg(s.image, i+3) + '">' +
         '<div class="chip" style="background:' + (s.subscribed ? 'var(--amber)' : '#B5B2AC') + '">' + esc(s.service + (s.subscribed ? '' : ' 参考')) + '</div>' +
@@ -117,6 +130,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
   function localCards(data){
     var list = sortByDate((data.local || []).filter(function(e){ return e.category !== 'day_trip' && upcoming(e); }), 'date_from');
     list = list.concat((data.local || []).filter(function(e){ return e.category === 'day_trip'; }));
+    ROWS[2] = list.map(function(e){ var dp = dateParts(e.date_from, e.date_to); return { kind:'local', when:dp.main + ' ' + dp.sub, title:e.title, reason:e.genre + '｜' + e.place, summary:e.summary || e.note || '', image:e.image }; });
     return list.map(function(e, i){
       var dp = dateParts(e.date_from, e.date_to);
       var color = e.category === 'food' ? 'var(--amber)' : 'var(--teal)';
@@ -137,7 +151,7 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
     stage.innerHTML =
       '<div class="board">' +
       '<div class="head"><div><h1 style="display:inline">今週のふたり</h1><span class="upd">' + esc(md(u) + '（' + DOW[u.getDay()] + '）更新') + '</span></div><div class="clock" id="clk">' + clock() + '</div></div>' +
-      '<section><h2>録画候補<small>お気に入り・いつもの番組・出会いの1本' + (window.TV ? '　｜　決定ボタンで番組表アプリへ（0で選び直し）' : '') + '</small></h2><div class="row">' + recordingCards(data) + '</div></section>' +
+      '<section><h2>録画候補<small>お気に入り・いつもの番組・出会いの1本' + (window.TV ? '　｜　決定で概要・番組表へ（0で番組表アプリを選び直し）' : '') + '</small></h2><div class="row">' + recordingCards(data) + '</div></section>' +
       '<section><h2>配信<small>プライムビデオ／他サービスは参考</small></h2><div class="row">' + streamingCards(data) + '</div></section>' +
       '<section><h2>長崎・佐賀<small>2週間分・日付順</small></h2><div class="row">' + localCards(data) + '</div></section>' +
       '<section><h2>映画（長崎で上映中）</h2><div style="display:flex;gap:12px;flex-wrap:wrap">' + movieLine(data) + '</div></section>' +
@@ -148,17 +162,38 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
 
   // リモコン（十字キー）で行内・行間を移動
   function setupKeys(){
-    var rows = Array.prototype.slice.call(stage.querySelectorAll('.row')).filter(function(r){ return r.children.length; });
+    var all = Array.prototype.slice.call(stage.querySelectorAll('.row'));
+    var rowMap = [];
+    var rows = all.filter(function(r, i){ if(r.children.length){ rowMap.push(i); return true; } return false; });
+    var detailEl = null, detailItem = null;
+    function closeDetail(){ if(detailEl){ detailEl.remove(); detailEl = null; detailItem = null; return true; } return false; }
+    window.onBack = closeDetail;
+    function openDetail(it){
+      if(!it) return;
+      closeDetail(); detailItem = it;
+      detailEl = document.createElement('div'); detailEl.className = 'detail';
+      var hint = it.kind === 'rec' && window.TV ? 'もう一度「決定」で番組表アプリを開く　／　戻る・矢印キーで閉じる' : '戻る・矢印キーで閉じる';
+      detailEl.innerHTML = '<div class="box"><div class="pic" style="' + bg(it.image, 0) + '"></div><div class="txt">' +
+        '<div class="when2">' + esc(it.when) + '</div><div class="ttl">' + esc(it.title) + '</div><div class="rsn">' + esc(it.reason) + '</div>' +
+        '<div class="sum">' + esc(it.summary || '（概要はまだありません）') + '</div><div class="hint">' + esc(hint) + '</div></div></div>';
+      stage.appendChild(detailEl);
+    }
     var ri = 0, ci = [0,0,0,0];
     function focus(){ var el = rows[ri].children[ci[ri]]; el.focus({preventScroll:true}); var row = rows[ri]; row.scrollLeft = Math.max(0, el.offsetLeft - row.offsetLeft - 48); }
     if(!rows.length) return;
     focus();
     document.addEventListener('keydown', function(e){
+      if(detailEl){
+        e.preventDefault();
+        if((e.key === 'Enter' || e.keyCode === 23) && detailItem && detailItem.kind === 'rec' && window.TV){ closeDetail(); window.TV.openGuide(); }
+        else closeDetail();
+        return;
+      }
       if(e.key === 'ArrowRight'){ ci[ri] = Math.min(ci[ri]+1, rows[ri].children.length-1); }
       else if(e.key === 'ArrowLeft'){ ci[ri] = Math.max(ci[ri]-1, 0); }
       else if(e.key === 'ArrowDown'){ ri = Math.min(ri+1, rows.length-1); }
       else if(e.key === 'ArrowUp'){ ri = Math.max(ri-1, 0); }
-      else if((e.key === 'Enter' || e.keyCode === 23) && ri === 0 && window.TV){ e.preventDefault(); window.TV.openGuide(); return; }
+      else if(e.key === 'Enter' || e.keyCode === 23){ e.preventDefault(); openDetail(ROWS[rowMap[ri]] && ROWS[rowMap[ri]][ci[ri]]); return; }
       else if(e.key === '0' && window.TV){ e.preventDefault(); window.TV.chooseGuide(); return; }
       else return;
       e.preventDefault(); focus();
