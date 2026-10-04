@@ -32,7 +32,7 @@
 - 件数は10〜15件、日付順
 - **グルメ（category: food）は約半分**。残りは祭り・展示・音楽・伝統芸能・自然など幅広く
 - 普段選ばないジャンルを毎回1〜2件混ぜる
-- 日帰り（category: day_trip）は毎回2件：`favorites.json` の `day_trip.sightseeing` から1件、`day_trip.theme_parks` から1件（genre はそれぞれ「日帰り定番」「テーマパーク」）。`visited` の場所と前週と同じ場所は避ける。旧ルール：日帰り定番を毎回1か所、前週と違う場所をランダムに（例：軍艦島、ハウステンボス、雲仙、平戸、五島は日帰り可否に注意、吉野ヶ里、武雄温泉、有田、呼子、嬉野）
+- 日帰り（category: day_trip）は毎回2件：`favorites.json` の `day_trip.sightseeing` から1件、`day_trip.theme_parks` から1件（genre はそれぞれ「日帰り定番」「テーマパーク」）。`visited` の場所と前週と同じ場所は避ける。
 - 情報源は `config/sources.json` の順に確認。写真は各イベント個別ページのメイン画像URLを `image` に入れ、取れなければ null
 - 期間外でも大型イベントは `coming_soon` に入れる
 
