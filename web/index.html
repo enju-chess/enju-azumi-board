@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=1920">
 <title>今週のふたり</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
@@ -65,11 +65,18 @@ section h2 small{font-size:19px;color:var(--mute);font-weight:400}
   var PH = ['#4A3A2E','#3E4A35','#4B3F4F','#2F4555','#5A3434','#3A3550','#4E4A2E','#2E4A44'];
   var stage = document.getElementById('stage');
 
+  // テレビのブラウザは画面幅を小さく報告することがあるので、取れる値のうち最小を使う
   function fit(){
-    var s = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    var vv = window.visualViewport;
+    var w = Math.min(window.innerWidth || 1920, document.documentElement.clientWidth || 1920, vv ? vv.width : 1920);
+    var h = Math.min(window.innerHeight || 1080, document.documentElement.clientHeight || 1080, vv ? vv.height : 1080);
+    var s = Math.min(w/1920, h/1080);
+    if(!(s > 0)) s = 1;
     stage.style.transform = 'scale(' + s + ')';
   }
-  window.addEventListener('resize', fit); fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  fit(); setTimeout(fit, 500); setTimeout(fit, 2000);
 
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function d(s){ var p = s.slice(0,10).split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
