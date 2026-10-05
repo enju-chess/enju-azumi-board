@@ -47,6 +47,8 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--sub);font-size:13px}
 .dip{display:inline-block;font-size:11px;padding:0 6px;border-radius:99px;background:var(--up);color:#fff;margin-left:4px}
 .wait{display:inline-block;font-size:11px;padding:0 6px;border-radius:99px;border:1px solid var(--line);color:var(--sub);margin-left:4px}
 button.act{font-size:13px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+#alloc th,#alloc td{padding:6px 3px;font-size:12.5px}
+input.sh{width:58px;font-size:16px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);text-align:right}
 </style>
 </head>
 <body>
@@ -85,81 +87,107 @@ const M = {
         link: t => `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`,
         rule2: "上昇率＝7ヶ月前→1ヶ月前の株価の伸び（直近1ヶ月は除く）。月末の終値で判断し、翌営業日に売買。損切りはしない。",
         perf: "検証（2015〜2026年）では同じ銘柄群の均等投資より年+15%程度上回ったが、最大で−43%の下落があり、11年中数年は負けている。過去の成績は将来を保証しない。",
-        allocnote: "1銘柄あたり予算の1/10。株数は1株単位で四捨五入（1株未満で買える証券会社なら金額どおりに）。" },
+        allocnote: "目標＝予算の1/10を今の株価・為替で割った株数（1株単位で四捨五入）。保有欄に今持っている株数を入れると、残りに買う株数と金額が出ます。" },
   jp: { file: "signal_jp.json", key: "momentum-jp-holdings", cur: "¥",
         link: t => `https://finance.yahoo.co.jp/quote/${encodeURIComponent(t)}`,
         rule2: "上昇率＝13ヶ月前→1ヶ月前の株価の伸び（直近1ヶ月は除く）。外れた銘柄は月末の翌営業日に売る。新しく入った銘柄は、終値が5日線を下回った翌営業日に買う（それまでは現金で待つ）。損切りはしない。",
         perf: "検証（2015〜2026年）では同じ銘柄群の均等投資より年+13%程度上回ったが、最大で−41%の下落があり、11年中4年は負けている。過去の成績は将来を保証しない。",
-        allocnote: "1銘柄あたり予算の1/10。ミニ株（1株単位）で計算。" },
+        allocnote: "目標＝予算の1/10を今の株価で割った株数（ミニ株・1株単位）。保有欄に今持っている株数を入れると、残りに買う株数と金額が出ます。" },
 };
 const load = k => { try { return JSON.parse(localStorage.getItem(k)) } catch (e) { return null } };
 const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) {} };
 const pct = x => (x >= 0 ? "+" : "") + (x * 100).toFixed(0) + "%";
 const code = t => t.replace(/\.T$/, "");
 let mk = new URLSearchParams(location.search).get("m") || load("momentum-tab") || "us";
-let D, held, cfg;
+let D, cfg, shares = {};
 const cache = {};
 
 const money = p => cfg.cur + p.toLocaleString(undefined, { maximumFractionDigits: cfg.cur === "$" ? 2 : 0 });
+const man = y => (y / 10000).toFixed(1) + "万円";
+const tags = l => l.map(t => `<span class="tag">${t}</span>`).join("");
+const top10 = () => D.official.top.slice(0, 10);
+const yenOf = r => r.price * (D.usdjpy || 1);
+const budget = () => (parseFloat(document.getElementById("budget").value) || 0) * 10000;
+const target = r => Math.max(1, Math.round(budget() / 10 / yenOf(r)));
+const have = t => shares[t] || 0;
+const remain = r => Math.max(0, target(r) - have(r.ticker));
+const saveShares = () => save(cfg.key + "-shares", shares);
 
-function badge(r, isHeld) {
-  if (!D.dip_rule || isHeld) return "";
+function badge(r) {
+  if (!D.dip_rule || !remain(r)) return "";
   return r.dip ? '<span class="dip">押し目・買い時</span>' : '<span class="wait">押し目待ち</span>';
 }
 
-function rowsHTML(list, withHold, prevSet) {
+function rowsHTML(list, mine, prevSet) {
   return list.slice(0, 10).map((r, i) => `
     <div class="row">
       <div class="rk">${i + 1}</div>
       <div class="nm"><a href="${cfg.link(r.ticker)}" target="_blank" rel="noopener"><b>${r.name}</b><span class="t">${code(r.ticker)}</span></a>
         ${prevSet && !prevSet.has(r.ticker) ? '<span class="new">今月の10銘柄外</span>' : ""}
-        ${withHold ? badge(r, held.has(r.ticker)) : ""}
+        ${mine ? badge(r) : ""}
         <div class="s">${r.sector}</div></div>
       <div class="num"><div class="m">${pct(r.momentum)}</div>${money(r.price)}
-        ${withHold ? `<label class="hold"><input type="checkbox" data-t="${r.ticker}" ${held.has(r.ticker) ? "checked" : ""}>保有</label>` : ""}</div>
+        ${mine && have(r.ticker) ? `<div class="s">保有 ${have(r.ticker)}株</div>` : ""}</div>
     </div>`).join("");
 }
 
-const tags = l => l.map(t => `<span class="tag">${code(t)}</span>`).join("");
+// 表（株数入力欄）は作り直すと入力中のカーソルが外れるので、タブ切替時だけ作る
+function buildTable() {
+  const rows = top10().map(r => `<tr>
+      <td>${code(r.ticker)}</td><td>${money(r.price)}</td><td id="tg-${code(r.ticker)}"></td>
+      <td><input class="sh" type="number" inputmode="numeric" min="0" step="1" data-t="${r.ticker}"
+           value="${have(r.ticker) || ""}" placeholder="0"></td>
+      <td id="rm-${code(r.ticker)}"></td><td id="ry-${code(r.ticker)}"></td></tr>`).join("");
+  document.getElementById("alloc").innerHTML =
+    `<tr><th>銘柄</th><th>株価</th><th>目標</th><th>保有</th><th>残り</th><th>残り金額</th></tr>${rows}
+     <tr><td><b>合計</b></td><td></td><td id="tg-sum"></td><td id="hv-sum"></td><td></td><td id="ry-sum"></td></tr>`;
+  document.querySelectorAll("input.sh").forEach(el => el.addEventListener("input", e => {
+    const n = Math.max(0, parseInt(e.target.value, 10) || 0);
+    if (n) shares[e.target.dataset.t] = n; else delete shares[e.target.dataset.t];
+    saveShares(); update();
+  }));
+}
 
-function renderPlan() {
-  const top = D.official.top.slice(0, 10);
-  const topSet = new Set(top.map(r => r.ticker));
-  const sell = [...held].filter(t => !topSet.has(t));
-  const buy = top.filter(r => !held.has(r.ticker));
+function update() {
+  save(cfg.key + "-budget", budget() / 10000);
+  const top = top10(), topSet = new Set(top.map(r => r.ticker));
+  let tgSum = 0, hvSum = 0, rySum = 0;
+  top.forEach(r => {
+    const c = code(r.ticker), tg = target(r), rm = remain(r), y = yenOf(r);
+    tgSum += tg * y; hvSum += have(r.ticker) * y; rySum += rm * y;
+    document.getElementById("tg-" + c).textContent = tg + "株";
+    const over = have(r.ticker) - tg;
+    document.getElementById("rm-" + c).innerHTML = rm ? `<b class="buy">${rm}株</b>`
+      : over > 0 ? `<span style="color:var(--sub)">${over}株多い</span>` : `<span style="color:var(--sub)">完了</span>`;
+    document.getElementById("ry-" + c).textContent = rm ? man(rm * y) : "";
+  });
+  document.getElementById("tg-sum").textContent = man(tgSum);
+  document.getElementById("hv-sum").textContent = man(hvSum);
+  document.getElementById("ry-sum").innerHTML = `<b>${man(rySum)}</b>`;
+
+  // 入れ替え
+  const sell = Object.keys(shares).filter(t => !topSet.has(t));
+  const buy = top.filter(r => remain(r) > 0);
+  const anyHeld = Object.keys(shares).length > 0;
   let h = "";
-  if (!held.size) h = "<p>保有銘柄が未登録です。上の一覧でチェックすると入れ替えが分かります。</p>";
-  if (held.size && !sell.length && !buy.length) h = "<p>入れ替えなし。今月はこのまま持ち続けます。</p>";
-  if (sell.length) h += `<p class="sell"><b>売る</b>（10銘柄から外れた）: ${tags(sell)}</p>
+  if (!anyHeld) h = "<p>保有株数が未入力です。下の表の「保有」に持っている株数を入れると、残りに買う株数が分かります。</p>";
+  else if (!sell.length && !buy.length) h = "<p>入れ替えなし。今月はこのまま持ち続けます。</p>";
+  if (sell.length) h += `<p class="sell"><b>売る</b>（10銘柄から外れた）: ${tags(sell.map(t => `${code(t)} ${shares[t]}株`))}</p>
       <p><button id="sold" class="act">売却済みにする</button></p>`;
-  if (buy.length && held.size) {
+  if (buy.length && anyHeld) {
+    const lab = r => `${code(r.ticker)} ${remain(r)}株`;
     if (D.dip_rule) {
       const now = buy.filter(r => r.dip), wait = buy.filter(r => !r.dip);
-      if (now.length) h += `<p class="buy"><b>買う</b>（押し目が出た・次の営業日に）: ${tags(now.map(r => r.ticker))}</p>`;
-      if (wait.length) h += `<p><b>押し目待ち</b>（終値が5日線を下回るまで待つ）: ${tags(wait.map(r => r.ticker))}</p>`;
+      if (now.length) h += `<p class="buy"><b>買う</b>（押し目が出た・次の営業日に）: ${tags(now.map(lab))}</p>`;
+      if (wait.length) h += `<p><b>押し目待ち</b>（終値が5日線を下回るまで待つ）: ${tags(wait.map(lab))}</p>`;
     } else {
-      h += `<p class="buy"><b>買う</b>（新しく入った）: ${tags(buy.map(r => r.ticker))}</p>`;
+      h += `<p class="buy"><b>買う</b>: ${tags(buy.map(lab))}</p>`;
     }
   }
   document.getElementById("swap").innerHTML = h;
   const sb = document.getElementById("sold");
-  if (sb) sb.onclick = () => { sell.forEach(t => held.delete(t)); save(cfg.key, [...held]); render(); };
-
-  const budget = (parseFloat(document.getElementById("budget").value) || 0) * 10000;
-  save(cfg.key + "-budget", budget / 10000);
-  const per = budget / 10, fx = D.usdjpy || 1;
-  let total = 0;
-  const lines = top.map(r => {
-    const yenPrice = r.price * fx;
-    const n = Math.max(1, Math.round(per / yenPrice));
-    total += n * yenPrice;
-    const dev = n * yenPrice / per - 1;
-    return `<tr><td>${code(r.ticker)}</td><td>${money(r.price)}</td><td>${n}株</td>
-      <td>${(n * yenPrice / 10000).toFixed(1)}万円</td><td style="color:${Math.abs(dev) > .3 ? "var(--warn)" : "var(--sub)"}">${pct(dev)}</td></tr>`;
-  });
-  document.getElementById("alloc").innerHTML =
-    `<tr><th>銘柄</th><th>株価</th><th>株数</th><th>金額</th><th>目安との差</th></tr>${lines.join("")}
-     <tr><td><b>合計</b></td><td></td><td></td><td><b>${(total / 10000).toFixed(1)}万円</b></td><td></td></tr>`;
+  if (sb) sb.onclick = () => { sell.forEach(t => delete shares[t]); saveShares(); update(); };
+  document.getElementById("official").innerHTML = rowsHTML(D.official.top, true);
 }
 
 function render() {
@@ -167,10 +195,9 @@ function render() {
   document.getElementById("meta").textContent = `株価: ${D.price_date} 終値${fxs} ／ 更新 ${D.updated}`;
   document.getElementById("offdate").textContent = `${D.official.date} 月末で確定`;
   document.getElementById("latdate").textContent = `${D.latest.date} 時点`;
-  document.getElementById("official").innerHTML = rowsHTML(D.official.top, true);
-  document.getElementById("offnote").textContent = "持っている銘柄にチェックを入れると、下に入れ替え内容が出ます（チェックはこの端末だけに保存）。"
+  document.getElementById("offnote").textContent = "保有株数は下の「入れ替えと買付額の目安」の表に入力します（この端末だけに保存）。"
     + (D.dip_rule ? "「押し目・買い時」は最新の終値が5日線を下回った銘柄です。" : "");
-  const offSet = new Set(D.official.top.slice(0, 10).map(r => r.ticker));
+  const offSet = new Set(top10().map(r => r.ticker));
   document.getElementById("latest").innerHTML = rowsHTML(D.latest.top, false, offSet);
   document.getElementById("rule").textContent = D.rule;
   document.getElementById("rule2").textContent = cfg.rule2;
@@ -178,19 +205,15 @@ function render() {
   document.getElementById("allocnote").textContent = cfg.allocnote;
   document.getElementById("exn").textContent = D.excluded.length + "銘柄";
   document.getElementById("excluded").textContent = D.excluded.join("、");
-  document.querySelectorAll("input[data-t]").forEach(c => c.addEventListener("change", e => {
-    e.target.checked ? held.add(e.target.dataset.t) : held.delete(e.target.dataset.t);
-    save(cfg.key, [...held]); render();
-  }));
-  renderPlan();
+  buildTable();
+  update();
 }
 
 function show(m) {
   mk = M[m] ? m : "us"; cfg = M[mk]; save("momentum-tab", mk);
-  held = new Set(load(cfg.key) || []);
+  shares = load(cfg.key + "-shares") || {};
   document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.m === mk));
-  const b = load(cfg.key + "-budget");
-  document.getElementById("budget").value = b || 200;
+  document.getElementById("budget").value = load(cfg.key + "-budget") || 200;
   const go = d => { D = d; render(); };
   if (cache[mk]) return go(cache[mk]);
   document.getElementById("meta").textContent = "読み込み中…";
@@ -199,7 +222,7 @@ function show(m) {
 }
 
 document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => show(b.dataset.m)));
-document.getElementById("budget").addEventListener("input", () => D && renderPlan());
+document.getElementById("budget").addEventListener("input", () => D && update());
 show(mk);
 </script>
 </body>
