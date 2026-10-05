@@ -1,0 +1,39 @@
+name: 投資シグナルのバックテスト
+
+on:
+  workflow_dispatch:
+    inputs:
+      per_tier:
+        description: "規模区分ごとの銘柄数"
+        default: "80"
+      years:
+        description: "検証する年数"
+        default: "10"
+      extra:
+        description: "追加銘柄（カンマ区切り 例: GC=F,BTC-USD,AAPL）"
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance pandas xlrd
+      - name: Run backtest
+        working-directory: invest
+        run: >
+          python backtest_signals.py
+          --per-tier "${{ inputs.per_tier }}"
+          --years "${{ inputs.years }}"
+          --extra "${{ inputs.extra }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results
+          path: invest/results/
