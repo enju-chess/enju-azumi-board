@@ -240,9 +240,28 @@ def section(title, curves, picks, names):
     return "".join(p)
 
 
+def clean(px):
+    """データ不良（株式分割の未反映など）による1日±50%超の動きを除外して株価を作り直す"""
+    raw = px.ffill()
+    r = raw.pct_change()
+    bad = r.abs() > 0.5
+    print("除外した異常値:", int(bad.sum().sum()), "件",
+          list(bad.sum()[bad.sum() > 0].index[:10]))
+    r = r.mask(bad, 0.0)
+    first = raw.apply(lambda c: c.first_valid_index())
+    out = (1 + r.fillna(0)).cumprod()
+    for c in out.columns:  # 上場前はNaNのまま、水準は元の初値に合わせる
+        f = first[c]
+        out.loc[:f, c] = np.nan if f is None else out.loc[:f, c]
+        if f is not None:
+            out[c] = out[c] / out.at[f, c] * raw.at[f, c]
+            out.loc[out.index < f, c] = np.nan
+    return out
+
+
 def analyze(px, names, index_t, label):
     stocks = [c for c in px.columns if c != index_t]
-    px = px[px[index_t].notna()].ffill()
+    px = clean(px[px[index_t].notna()])
     start = px.index[260]  # モメンタム計算に1年分必要
     strategies = {
         "指数そのもの": ("index", 252),
