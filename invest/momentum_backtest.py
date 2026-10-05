@@ -69,18 +69,25 @@ SEMI_JP = {
 }
 SEMI_US = set()
 SECTOR = {}
-# AIデータセンター向けの電線・電力設備など、業種分類では拾えないAI関連
-AI_EXTRA = {"5801.T", "5802.T", "5803.T", "VRT", "BE", "VST", "CEG", "GEV", "NRG", "TLN"}
-AI_SECTORS = ("電気機器", "情報", "Information Technology", "Communication Services")
+# AI関連 = 半導体製造の関連銘柄（チップ・装置・材料・メモリ/ストレージ・基板）
+#          ＋AIデータセンター関連（サーバー・ネットワーク/光通信・電線・電力/冷却・データセンター運営）
+# GoogleやAppleなど「AIを使う側」は含めない
+AI_DC = {
+    # 日本: 電線・光ファイバー
+    "5801.T", "5802.T", "5803.T", "5805.T",
+    # 米国: メモリ・ストレージ
+    "SNDK", "WDC", "STX", "NTAP", "PSTG",
+    # 米国: サーバー・ネットワーク・光通信・コネクタ
+    "DELL", "HPE", "SMCI", "ANET", "CSCO", "CIEN", "LITE", "COHR", "GLW", "APH", "JBL",
+    # 米国: 電力・冷却・発電
+    "VRT", "ETN", "GEV", "BE", "VST", "CEG", "NRG", "TLN",
+    # 米国: データセンター運営
+    "EQIX", "DLR",
+}
 
 
 def find_ai(tickers):
-    """AI関連: 電機・情報通信（米国はIT・通信サービス）全体＋半導体関連＋電線・電力設備"""
-    out = set(find_semis(tickers))
-    for t in tickers:
-        if t in AI_EXTRA or any(k in SECTOR.get(t, "") for k in AI_SECTORS):
-            out.add(t)
-    return out
+    return set(find_semis(tickers)) | {t for t in tickers if t in AI_DC}
 
 
 def find_semis(tickers):
@@ -265,9 +272,11 @@ def section(title, curves, picks, names):
         years[k] = y
     p = [f"<h2>{title}</h2>", svg_chart(curves),
          "<div class='wrap'><table><tr><th>戦略</th><th>年率リターン</th><th>最大下落</th>"
-         "<th>振れ幅(年)</th><th>100万円→</th></tr>"]
+         "<th>均等投資との差</th><th>振れ幅(年)</th><th>100万円→</th></tr>"]
+    base = dict(rows)["全銘柄に均等投資"]["年率リターン"]
     for k, s in rows:
         p.append(f"<tr><td>{k}</td>{pc(s['年率リターン'])}{pc(s['最大下落'])}"
+                 f"{pc(s['年率リターン'] - base) if k != '全銘柄に均等投資' else '<td>基準</td>'}"
                  f"<td>{s['年率の振れ幅']*100:.0f}%</td><td>{s['最終資産']*100:.0f}万円</td></tr>")
     p.append("</table></div><h3>年ごとのリターン</h3><div class='wrap'><table><tr><th>年</th>"
              + "".join(f"<th>{k}</th>" for k in curves) + "</tr>")
@@ -307,7 +316,7 @@ def analyze(px, names, index_t, label):
     start = px.index[260]  # モメンタム計算に1年分必要
     strategies = {
         "指数そのもの": ("index", 252),
-        "全銘柄に均等投資": ("equal", 252),
+        "全銘柄に均等投資": ("equal", 252),  # 除外後の対象銘柄だけの平均
         "① 12ヶ月モメンタム": ("mom", 252),
         "① 6ヶ月モメンタム": ("mom", 126),
         "② 12ヶ月＋相場フィルター": ("mom_filter", 252),
