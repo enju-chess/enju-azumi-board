@@ -9,8 +9,11 @@ on:
       years:
         description: "検証する年数"
         default: "10"
+      us:
+        description: "S&P500から選ぶ銘柄数"
+        default: "100"
       extra:
-        description: "追加銘柄（カンマ区切り 例: GC=F,BTC-USD,AAPL）"
+        description: "個別に追加する銘柄（カンマ区切り 例: GC=F,BTC-USD）"
         default: ""
 
 permissions:
@@ -25,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install yfinance pandas xlrd openpyxl
+      - run: pip install yfinance pandas xlrd openpyxl lxml
       - name: Run backtest
         working-directory: invest
         run: |
@@ -34,6 +37,7 @@ jobs:
           python backtest_signals.py \
             --per-tier "${{ inputs.per_tier }}" \
             --years "${{ inputs.years }}" \
+            --us "${{ inputs.us }}" \
             --extra "${{ inputs.extra }}" 2>&1 | tee results/run.log
       - name: 結果を invest-results ブランチに保存
         if: always()
