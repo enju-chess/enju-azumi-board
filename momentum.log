@@ -1,0 +1,35 @@
+日本株 TOPIX500 491 銘柄を取得中…
+日本株 TOPIX500 AI関連として除外: 28 銘柄
+  キオクシアホールディングス(285A.T), ＳＵＭＣＯ(3436.T), レゾナック・ホールディングス(4004.T), イビデン(4062.T), 信越化学工業(4063.T), 東京応化工業(4186.T), デクセリアルズ(4980.T), ＪＸ金属(5016.T), ＭＡＲＵＷＡ(5344.T), 古河電気工業(5801.T), 住友電気工業(5802.T), フジクラ(5803.T), ディスコ(6146.T), ローツェ(6323.T), ＫＯＫＵＳＡＩ　ＥＬＥＣＴＲＩＣ(6525.T), ソシオネクスト(6526.T), サンケン電気(6707.T), ルネサスエレクトロニクス(6723.T), アルバック(6728.T), アドバンテスト(6857.T), レーザーテック(6920.T), ローム(6963.T), 太陽誘電(6976.T), 村田製作所(6981.T), 東京精密(7729.T), ＳＣＲＥＥＮホールディングス(7735.T), ＨＯＹＡ(7741.T), 東京エレクトロン(8035.T)
+除外した異常値: 14 件 ['8227.T', '8303.T', '8377.T', '1306.T']
+日本株 TOPIX500 AI関連除く 指数そのもの +11.6%
+日本株 TOPIX500 AI関連除く 全銘柄に均等投資 +12.9%
+日本株 TOPIX500 AI関連除く ① 12ヶ月モメンタム +22.7%
+日本株 TOPIX500 AI関連除く ① 6ヶ月モメンタム +22.0%
+日本株 TOPIX500 AI関連除く ② 12ヶ月＋相場フィルター +14.7%
+日本株 TOPIX500 AI関連除く ③ 12ヶ月＋押し目買い +26.1%
+除外した異常値: 14 件 ['8227.T', '8303.T', '8377.T', '1306.T']
+日本株 TOPIX500 指数そのもの +11.6%
+日本株 TOPIX500 全銘柄に均等投資 +14.2%
+日本株 TOPIX500 ① 12ヶ月モメンタム +31.4%
+日本株 TOPIX500 ① 6ヶ月モメンタム +31.2%
+日本株 TOPIX500 ② 12ヶ月＋相場フィルター +22.9%
+日本株 TOPIX500 ③ 12ヶ月＋押し目買い +34.4%
+米国株 S&P500 503 銘柄を取得中…
+米国株 S&P500 AI関連として除外: 43 銘柄
+  Analog Devices(ADI), Applied Materials(AMAT), Advanced Micro Devices(AMD), Arista Networks(ANET), Amphenol(APH), Broadcom(AVGO), Bloom Energy(BE), Constellation Energy(CEG), Ciena(CIEN), Coherent Corp.(COHR), Cisco(CSCO), Dell Technologies(DELL), Digital Realty(DLR), Equinix(EQIX), Eaton Corporation(ETN), First Solar(FSLR), GE Vernova(GEV), Corning Inc.(GLW), Hewlett Packard Enterprise(HPE), Intel(INTC), Jabil(JBL), KLA Corporation(KLAC), Lumentum(LITE), Lam Research(LRCX), Microchip Technology(MCHP), Monolithic Power Systems(MPWR), Marvell Technology(MRVL), Micron Technology(MU), NRG Energy(NRG), NetApp(NTAP), Nvidia(NVDA), NXP Semiconductors(NXPI), ON Semiconductor(ON), Qualcomm(QCOM), Supermicro(SMCI), Sandisk(SNDK), Seagate Technology(STX), Skyworks Solutions(SWKS), Teradyne(TER), Texas Instruments(TXN), Vertiv(VRT), Vistra Corp.(VST), Western Digital(WDC)
+除外した異常値: 12 件 ['APA', 'CVNA', 'CTVA', 'DHR', 'ECHO', 'GL', 'MRNA', 'OXY', 'PCG', 'HOOD']
+米国株 S&P500 AI関連除く 指数そのもの +14.8%
+米国株 S&P500 AI関連除く 全銘柄に均等投資 +15.1%
+米国株 S&P500 AI関連除く ① 12ヶ月モメンタム +27.6%
+米国株 S&P500 AI関連除く ① 6ヶ月モメンタム +30.4%
+米国株 S&P500 AI関連除く ② 12ヶ月＋相場フィルター +16.4%
+米国株 S&P500 AI関連除く ③ 12ヶ月＋押し目買い +29.2%
+除外した異常値: 14 件 ['AMD', 'APA', 'BE', 'CVNA', 'CTVA', 'DHR', 'ECHO', 'GL', 'MRNA', 'OXY']
+米国株 S&P500 指数そのもの +14.8%
+米国株 S&P500 全銘柄に均等投資 +17.0%
+米国株 S&P500 ① 12ヶ月モメンタム +51.7%
+米国株 S&P500 ① 6ヶ月モメンタム +49.7%
+米国株 S&P500 ② 12ヶ月＋相場フィルター +33.6%
+米国株 S&P500 ③ 12ヶ月＋押し目買い +51.0%
+完了: results/momentum_report.html
