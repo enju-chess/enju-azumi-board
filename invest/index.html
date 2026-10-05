@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>モメンタム10銘柄</title>
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1d1d1f;--sub:#5f5f66;--line:#e4e2dc;--accent:#0b6e4f;
+--up:#c62828;--down:#1565c0;--warn:#b26a00;--chip:#eef3f0}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--card:#1c1d20;--ink:#eceae5;--sub:#a3a19b;
+--line:#2c2d31;--accent:#5fc6a1;--up:#ff7a7a;--down:#7ab5ff;--warn:#f0b35a;--chip:#22302a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif;
+line-height:1.55;font-size:15px}
+main{max-width:640px;margin:0 auto;padding:16px 16px 48px}
+h1{font-size:21px;margin:4px 0 2px}
+.meta{color:var(--sub);font-size:12.5px}
+h2{font-size:16px;margin:26px 0 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+h2 small{font-weight:400;color:var(--sub);font-size:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.row{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;padding:11px 12px;border-top:1px solid var(--line)}
+.row:first-child{border-top:none}
+.rk{font-weight:700;color:var(--sub);text-align:center}
+.nm{min-width:0}.nm b{font-size:15px}.nm a{color:inherit;text-decoration:none}
+.nm .t{color:var(--sub);font-size:12px;margin-left:6px}
+.nm .s{color:var(--sub);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.num{text-align:right;font-size:13px;white-space:nowrap}.num .m{color:var(--up);font-weight:700;font-size:14px}
+label.hold{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--sub);justify-content:flex-end;margin-top:3px}
+input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.plan{padding:12px}
+.plan p{margin:4px 0}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;margin:2px 4px 2px 0;background:var(--chip)}
+.sell{color:var(--down)}.buy{color:var(--up)}
+.budget{display:flex;gap:8px;align-items:center;margin:8px 0 4px;font-size:14px}
+.budget input{width:110px;font-size:16px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 8px;border-top:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}th{color:var(--sub);font-weight:400;font-size:12px}
+.note{color:var(--sub);font-size:12.5px;margin:8px 2px}
+.warn{color:var(--warn)}
+details{margin-top:8px}summary{cursor:pointer;color:var(--sub);font-size:13px}
+.new{font-size:11px;color:var(--warn);margin-left:4px}
+</style>
+</head>
+<body>
+<main>
+<h1>モメンタム10銘柄（米国株）</h1>
+<div class="meta" id="meta">読み込み中…</div>
+
+<h2>今月持つ10銘柄 <small id="offdate"></small></h2>
+<div class="card" id="official"></div>
+<p class="note">持っている銘柄にチェックを入れると、下に入れ替え内容が出ます（チェックはこの端末だけに保存）。</p>
+
+<h2>入れ替えと買付額の目安</h2>
+<div class="card plan">
+  <div id="swap"></div>
+  <div class="budget">予算 <input id="budget" type="number" inputmode="numeric" step="10" value="200"> 万円</div>
+  <div style="overflow-x:auto"><table id="alloc"></table></div>
+  <p class="note">1銘柄あたり予算の1/10。株数は1株単位で四捨五入（1株未満で買える証券会社なら金額どおりに）。</p>
+</div>
+
+<h2>最新の暫定ランキング <small id="latdate"></small></h2>
+<div class="card" id="latest"></div>
+<p class="note">月の途中の参考です。<b>売買は月末の確定ランキングだけで行います。</b>途中で入れ替えないのがこのルールのポイントです。</p>
+
+<h2>ルール</h2>
+<div class="card plan">
+  <p id="rule"></p>
+  <p>上昇率＝7ヶ月前→1ヶ月前の株価の伸び（直近1ヶ月は除く）。月末の終値で判断し、翌営業日に売買。損切りはしない。</p>
+  <p class="warn">検証（2015〜2026年）では同じ銘柄群の均等投資より年+15%程度上回ったが、最大で−43%の下落があり、11年中数年は負けている。過去の成績は将来を保証しない。</p>
+  <details><summary>対象外にしているAI関連銘柄（<span id="exn"></span>）</summary><p class="note" id="excluded"></p></details>
+</div>
+</main>
+<script>
+const KEY = "momentum-us-holdings";
+const load = k => { try { return JSON.parse(localStorage.getItem(k)) } catch (e) { return null } };
+const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)) } catch (e) {} };
+let held = new Set(load(KEY) || []);
+let D;
+
+const pct = x => (x >= 0 ? "+" : "") + (x * 100).toFixed(0) + "%";
+const link = t => `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`;
+
+function rowsHTML(list, withHold, prevSet) {
+  return list.slice(0, 10).map((r, i) => `
+    <div class="row">
+      <div class="rk">${i + 1}</div>
+      <div class="nm"><a href="${link(r.ticker)}" target="_blank" rel="noopener"><b>${r.name}</b><span class="t">${r.ticker}</span></a>
+        ${prevSet && !prevSet.has(r.ticker) ? '<span class="new">今月の10銘柄外</span>' : ""}
+        <div class="s">${r.sector}</div></div>
+      <div class="num"><div class="m">${pct(r.momentum)}</div>$${r.price.toLocaleString()}
+        ${withHold ? `<label class="hold"><input type="checkbox" data-t="${r.ticker}" ${held.has(r.ticker) ? "checked" : ""}>保有</label>` : ""}</div>
+    </div>`).join("");
+}
+
+function renderPlan() {
+  const top = D.official.top.slice(0, 10);
+  const topSet = new Set(top.map(r => r.ticker));
+  const sell = [...held].filter(t => !topSet.has(t));
+  const buy = top.filter(r => !held.has(r.ticker));
+  let h = "";
+  if (!held.size) h = "<p>保有銘柄が未登録です。上の一覧でチェックすると入れ替えが分かります。</p>";
+  else if (!sell.length && !buy.length) h = "<p>入れ替えなし。今月はこのまま持ち続けます。</p>";
+  else {
+    if (sell.length) h += `<p class="sell"><b>売る</b>（10銘柄から外れた）: ${sell.map(t => `<span class="tag">${t}</span>`).join("")}</p>
+      <p><button id="sold" style="font-size:13px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)">売却済みにする</button></p>`;
+    if (buy.length) h += `<p class="buy"><b>買う</b>（新しく入った）: ${buy.map(r => `<span class="tag">${r.ticker}</span>`).join("")}</p>`;
+  }
+  document.getElementById("swap").innerHTML = h;
+  const sb = document.getElementById("sold");
+  if (sb) sb.onclick = () => { sell.forEach(t => held.delete(t)); save(KEY, [...held]); renderPlan(); };
+
+  const budget = (parseFloat(document.getElementById("budget").value) || 0) * 10000;
+  save(KEY + "-budget", budget / 10000);
+  const per = budget / 10, fx = D.usdjpy;
+  let total = 0;
+  const lines = top.map(r => {
+    const yenPrice = r.price * fx;
+    const n = Math.max(1, Math.round(per / yenPrice));
+    total += n * yenPrice;
+    const dev = n * yenPrice / per - 1;
+    return `<tr><td>${r.ticker}</td><td>$${r.price.toLocaleString()}</td><td>${n}株</td>
+      <td>${(n * yenPrice / 10000).toFixed(1)}万円</td><td style="color:${Math.abs(dev) > .3 ? "var(--warn)" : "var(--sub)"}">${pct(dev)}</td></tr>`;
+  });
+  document.getElementById("alloc").innerHTML =
+    `<tr><th>銘柄</th><th>株価</th><th>株数</th><th>金額</th><th>目安との差</th></tr>${lines.join("")}
+     <tr><td><b>合計</b></td><td></td><td></td><td><b>${(total / 10000).toFixed(1)}万円</b></td><td></td></tr>`;
+}
+
+function render() {
+  document.getElementById("meta").textContent =
+    `株価: ${D.price_date} 終値 ／ 1ドル=${D.usdjpy}円 ／ 更新 ${D.updated}`;
+  document.getElementById("offdate").textContent = `${D.official.date} 月末で確定`;
+  document.getElementById("latdate").textContent = `${D.latest.date} 時点`;
+  document.getElementById("official").innerHTML = rowsHTML(D.official.top, true);
+  const offSet = new Set(D.official.top.slice(0, 10).map(r => r.ticker));
+  document.getElementById("latest").innerHTML = rowsHTML(D.latest.top, false, offSet);
+  document.getElementById("rule").textContent = D.rule;
+  document.getElementById("exn").textContent = D.excluded.length + "銘柄";
+  document.getElementById("excluded").textContent = D.excluded.join("、");
+  document.querySelectorAll("input[data-t]").forEach(c => c.addEventListener("change", e => {
+    e.target.checked ? held.add(e.target.dataset.t) : held.delete(e.target.dataset.t);
+    save(KEY, [...held]); renderPlan();
+  }));
+  const b = load(KEY + "-budget"); if (b) document.getElementById("budget").value = b;
+  document.getElementById("budget").addEventListener("input", renderPlan);
+  renderPlan();
+}
+
+fetch("signal.json?" + Date.now()).then(r => r.json()).then(d => { D = d; render(); })
+  .catch(() => document.getElementById("meta").textContent = "データを読み込めませんでした");
+</script>
+</body>
+</html>
