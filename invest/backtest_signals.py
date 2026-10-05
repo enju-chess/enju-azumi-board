@@ -50,7 +50,10 @@ TIER_ORDER = ["大型(TOPIX100)", "中型(Mid400)", "小型1(Small1)", "小型2(
 
 # ---------------------------------------------------------------- 銘柄リスト
 def load_universe(per_tier, seed=0):
-    df = pd.read_excel(JPX_LIST_URL, dtype=str)
+    import io, urllib.request
+    req = urllib.request.Request(JPX_LIST_URL, headers={"User-Agent": "Mozilla/5.0"})
+    df = pd.read_excel(io.BytesIO(urllib.request.urlopen(req, timeout=60).read()), dtype=str)
+    print("JPXリストの列:", list(df.columns))
     df = df[df["市場・商品区分"].str.contains("内国株式", na=False)]
     tier_map = {
         "TOPIX Core30": "大型(TOPIX100)", "TOPIX Large70": "大型(TOPIX100)",

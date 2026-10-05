@@ -14,7 +14,7 @@ on:
         default: ""
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   backtest:
@@ -28,12 +28,22 @@ jobs:
       - run: pip install yfinance pandas xlrd
       - name: Run backtest
         working-directory: invest
-        run: >
-          python backtest_signals.py
-          --per-tier "${{ inputs.per_tier }}"
-          --years "${{ inputs.years }}"
-          --extra "${{ inputs.extra }}"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: backtest-results
-          path: invest/results/
+        run: |
+          set -o pipefail
+          mkdir -p results
+          python backtest_signals.py \
+            --per-tier "${{ inputs.per_tier }}" \
+            --years "${{ inputs.years }}" \
+            --extra "${{ inputs.extra }}" 2>&1 | tee results/run.log
+      - name: 結果を invest-results ブランチに保存
+        if: always()
+        run: |
+          mkdir -p /tmp/out && cp -r invest/results/. /tmp/out/ || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan invest-results
+          git rm -rf -q . 
+          cp -r /tmp/out/. .
+          git add -A
+          git commit -q -m "バックテスト結果 run ${{ github.run_id }}"
+          git push -f origin invest-results
