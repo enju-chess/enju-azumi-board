@@ -3,7 +3,7 @@
 
 ■ 使い方（M1 Mac のターミナル）
     source ~/Documents/Python/.venv/bin/activate
-    pip install yfinance pandas xlrd
+    pip install yfinance pandas xlrd openpyxl
     python backtest_signals.py                  # 東証の規模別に各80銘柄・過去10年
     python backtest_signals.py --per-tier 150   # 銘柄数を増やす（時間がかかる）
     python backtest_signals.py --extra "GC=F,BTC-USD,AAPL,NVDA,MSFT"   # 金・BTC・米国株も追加
@@ -39,8 +39,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-JPX_LIST_URL = ("https://www.jpx.co.jp/markets/statistics-equities/misc/"
-                "tvdivq0000001vg2-att/data_j.xls")
+JPX_PAGE = "https://www.jpx.co.jp/markets/statistics-equities/misc/01.html"
 COST = 0.001        # 片道コスト
 MAX_HOLD = 250
 STOP_CONFIGS = {"損切りなし": None, "損切り-8%": 0.08}
@@ -50,9 +49,17 @@ TIER_ORDER = ["大型(TOPIX100)", "中型(Mid400)", "小型1(Small1)", "小型2(
 
 # ---------------------------------------------------------------- 銘柄リスト
 def load_universe(per_tier, seed=0):
-    import io, urllib.request
-    req = urllib.request.Request(JPX_LIST_URL, headers={"User-Agent": "Mozilla/5.0"})
-    df = pd.read_excel(io.BytesIO(urllib.request.urlopen(req, timeout=60).read()), dtype=str)
+    import io, re, urllib.request
+
+    def get(url):
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        return urllib.request.urlopen(req, timeout=60).read()
+    # 一覧ページからExcelのリンクを探す（ファイル名や拡張子が変わっても対応）
+    page = get(JPX_PAGE).decode("utf-8", "ignore")
+    link = re.search(r'href="([^"]*data_j\.xlsx?)"', page).group(1)
+    url = link if link.startswith("http") else "https://www.jpx.co.jp" + link
+    print("銘柄リスト:", url)
+    df = pd.read_excel(io.BytesIO(get(url)), dtype=str)
     print("JPXリストの列:", list(df.columns))
     df = df[df["市場・商品区分"].str.contains("内国株式", na=False)]
     tier_map = {

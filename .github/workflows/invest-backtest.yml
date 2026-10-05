@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install yfinance pandas xlrd
+      - run: pip install yfinance pandas xlrd openpyxl
       - name: Run backtest
         working-directory: invest
         run: |
