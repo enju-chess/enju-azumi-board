@@ -51,7 +51,33 @@ def load_japan():
 def load_us():
     tables = pd.read_html(io.StringIO(get(SP500_PAGE).decode("utf-8")))
     sp = next(t for t in tables if "Symbol" in t.columns)
+    for sym, sub in zip(sp["Symbol"], sp["GICS Sub-Industry"]):
+        if "Semiconductor" in str(sub):
+            SEMI_US.add(sym.replace(".", "-"))
     return {s.replace(".", "-"): n for s, n in zip(sp["Symbol"], sp["Security"])}
+
+
+# 日本の主な半導体関連（製造装置・材料・メモリ・パッケージ基板を含む）
+SEMI_JP = {
+    "8035", "6857", "6920", "7735", "6146", "6526", "6723", "4063", "3436", "285A",
+    "6963", "7729", "6323", "6890", "4062", "4004", "4186", "6254", "6315", "6728",
+    "6871", "6855", "6525", "4970", "5384", "6627", "4369", "6707", "3445", "6266",
+    "4980", "7741", "6588", "5344", "6699", "6787", "4975", "6235", "6284",
+}
+SEMI_US = set()
+
+
+def find_semis(tickers):
+    import yfinance as yf
+    semis = {t for t in tickers if t in SEMI_US or t.removesuffix(".T") in SEMI_JP}
+    for t in tickers:
+        if t.endswith(".T") and t not in semis:
+            try:
+                if "Semiconductor" in ((yf.Ticker(t).info or {}).get("industry") or ""):
+                    semis.add(t)
+            except Exception:
+                pass
+    return semis
 
 
 def download(tickers, years):
@@ -286,6 +312,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--years", type=int, default=12)
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--exclude-semis", action="store_true", help="半導体関連を除いた版も計算する")
     ap.add_argument("--out", default="results")
     args = ap.parse_args()
 
@@ -299,6 +326,12 @@ def main():
             names = loader()
             print(label, len(names), "銘柄を取得中…")
             px = download(list(names) + [index_t], args.years)
+            if args.exclude_semis:
+                semis = find_semis([c for c in px.columns if c != index_t])
+                print(label, "半導体関連として除外:", len(semis), "銘柄")
+                print("  " + ", ".join(f"{names.get(t, t)}({t})" for t in sorted(semis)))
+                sections.append(analyze(px.drop(columns=list(semis)), names, index_t,
+                                        label + " 半導体除く"))
             sections.append(analyze(px, names, index_t, label))
 
     os.makedirs(args.out, exist_ok=True)

@@ -6,6 +6,9 @@ on:
       years:
         description: "取得する年数"
         default: "12"
+      exclude_semis:
+        description: "半導体関連を除いた版も計算 (yes/no)"
+        default: "yes"
 
 permissions:
   contents: write
@@ -25,7 +28,7 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p results
-          python momentum_backtest.py --years "${{ inputs.years }}" 2>&1 | tee results/momentum.log
+          python momentum_backtest.py --years "${{ inputs.years }}" $( [ "${{ inputs.exclude_semis }}" = "yes" ] && echo --exclude-semis ) 2>&1 | tee results/momentum.log
       - name: 結果を invest-momentum-results ブランチに保存
         if: always()
         run: |
