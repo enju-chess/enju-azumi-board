@@ -88,8 +88,37 @@ def load_us(n, seed=0):
     tables = pd.read_html(io.StringIO(get(SP500_PAGE).decode("utf-8")))
     sp = next(t for t in tables if "Symbol" in t.columns)
     sp = sp.sample(n=min(n, len(sp)), random_state=seed)
+    for s_, sub in zip(sp["Symbol"], sp["GICS Sub-Industry"]):
+        if "Semiconductor" in str(sub):
+            SEMI_US.add(s_.replace(".", "-"))
     return [(s.replace(".", "-"), name, "米国(S&P500)")
             for s, name in zip(sp["Symbol"], sp["Security"])]
+
+
+# 日本の主な半導体関連（製造装置・材料・メモリ・パッケージ基板を含む）
+SEMI_JP = {
+    "8035", "6857", "6920", "7735", "6146", "6526", "6723", "4063", "3436", "285A",
+    "6963", "7729", "6323", "6890", "4062", "4004", "4186", "6254", "6315", "6728",
+    "6871", "6855", "6525", "4970", "5384", "6627", "4369", "6707", "3445", "6266",
+    "4980", "7741", "6588", "5344", "6699", "6787", "4975", "6235", "7701", "6284",
+}
+SEMI_US = set()
+
+
+def find_semis(tickers):
+    """半導体関連の銘柄を判定（日本: 一覧＋Yahooの業種、米国: S&P500のGICS分類）"""
+    import yfinance as yf
+    semis = {t for t in tickers if t in SEMI_US or t.removesuffix(".T") in SEMI_JP}
+    for t in tickers:
+        if not t.endswith(".T") or t in semis:
+            continue
+        try:
+            ind = (yf.Ticker(t).info or {}).get("industry", "")
+            if "Semiconductor" in ind:
+                semis.add(t)
+        except Exception:
+            pass
+    return semis
 
 
 def download(tickers, years):
@@ -328,6 +357,7 @@ def main():
     ap.add_argument("--years", type=int, default=10)
     ap.add_argument("--extra", default="", help="個別に追加する銘柄（カンマ区切り）")
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--exclude-semis", action="store_true", help="半導体関連を除く")
     ap.add_argument("--out", default="results")
     args = ap.parse_args()
 
@@ -344,6 +374,13 @@ def main():
                      for t in args.extra.split(",") if t.strip()]
         print(f"{len(universe)} 銘柄の株価を取得中…")
         data = download([u[0] for u in universe], args.years)
+        if args.exclude_semis:
+            semis = find_semis(list(data))
+            names = {t: n for t, n, _ in universe}
+            print(f"半導体関連として除外: {len(semis)} 銘柄")
+            for t in sorted(semis):
+                print("  ", t, names.get(t, ""))
+            data = {t: d for t, d in data.items() if t not in semis}
     tier_of = {t: tier for t, _, tier in universe}
     name_of = {t: nm for t, nm, _ in universe}
 

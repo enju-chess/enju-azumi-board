@@ -12,6 +12,9 @@ on:
       us:
         description: "S&P500から選ぶ銘柄数"
         default: "100"
+      exclude_semis:
+        description: "半導体関連を除く (yes/no)"
+        default: "no"
       extra:
         description: "個別に追加する銘柄（カンマ区切り 例: GC=F,BTC-USD）"
         default: ""
@@ -38,7 +41,8 @@ jobs:
             --per-tier "${{ inputs.per_tier }}" \
             --years "${{ inputs.years }}" \
             --us "${{ inputs.us }}" \
-            --extra "${{ inputs.extra }}" 2>&1 | tee results/run.log
+            --extra "${{ inputs.extra }}" \
+            $( [ "${{ inputs.exclude_semis }}" = "yes" ] && echo --exclude-semis ) 2>&1 | tee results/run.log
       - name: 結果を invest-results ブランチに保存
         if: always()
         run: |
