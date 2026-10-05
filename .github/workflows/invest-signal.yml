@@ -3,6 +3,7 @@ name: モメンタム10銘柄の更新
 on:
   schedule:
     - cron: "40 22 * * 1-5"   # 日本時間 火〜土の朝7:40（米国市場の終了後）
+    - cron: "40 7 * * 1-5"    # 日本時間 月〜金の16:40（東証の終了後）
   workflow_dispatch:
 
 permissions:
@@ -21,11 +22,16 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install yfinance pandas lxml xlrd openpyxl
-      - run: python invest/momentum_signal.py
+      - name: 米国株
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '40 22 * * 1-5'
+        run: python invest/momentum_signal.py us
+      - name: 日本株
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '40 7 * * 1-5'
+        run: python invest/momentum_signal.py jp
       - name: signal.json を保存
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add invest/signal.json
+          git add invest/signal.json invest/signal_jp.json
           git commit -q -m "モメンタム10銘柄を更新 [skip ci]" || exit 0
           git pull -q --rebase origin main && git push -q

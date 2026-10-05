@@ -16,4 +16,4 @@
 
 - `invest/backtest_signals.py` … 売買シグナル（底からの反転・勢いのある上昇→デッドクロスで売り）のバックテスト
 - GitHub の Actions タブ →「投資シグナルのバックテスト」→ Run workflow で実行。結果は backtest-results としてダウンロードできる
-- `invest/index.html` … 米国株モメンタム10銘柄のページ（スマホ用）。`invest/signal.json` を毎朝自動更新
+- `invest/index.html` … モメンタム10銘柄のページ（スマホ用、米国株・日本株タブ）。米国株 `signal.json` は毎朝、日本株 `signal_jp.json` は毎夕に自動更新
