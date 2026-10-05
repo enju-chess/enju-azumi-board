@@ -9,6 +9,9 @@ on:
       exclude_semis:
         description: "半導体関連を除いた版も計算 (yes/no)"
         default: "yes"
+      exclude_ai:
+        description: "AI関連を除いた版も計算 (yes/no)"
+        default: "yes"
 
 permissions:
   contents: write
@@ -28,7 +31,7 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p results
-          python momentum_backtest.py --years "${{ inputs.years }}" $( [ "${{ inputs.exclude_semis }}" = "yes" ] && echo --exclude-semis ) 2>&1 | tee results/momentum.log
+          python momentum_backtest.py --years "${{ inputs.years }}" $( [ "${{ inputs.exclude_semis }}" = "yes" ] && echo --exclude-semis ) $( [ "${{ inputs.exclude_ai }}" = "yes" ] && echo --exclude-ai ) 2>&1 | tee results/momentum.log
       - name: 結果を invest-momentum-results ブランチに保存
         if: always()
         run: |

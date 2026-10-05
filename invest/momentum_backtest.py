@@ -45,15 +45,18 @@ def load_japan():
     url = link if link.startswith("http") else "https://www.jpx.co.jp" + link
     df = pd.read_excel(io.BytesIO(get(url)), dtype=str)
     df = df[df["規模区分"].isin(["TOPIX Core30", "TOPIX Large70", "TOPIX Mid400"])]
+    for c, sec in zip(df["コード"], df["33業種区分"]):
+        SECTOR[f"{c}.T"] = str(sec)
     return {f"{c}.T": n for c, n in zip(df["コード"], df["銘柄名"])}
 
 
 def load_us():
     tables = pd.read_html(io.StringIO(get(SP500_PAGE).decode("utf-8")))
     sp = next(t for t in tables if "Symbol" in t.columns)
-    for sym, sub in zip(sp["Symbol"], sp["GICS Sub-Industry"]):
+    for sym, sub, sec in zip(sp["Symbol"], sp["GICS Sub-Industry"], sp["GICS Sector"]):
         if "Semiconductor" in str(sub):
             SEMI_US.add(sym.replace(".", "-"))
+        SECTOR[sym.replace(".", "-")] = str(sec)
     return {s.replace(".", "-"): n for s, n in zip(sp["Symbol"], sp["Security"])}
 
 
@@ -65,6 +68,19 @@ SEMI_JP = {
     "4980", "7741", "6588", "5344", "6699", "6787", "4975", "6235", "6284",
 }
 SEMI_US = set()
+SECTOR = {}
+# AIデータセンター向けの電線・電力設備など、業種分類では拾えないAI関連
+AI_EXTRA = {"5801.T", "5802.T", "5803.T", "VRT", "BE", "VST", "CEG", "GEV", "NRG", "TLN"}
+AI_SECTORS = ("電気機器", "情報", "Information Technology", "Communication Services")
+
+
+def find_ai(tickers):
+    """AI関連: 電機・情報通信（米国はIT・通信サービス）全体＋半導体関連＋電線・電力設備"""
+    out = set(find_semis(tickers))
+    for t in tickers:
+        if t in AI_EXTRA or any(k in SECTOR.get(t, "") for k in AI_SECTORS):
+            out.add(t)
+    return out
 
 
 def find_semis(tickers):
@@ -313,6 +329,7 @@ def main():
     ap.add_argument("--years", type=int, default=12)
     ap.add_argument("--demo", action="store_true")
     ap.add_argument("--exclude-semis", action="store_true", help="半導体関連を除いた版も計算する")
+    ap.add_argument("--exclude-ai", action="store_true", help="AI関連を除いた版も計算する")
     ap.add_argument("--out", default="results")
     args = ap.parse_args()
 
@@ -326,6 +343,13 @@ def main():
             names = loader()
             print(label, len(names), "銘柄を取得中…")
             px = download(list(names) + [index_t], args.years)
+            stocks = [c for c in px.columns if c != index_t]
+            if args.exclude_ai:
+                ai = find_ai(stocks)
+                print(label, "AI関連として除外:", len(ai), "銘柄")
+                print("  " + ", ".join(f"{names.get(t, t)}({t})" for t in sorted(ai)))
+                sections.append(analyze(px.drop(columns=list(ai)), names, index_t,
+                                        label + " AI関連除く"))
             if args.exclude_semis:
                 semis = find_semis([c for c in px.columns if c != index_t])
                 print(label, "半導体関連として除外:", len(semis), "銘柄")
