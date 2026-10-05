@@ -1,0 +1,31 @@
+name: 株価の取得
+
+on:
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: "銘柄（カンマ区切り）"
+        default: "SNDK,MRNA,MU,LITE,WDC,DELL,STX,AMD,INTC,MRVL"
+
+permissions:
+  contents: write
+
+jobs:
+  quote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance pandas
+      - run: python invest/quote.py "${{ inputs.tickers }}" > /tmp/quote.csv 2>&1; cat /tmp/quote.csv
+      - name: 結果を invest-quote ブランチに保存
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan invest-quote
+          git rm -rf -q .
+          cp /tmp/quote.csv .
+          git add -A && git commit -q -m "quote" && git push -f origin invest-quote
