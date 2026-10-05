@@ -1,0 +1,40 @@
+name: モメンタム戦略のバックテスト
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "取得する年数"
+        default: "12"
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance pandas xlrd openpyxl lxml
+      - name: Run backtest
+        working-directory: invest
+        run: |
+          set -o pipefail
+          mkdir -p results
+          python momentum_backtest.py --years "${{ inputs.years }}" 2>&1 | tee results/momentum.log
+      - name: 結果を invest-momentum-results ブランチに保存
+        if: always()
+        run: |
+          mkdir -p /tmp/out && cp -r invest/results/. /tmp/out/ || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan invest-momentum-results
+          git rm -rf -q .
+          cp -r /tmp/out/. .
+          git add -A
+          git commit -q -m "モメンタム検証結果 run ${{ github.run_id }}"
+          git push -f origin invest-momentum-results
