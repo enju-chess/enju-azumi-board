@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03T21:30:00+09:00",
+  "updated_at": "2026-10-08T21:30:00+09:00",
   "period": {
-    "from": "2026-10-03",
-    "to": "2026-10-18"
+    "from": "2026-10-08",
+    "to": "2026-10-22"
   },
   "notes": [
     "写真は取れたイベントのみ（取れないものはimage: null）",
@@ -13,26 +13,26 @@
     {
       "kind": "favorite",
       "title": "ポリティカルパン",
-      "start": "2026-10-07T22:00:00+09:00",
+      "start": "2026-10-14T22:00:00+09:00",
       "slot": "毎週水曜 22:00",
       "channel": "フジテレビ系（長崎：KTN）",
-      "is_premiere": true,
+      "is_premiere": false,
       "reason": "脚本 野木亜紀子／出演 石原さとみ・高橋一生",
       "image": "https://www.crank-in.net/img/db/269095242125380_1200.jpg",
       "source": "https://www.crank-in.net/drama/autumn2026/2281",
-      "summary": "『アンナチュラル』以来、約8年ぶりの石原さとみ×野木亜紀子。架空の国・ニッポニアの政界を舞台にした怪盗エンターテインメント。主人公は怪盗として政界へと潜り込み、“政治の金”を盗み出していく。"
+      "summary": "架空の国ニッポニアを舞台に、石原さとみ演じる女怪盗・如月弥生が使途不明の「政治の金」を狙う怪盗エンターテインメント。与党の金庫番を務めるエリート議員と駆け引きしながら闇の政治資金を奪っていく。『アンナチュラル』以来約8年ぶりの石原さとみ×野木亜紀子タッグ。"
     },
     {
       "kind": "favorite",
       "title": "豊臣兄弟！",
-      "start": null,
+      "start": "2026-10-11T20:00:00+09:00",
       "slot": "毎週日曜 20:00",
       "channel": "NHK総合",
       "is_premiere": false,
       "reason": "仲野太賀（主演）",
       "image": "https://www.crank-in.net/img/db/251104059155135_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2195",
-      "summary": "「秀長が長生きしていれば豊臣家の天下は安泰だった」とまで言わしめた天下一の補佐役・秀長（仲野太賀）の目線で戦国時代を描く、下剋上サクセスストーリー。兄・秀吉は池松壮亮。"
+      "source": "https://www.crank-in.net/drama/spring2026/1947",
+      "summary": "豊臣秀吉の弟・秀長（仲野太賀）の視点から戦国時代を描く大河ドラマ。兄・秀吉（池松壮亮）に誘われて武士となった小一郎が、兄弟で天下という夢に挑む下剋上の物語。"
     },
     {
       "kind": "favorite",
@@ -44,7 +44,31 @@
       "reason": "松たか子",
       "image": "https://www.crank-in.net/img/db/255057293130191_1200.jpg",
       "source": "https://www.crank-in.net/drama/autumn2026/2259",
-      "summary": "明治・大正・昭和を駆け抜けた作家・宇野千代の生涯を大胆に再構成したフィクション。小説を書く夢をあきらめず、故郷の山口・岩国を飛び出した主人公・葉野珠（石橋静河）の姿を描く。"
+      "summary": "作家・宇野千代の生涯をもとに大胆に再構成した連続テレビ小説。山口県岩国から上京した葉野珠（石橋静河）が作家を志し、震災や戦争、結婚と離婚といった困難を越えて自由を求めて生きる姿を描く。"
+    },
+    {
+      "kind": "favorite",
+      "title": "バックパッカー仲野太賀 in モロッコ",
+      "start": "2026-10-09T19:30:00+09:00",
+      "slot": "単発 10/9（金）19:30",
+      "channel": "NHK BS",
+      "is_premiere": false,
+      "reason": "仲野太賀（紀行番組。新作か再放送かは未確認）",
+      "image": null,
+      "source": "https://thetv.jp/person/2000042074/",
+      "summary": "仲野太賀がモロッコを旅する紀行番組。"
+    },
+    {
+      "kind": "favorite",
+      "title": "ビストロボイス「矢野顕子×松たか子」EP2",
+      "start": "2026-10-10T21:00:00+09:00",
+      "slot": "単発 10/10（土）21:00",
+      "channel": "NHK Eテレ",
+      "is_premiere": false,
+      "reason": "松たか子（ゲスト）",
+      "image": null,
+      "source": "https://thetv.jp/person/0000009262/",
+      "summary": "歌手・俳優が「声」について語り合うトーク番組。矢野顕子と松たか子の回の第2回。"
     },
     {
       "kind": "local_interest",
@@ -56,35 +80,36 @@
       "reason": "長崎・波佐見町が舞台（期間外だが予告として掲載）",
       "image": "https://www.crank-in.net/img/db/241033264180205_1200.jpg",
       "source": "https://www.crank-in.net/drama/autumn2026/2260",
-      "summary": "長崎県波佐見町の焼き物づくりが舞台の大人のラブストーリー。不器用な男女（松井玲奈ほか）が工房の仲間に支えられながら少しずつ心を開き、器と人生を創り出していく。"
+      "summary": "同名漫画が原作のラブストーリー。波佐見で絵付け職人として働く青子（松井玲奈）のもとに、フィンランドから孤高の陶芸家・龍生がやってくる。不器用な二人が工房の仲間に支えられて少しずつ心を開いていく。"
     },
     {
       "kind": "discovery",
-      "title": "俺たちの箱根駅伝",
-      "start": "2026-10-10T21:00:00+09:00",
-      "slot": "毎週土曜 21:00（初回40分拡大）",
-      "channel": "日本テレビ系（長崎：NIB）",
+      "title": "救命病棟24時（第6シリーズ）",
+      "start": "2026-10-12T21:00:00+09:00",
+      "slot": "毎週月曜 21:00",
+      "channel": "フジテレビ系（長崎：KTN）",
       "is_premiere": true,
-      "reason": "出会いの1本：池井戸潤原作×大泉洋主演の話題作",
-      "image": "https://www.crank-in.net/img/db/268080123186210_1200.jpg",
-      "source": "https://www.crank-in.net/drama/autumn2026/2197",
-      "summary": "箱根駅伝をテーマに、池井戸潤が十余年をかけて執筆した同名小説を映像化。人々が箱根駅伝に懸ける青春とプライドを、選手側とテレビ局側の目線から描き出す。主演は大泉洋。"
+      "reason": "出会いの1本：江口洋介×松嶋菜々子が16年ぶりに再共演する人気シリーズの新作",
+      "image": "https://www.crank-in.net/img/db/268090285106372_1200.jpg",
+      "source": "https://www.crank-in.net/drama/autumn2026/2285",
+      "summary": "1999年から続く救命医療ドラマの第6シリーズ。医師の働き方改革や世代間の価値観の違い、命の選択がテーマ。進藤一生（江口洋介）と小島楓（松嶋菜々子）が若い医師や看護師とぶつかりながら、救命医として大切なことを伝えていく。"
     }
   ],
   "regular_programs": [
     {
       "title": "ブラタモリ",
       "channel": "NHK総合",
-      "slot": "土曜（毎週ではなく不定期に放送）",
-      "status": "2026年は9/26の奈良・飛鳥SPまで放送済み。次回は未確認",
-      "source": "https://thetvdb.com/series/tamori-bra/seasons/official/2026"
+      "slot": "土曜 19:30",
+      "start": "2026-10-10T19:30:00+09:00",
+      "status": "10/10「北海道・十勝 なぜ農業王国に？」、10/17「農業王国・北海道十勝 豆に翻弄された人々と豊かな大地の秘密」",
+      "source": "https://thetv.jp/program/0000806274/plot/"
     },
     {
       "title": "相棒",
       "channel": "テレビ朝日系（長崎：NCC）",
       "slot": "毎週水曜 21:00",
       "start": "2026-10-21T21:00:00+09:00",
-      "status": "season25が10/21スタート（初回スペシャル）",
+      "status": "season25が10/21スタート（初回拡大スペシャル）",
       "summary": "現行連続ドラマで日本最長シリーズの新記録となるメモリアルシーズン。杉下右京（水谷豊）と亀山薫（寺脇康文）のコンビが12年目に入り、初回スペシャルでは現職総理を巡る国家レベルの危機と“解いてはならない謎”に挑む。",
       "image": "https://www.crank-in.net/img/db/268081272174249_1200.jpg",
       "source": "https://www.crank-in.net/drama/autumn2026/2295"
@@ -98,18 +123,18 @@
       "start": "2026-10-03",
       "reason": "秋アニメ・見放題",
       "image": "https://www.crank-in.net/img/db/267082176166206_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270",
-      "summary": "舞台を後宮から市井へと移し、猫猫と壬氏に待ち受ける新たな試練が描かれる。"
+      "source": "https://dengekionline.com/article/202609/89529",
+      "summary": "人気シリーズの第3期。舞台を後宮から市井へと移し、猫猫と壬氏に新たな試練が待ち受ける。"
     },
     {
       "service": "Prime Video",
       "subscribed": true,
-      "title": "佐々木とピーちゃん Season2",
-      "start": "2026-10-07",
-      "reason": "秋アニメ・見放題",
-      "image": "https://www.crank-in.net/img/db/266095167101570_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270",
-      "summary": "異世界から転生してきた賢者で文鳥のピーちゃんと、ピーちゃんをペットショップで買ったことから異世界を行き来できるようになった佐々木を軸に描かれるファンタジー。"
+      "title": "転生した大聖女は、聖女であることをひた隠す",
+      "start": "2026-10-03",
+      "reason": "秋アニメ・地上波より1週間先行",
+      "image": null,
+      "source": "https://dengekionline.com/article/202609/86990",
+      "summary": "騎士を目指す少女フィーアが、死にかけたことをきっかけに300年前の大聖女だった前世を思い出す。聖女と知られれば殺されるため力を隠すが、人助けのたびに使ってしまう。毎週土曜22時配信。"
     },
     {
       "service": "Prime Video",
@@ -118,152 +143,225 @@
       "start": "2026-10-04",
       "reason": "秋アニメ・世界独占",
       "image": "https://www.crank-in.net/img/db/266085109149234_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270",
-      "summary": "8つの国の中心に位置するマロニエ王国を舞台に、7人兄弟の騎士がそれぞれ7つの国へ大使として派遣され、運命の相手を見つけていく恋と冒険のファンタジーロマンス。"
+      "source": "https://gamebiz.jp/news/433310",
+      "summary": "マロニエ王国の7人兄弟の騎士が、それぞれ7つの国へ大使として派遣され、運命の相手を見つけていく恋と冒険のファンタジーロマンス。"
     },
     {
       "service": "Prime Video",
       "subscribed": true,
       "title": "TANK CHAIR-戦車椅子-",
       "start": "2026-10-04",
-      "reason": "秋アニメ・見放題",
+      "reason": "秋アニメ・見放題最速",
       "image": "https://www.crank-in.net/img/db/264086126165584_1200.jpg",
-      "source": "https://gamebiz.jp/news/433270",
+      "source": "https://dengekionline.com/article/202609/89529",
       "summary": "互いを支え合う兄妹と、個性豊かな敵との戦いを描くバイオレンスアクション。"
     },
     {
-      "service": "Disney+",
-      "subscribed": false,
-      "title": "殺し屋たちの店 2",
-      "start": "2026-07-22",
-      "reason": "岡田将生（参考）",
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "転生ゴブリンだけど質問ある？",
+      "start": "2026-10-05",
+      "reason": "秋アニメ・地上波より1週間先行",
       "image": null,
-      "source": "https://thetv.jp/news/detail/1433535/",
-      "summary": "世界的にヒットした韓国ドラマのシーズン2。岡田将生が韓国ドラマに初出演し、謎めいた傭兵“J”を演じる（全8話）。"
+      "source": "https://www.inside-games.jp/release/prtimes/20260909/306052.html",
+      "summary": "子どもをかばって亡くなった会社員が、寿命7日のゴブリンに転生。スキル「人間80年」で仲間のスキルを受け継ぎながら生き抜く無双ファンタジー。毎週月曜22時配信。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "佐々木とピーちゃん Season2",
+      "start": "2026-10-07",
+      "reason": "秋アニメ・見放題最速",
+      "image": "https://www.crank-in.net/img/db/266095167101570_1200.jpg",
+      "source": "https://gamebiz.jp/news/433310",
+      "summary": "異世界と現代日本を行き来するファンタジーと異能バトルの第2期。毎週水曜22:30から、TOKYO MXの放送より30分早く配信。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "ドラゴンボール超 ビルス",
+      "start": "2026-10-12",
+      "reason": "秋アニメ・最速見放題",
+      "image": "https://www.crank-in.net/img/db/268048209144105_1200.jpg",
+      "source": "https://dengekionline.com/article/202609/89529",
+      "summary": "『ドラゴンボール超』を最新の映像表現で作り直したエンハンスド版。孫悟空と破壊神ビルスの戦いを描く。"
     }
   ],
   "movies": [
     {
       "title": "キングダム 魂の決戦",
-      "theater": "ローソン・ユナイテッドシネマ長崎",
+      "theater": "ローソン・ユナイテッドシネマ長崎／TOHOシネマズ長崎",
       "released": "2026-07-17",
       "reason": "岡山天音",
       "image": null,
-      "source": "https://www.crank-in.net/theater/search/all/42/80044",
-      "note": "7月公開のため上映終了が近い可能性"
+      "source": "https://www.crank-in.net/theater/search/all/42/80122",
+      "note": "10/13〜15頃まで上映を確認。TOHOは1日1回20時台"
+    },
+    {
+      "title": "我々は宇宙人",
+      "theater": "TOHOシネマズ長崎",
+      "released": "2026-09-25",
+      "reason": "岡山天音（声の出演）",
+      "image": null,
+      "source": "https://www.crank-in.net/theater/search/all/42/80122",
+      "note": "吹替版・字幕版あり。キャストは https://movie.jorudan.co.jp/film/102283/ で確認"
     }
   ],
   "local": [
     {
-      "date_from": "2026-10-03",
-      "date_to": "2026-10-04",
+      "date_from": "2026-07-17",
+      "date_to": "2026-10-31",
+      "category": "other",
+      "genre": "夜間イベント",
+      "title": "グラバー園ランタンナイト",
+      "place": "グラバー園（長崎市）",
+      "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/102124/responsive_images/bjppY6pLu3oMkDMiHNONbzHHiVTx2hGMFpxfnHUA__1685_1191.png",
+      "source": "https://www.nagasaki-tabinet.com/event/102124",
+      "note": "日没〜21:30・実施しない日あり",
+      "summary": "約400個のランタンとイルミネーションでグラバー園を彩る夜のイベント。洋館のライトアップと長崎の夜景を一緒に楽しめる。日没〜21:30（最終入園21:10）、実施しない日あり。"
+    },
+    {
+      "date_from": "2026-09-01",
+      "date_to": "2026-10-31",
       "category": "food",
-      "genre": "マルシェ",
-      "title": "NAGASAKI護国神社の庭フェス",
-      "place": "長崎護国神社（長崎市）",
-      "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/101112/responsive_images/6dK3GaU3dkbmkyraI6riTMZPVVgsFS4ZIlxvlj6y__1652_1239.jpeg",
-      "source": "https://www.nagasaki-tabinet.com/event/101112",
-      "note": "約80店・10:00〜17:00頃",
-      "summary": "春と秋に開かれる人気マルシェ。約80店が手仕事の品や食べ物を出店し、神社の森の中でゆったり買い物を楽しめる。10:00〜17:00頃。"
-    },
-    {
-      "date_from": "2026-10-03",
-      "date_to": "2026-10-03",
-      "category": "other",
-      "genre": "伝統芸能",
-      "title": "島原城薪能",
-      "place": "島原城天守閣前広場",
+      "genre": "ご当地御膳",
+      "title": "多久御膳祭（たくごぜんフェア）",
+      "place": "多久市内の参加飲食店15店（多久市）",
       "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
+      "source": "https://www.asobo-saga.jp/events/detail/15ed9b44-0db4-4f3e-a43e-0908a27c5ebd",
+      "note": "1,000〜2,900円",
+      "summary": "多久市内の15店が、このフェアのためのオリジナル御膳を期間限定で出す。価格は店により1,000〜2,900円。スタンプラリーと期間限定クーポンもあり。"
     },
     {
-      "date_from": "2026-10-03",
-      "date_to": "2026-11-08",
+      "date_from": "2026-09-12",
+      "date_to": "2026-11-23",
       "category": "other",
-      "genre": "展示",
-      "title": "文化財未来継承プロジェクト『綴』",
-      "place": "長崎歴史文化博物館",
-      "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
+      "genre": "企画展（昆虫）",
+      "title": "長崎バイオパーク 日本の昆虫展",
+      "place": "長崎バイオパーク（西海市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/04/l2/609604.jpg",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10639094.htm",
+      "note": "10:00〜16:50・入園料のみ",
+      "summary": "スズムシやコオロギなど秋に鳴く虫、オオクワガタ、クツワムシなど、今では珍しくなった日本の昆虫を生体と標本で展示。10:00〜16:50（入園16:00まで）、入園料のみで見られる（大人2,100円）。"
     },
     {
-      "date_from": "2026-10-04",
-      "date_to": "2026-10-04",
+      "date_from": "2026-09-18",
+      "date_to": "2026-11-03",
+      "category": "other",
+      "genre": "ナイトショー（ハロウィン）",
+      "title": "ハウステンボス ホーンテッド・ハロウィン",
+      "place": "ハウステンボス（佐世保市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/38/l2/565838_1.jpg",
+      "source": "https://www.walkerplus.com/event/ar1042e565838/",
+      "note": "10月は18:00〜・火水休演",
+      "summary": "本格ホラーが体験できるハロウィンのナイトイベント。10月は18:00開演で1日2〜4公演の完全入れ替え制、火・水曜は休演（祝日は開演）。苦手な人向けのセーフティエリアもある。"
+    },
+    {
+      "date_from": "2026-10-01",
+      "date_to": "2026-10-31",
       "category": "food",
-      "genre": "朝市・マルシェ",
-      "title": "呼子マルシェ",
-      "place": "呼子朝市通り（唐津市）",
-      "image": "https://www.asobo-saga.jp/files/download/events/06b6b53c-5332-47ac-891d-d1f6f3b985c8/image/40ad4cedcd2a155e695a5c9078c29211.jpg",
-      "source": "https://www.asobo-saga.jp/events/detail/06b6b53c-5332-47ac-891d-d1f6f3b985c8",
-      "note": "8:00〜14:00。10/17はナイトマルシェ",
-      "summary": "新鮮な魚介や野菜、イカの一夜干しが並ぶ呼子朝市通りに、グルメや雑貨の出店者が集まる。8:00〜14:00。"
+      "genre": "アフタヌーンティー",
+      "title": "真夜中の秋色 Monsters' Autumn Feast",
+      "place": "スタジアムシティホテル長崎 7F ヴィヴェルデ（長崎市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/77/l2/615077.jpg",
+      "source": "https://www.walkerplus.com/event/ar1042e615077/",
+      "note": "2部制 11:30〜／14:00〜",
+      "summary": "長崎スタジアムシティのホテルで開かれるハロウィンがテーマの期間限定アフタヌーンティー。ドリンクはそのぎ茶やびわ茶などから選べる飲み放題。11:30〜と14:00〜の2部制。"
     },
     {
-      "date_from": "2026-10-07",
-      "date_to": "2026-10-09",
+      "date_from": "2026-10-01",
+      "date_to": "2026-11-29",
       "category": "other",
-      "genre": "祭り",
-      "title": "長崎くんち",
-      "place": "諏訪神社・中央公園ほか",
-      "image": null,
-      "source": "https://jal.japantravel.com/nagasaki/nagasaki-kunchi-festival/71927",
-      "note": "10/4は人数揃い",
-      "summary": "諏訪神社の秋の大祭。諏訪神社・御旅所・八坂神社・中央公園の4会場のほか、市内各地で奉納踊りが見られる。"
+      "genre": "近代化遺産ライトアップ",
+      "title": "針尾送信所ライトアップ・夜間公開",
+      "place": "針尾送信所（佐世保市）",
+      "image": "https://cdn-travel.ekitan.com/img/ebk/10648529.jpg",
+      "source": "https://ekitan.com/event/evid-f7da7060a1af6ca7b1aa60d0c07ca2eb",
+      "note": "無料・18:00〜21:00（日程限定）",
+      "summary": "建設100年を迎えた国の重要文化財、巨大な無線塔3本をライトアップ（無料）。期間内は10/8〜13と10/19〜22の18:00〜21:00、10/10は16:00〜20:00に夜間公開も。車で佐世保大塔ICから約20分。"
+    },
+    {
+      "date_from": "2026-10-01",
+      "date_to": "2026-11-30",
+      "category": "food",
+      "genre": "ご当地丼",
+      "title": "さいかい丼フェア",
+      "place": "西海市内のフェア参加店（西海市）",
+      "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/60789/responsive_images/Co9YJlfx0i37RkAvpJWcJgil4DsuaNzO0p637gV4__1728_1152.jpeg",
+      "source": "https://www.nagasaki-tabinet.com/event/60789",
+      "note": "マイ箸持参で特典",
+      "summary": "西海市の飲食店が地元の農水産物を使ったオリジナル丼を出すグルメフェア。マイ箸を持参すると店ごとに特典がある。土日祝は混雑予想。"
+    },
+    {
+      "date_from": "2026-10-09",
+      "date_to": "2026-10-12",
+      "category": "food",
+      "genre": "肉フェス",
+      "title": "肉肉パーク 佐賀城跡",
+      "place": "佐賀城跡 低床広場（佐賀市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/17/l2/615717.jpg",
+      "source": "https://www.walkerplus.com/event/ar1041e615717/",
+      "note": "入場無料",
+      "summary": "人気の肉料理店24店が看板メニューを出す肉フェス。10/9は17:00〜21:00、10/10・11は11:00〜21:00、10/12は11:00〜20:00。入場無料。"
     },
     {
       "date_from": "2026-10-10",
       "date_to": "2026-10-10",
       "category": "other",
-      "genre": "花火",
-      "title": "九州花火大会",
-      "place": "唐津市 松浦川右岸",
-      "image": null,
-      "source": "https://www.asobo-saga.jp/events/detail/fee60902-0206-46b3-a6e0-9ddebbd91165",
-      "summary": "唐津・松浦川の右岸で行われる花火大会。今年で第74回。"
+      "genre": "流鏑馬・時代まつり",
+      "title": "成富兵庫茂安公「時代まつり」・奉納流鏑馬",
+      "place": "白石神社外苑（みやき町）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/00/l2/606900.jpg",
+      "source": "https://www.walkerplus.com/event/ar1041e606900/",
+      "note": "10:00〜16:00・流鏑馬13:00ごろ",
+      "summary": "治水で知られる武将・成富兵庫茂安をたたえる祭り。目玉は13:00ごろからの奉納流鏑馬。10:00〜16:00で、ステージ、物産販売、武者行列もある。"
+    },
+    {
+      "date_from": "2026-10-10",
+      "date_to": "2026-10-11",
+      "category": "food",
+      "genre": "酒蔵開き",
+      "title": "潜龍酒造 蔵開き〜秋の陣〜",
+      "place": "潜龍酒造（佐世保市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/46/l2/614746.jpg",
+      "source": "https://www.walkerplus.com/event/ar1042e614746/",
+      "note": "10:00〜16:00",
+      "summary": "伝統的な技法で造った酒を味わえる恒例の蔵開き。県指定文化財の「もと蔵」と「本陣屋敷」を無料開放し、地元グルメも並ぶ。10:00〜16:00、蔵見学ツアーあり。"
     },
     {
       "date_from": "2026-10-10",
       "date_to": "2026-10-12",
       "category": "food",
-      "genre": "夜の窯元・食",
-      "title": "吉田皿屋ひかりぼし",
-      "place": "肥前吉田焼窯元会館周辺（嬉野市）",
-      "image": "https://www.asobo-saga.jp/files/download/events/6e5f2ac4-79f4-4ac3-af1a-8870493187ad/image/6df3621eb9b9ab798dcea15406183854.jpg",
-      "source": "https://www.asobo-saga.jp/events/detail/6e5f2ac4-79f4-4ac3-af1a-8870493187ad",
-      "note": "18:00〜21:30・入場500円",
-      "summary": "肥前吉田焼の産地で開かれる夜のイベント。「ボシ」と呼ばれる窯道具に淡い光を灯し、幻想的な街並みに。夜間の工房見学や食とのコラボ企画も。18:00〜21:30・入場500円。"
+      "genre": "パンマルシェ",
+      "title": "パンマルシェ vol.19",
+      "place": "アミュプラザ長崎 かもめ広場（長崎市）",
+      "image": "https://www.nagasaki-press.com/press/wp-content/uploads/2026/09/2610_amu.jpg",
+      "source": "https://www.nagasaki-press.com/event/post-180526/",
+      "summary": "長崎・福岡を中心に県内外の人気ベーカリーが長崎駅前に集まる。ベーグルの店やキッチンカーも出て、持ち帰りもその場で食べるのもOK。"
     },
     {
-      "date_from": "2026-10-14",
-      "date_to": "2026-10-15",
+      "date_from": "2026-10-10",
+      "date_to": "2026-12-20",
       "category": "other",
-      "genre": "伝統芸能",
-      "title": "竹ン芸",
-      "place": "若宮稲荷神社（長崎市）",
-      "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
-    },
-    {
-      "date_from": "2026-10-16",
-      "date_to": "2026-10-18",
-      "category": "food",
-      "genre": "グルメ",
-      "title": "肉肉パーク佐世保",
-      "place": "新みなとイベント広場（佐世保市）",
-      "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
+      "genre": "展示（国宝）",
+      "title": "徴古館 企画展「佐賀のたから」",
+      "place": "徴古館（佐賀市）",
+      "image": "https://www.asobo-saga.jp/files/download/events/eff2c830-daf0-46ec-a346-17d60424cdf4/image/127c7962bef394f50712288edadc921a.jpg",
+      "source": "https://www.asobo-saga.jp/events/detail/eff2c830-daf0-46ec-a346-17d60424cdf4",
+      "note": "9:30〜16:00・300円",
+      "summary": "鍋島家に伝わる重要文化財などを展示し、佐賀県唯一の国宝「催馬楽譜」も見られる。9:30〜16:00（最終入館15:40）、入館料300円。"
     },
     {
       "date_from": "2026-10-16",
       "date_to": "2026-10-18",
       "category": "other",
-      "genre": "祭り",
-      "title": "YOSAKOIさせぼ祭り",
-      "place": "佐世保市街地",
-      "image": "https://www.nagasaki-tabinet.com/storage/tourism_attractions/51727/responsive_images/yH8UEyR5vFUJjYOx9l4sqU09wEscholj76aSpsfi__1712_1241.jpeg",
-      "source": "https://www.nagasaki-tabinet.com/event/51727",
-      "note": "16日は前夜祭",
-      "summary": "佐世保の市街地一帯でYOSAKOIチームが踊る大型の祭り。16日は前夜祭。"
+      "genre": "伝統芸能・祭り",
+      "title": "相知くんち",
+      "place": "熊野神社・相知宿通り（唐津市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/71/l2/615771.jpg",
+      "source": "https://www.walkerplus.com/event/ar1041e615771/",
+      "note": "はんぐま行列",
+      "summary": "長さ3.45mの毛槍を投げ渡す「はんぐま」の行列が見どころの秋祭り。10/16 18:30〜宵山、10/17 10:40ごろ〜御神幸、10/18 10:30〜子どもはんぐまと山鉾巡行。"
     },
     {
       "date_from": "2026-10-17",
@@ -271,87 +369,100 @@
       "category": "food",
       "genre": "ナイトマルシェ",
       "title": "呼子ナイトマルシェ",
-      "place": "呼子朝市通り（唐津市）",
+      "place": "呼子朝市通り周辺（唐津市）",
       "image": "https://www.asobo-saga.jp/files/download/events/06b6b53c-5332-47ac-891d-d1f6f3b985c8/image/40ad4cedcd2a155e695a5c9078c29211.jpg",
       "source": "https://www.asobo-saga.jp/events/detail/06b6b53c-5332-47ac-891d-d1f6f3b985c8",
       "note": "17:00〜21:00",
-      "summary": "呼子朝市通りに夜の出店が集まるナイトマルシェ。17:00〜21:00。"
+      "summary": "呼子朝市通りに食べ物・クラフト・雑貨の店が並ぶ夜のマルシェ。17:00〜21:00、入場無料（駐車場は有料）。同じ夜に呼子くんちの宵山も。"
     },
     {
       "date_from": "2026-10-17",
-      "date_to": "2026-10-18",
-      "category": "food",
-      "genre": "グルメ・物産",
-      "title": "島原城大手門市",
-      "place": "島原市役所大手広場",
-      "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
-    },
-    {
-      "date_from": "2026-10-17",
-      "date_to": "2026-10-18",
-      "category": "food",
-      "genre": "グルメ・異国文化",
-      "title": "タイフェスティバル in SAGA",
-      "place": "佐賀城公園南濠",
-      "image": null,
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/saga.htm"
-    },
-    {
-      "date_from": "2026-10-17",
-      "date_to": "2026-10-18",
+      "date_to": "2026-10-17",
       "category": "other",
-      "genre": "アート・音楽",
-      "title": "佐賀さいこうフェスVol.11",
-      "place": "佐賀県立博物館・美術館前",
-      "image": "https://www.asobo-saga.jp/files/download/events/05fdb05e-836c-4dd1-934f-6a73fc2d206b/image/8caa6dad9dfc8efc095ee5494e19a681.jpg",
-      "source": "https://www.asobo-saga.jp/events/detail/05fdb05e-836c-4dd1-934f-6a73fc2d206b",
-      "note": "入場無料（一部有料）",
-      "summary": "「文化・芸術のチカラで佐賀をもっと『さいこう』に」がテーマ。アーティストとのワークショップ、音楽ステージ、グルメなど。入場無料（一部有料）。"
+      "genre": "祭り",
+      "title": "しまばら温泉不知火まつり 歴史奉納パレード",
+      "place": "島原一番街・サンシャイン中央街ほか（島原市）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/92/l2/616892.jpg",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10646056.htm",
+      "note": "11:00〜12:30・無料",
+      "summary": "島原の秋祭り。キリシタン行列や武者行列、約300人の甲冑行列、山車が商店街を進む。11:00〜12:30、観覧無料。"
     },
     {
       "date_from": null,
       "date_to": null,
       "category": "day_trip",
       "genre": "日帰り定番",
-      "title": "雲仙温泉",
-      "place": "雲仙市",
-      "image": null,
-      "source": null
+      "title": "吉野ヶ里歴史公園",
+      "place": "吉野ヶ里町（佐賀県）",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/63/l2/615063.jpg",
+      "source": "https://www.walkerplus.com/event/ar1041e615063/",
+      "summary": "11/8まで特別企画展「よみがえる邪馬台国 豊のクニと丹後のクニ」を開催中（期間中無休、9:00〜17:00）。入園料は大人460円。10/17・18は臨時駐車場で「花とみどりの市 inグランマルシェ」（10:00〜16:00）も。"
     },
     {
       "date_from": null,
       "date_to": null,
       "category": "day_trip",
       "genre": "テーマパーク",
-      "title": "佐賀県立宇宙科学館（ゆめぎんが）",
-      "place": "武雄市",
-      "image": null,
-      "summary": "「宇宙から地球・佐賀を発見する」がテーマの総合科学博物館。プラネタリウムと天文台があり、宇宙発見ゾーンは2024年に全面リニューアル。平日9:15〜17:15・土日祝は18:00まで、月曜休館。大人520円。武雄温泉とセットにも。",
-      "source": "https://www.museum.or.jp/museum/7109"
+      "title": "おおむら夢ファーム シュシュ",
+      "place": "大村市",
+      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/images/l2/55617.jpg",
+      "source": "https://www.walkerplus.com/spot/ar1042s37948/data.html",
+      "summary": "大村の丘にある農業体験型の施設で、食事処や収穫体験がある。10:00〜18:00（ランチ11:00〜15:00）、10月は休みなし。入園料は3歳以上500円（掲載時点）。"
     }
   ],
   "coming_soon": [
     {
+      "date_from": "2026-10-24",
+      "date_to": "2026-10-25",
+      "title": "吉野ヶ里ふるさと炎まつり",
+      "place": "吉野ヶ里歴史公園（吉野ヶ里町）",
+      "source": "https://www.asobo-saga.jp/events/detail/b56fde39-d3e6-4f4a-a7e4-538b15e13c1f"
+    },
+    {
+      "date_from": "2026-10-29",
+      "date_to": "2027-02-14",
+      "title": "サガ・ライトファンタジー2026",
+      "place": "佐賀中央大通り シンボルロード（佐賀市）",
+      "source": "https://www.asobo-saga.jp/events/detail/2d7dcb78-4386-4253-b65c-73a73e100a8e"
+    },
+    {
       "date_from": "2026-10-30",
       "date_to": "2026-11-03",
       "title": "佐賀インターナショナルバルーンフェスタ",
-      "place": "嘉瀬川河川敷（佐賀市）"
+      "place": "嘉瀬川河川敷（佐賀市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10639268.htm"
+    },
+    {
+      "date_from": "2026-10-31",
+      "date_to": "2026-11-01",
+      "title": "かっちぇてアイラブ西九州フェア",
+      "place": "新みなと暫定広場（佐世保市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10647913.htm"
+    },
+    {
+      "date_from": "2026-11-01",
+      "date_to": "2026-11-03",
+      "title": "させぼくんち",
+      "place": "亀山八幡宮（佐世保市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10639195.htm"
     },
     {
       "date_from": "2026-11-02",
       "date_to": "2026-11-04",
       "title": "唐津くんち",
-      "place": "唐津市中心市街地"
+      "place": "唐津市中心市街地",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10628995.htm"
     }
   ],
   "sources": [
+    "https://www.nagasaki-tabinet.com/event",
+    "https://www.asobo-saga.jp/events/",
     "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm",
     "https://www.nta.co.jp/kokunai/special/eventinfo/saga.htm",
-    "https://rurubu.jp/andmore/spot/20000210",
+    "https://www.walkerplus.com/",
     "https://www.crank-in.net/drama/autumn2026",
-    "https://gamebiz.jp/news/433270",
-    "https://www.nagasaki-tabinet.com/event",
-    "https://www.asobo-saga.jp/events/"
+    "https://thetv.jp/",
+    "https://dengekionline.com/article/202609/89529",
+    "https://gamebiz.jp/news/433310"
   ]
 }
