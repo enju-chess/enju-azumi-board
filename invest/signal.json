@@ -1,9 +1,9 @@
 {
  "market": "us",
- "updated": "2026-10-09 07:55",
- "price_date": "2026-10-08",
+ "updated": "2026-10-10 07:54",
+ "price_date": "2026-10-09",
  "rule": "S&P500（AI関連を除く）の6ヶ月モメンタム上位10銘柄を均等な金額で持つ。毎月末に入れ替え。",
- "usdjpy": 157.87,
+ "usdjpy": 158.25,
  "dip_rule": false,
  "official": {
   "date": "2026-09-30",
@@ -13,215 +13,215 @@
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
     "momentum": 1.3835,
-    "price": 398.5
+    "price": 418.78
    },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
     "momentum": 1.3667,
-    "price": 263.01
+    "price": 275.04
    },
    {
     "ticker": "HUM",
     "name": "Humana",
     "sector": "Health Care",
     "momentum": 1.2154,
-    "price": 387.12
+    "price": 431.87
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
     "momentum": 1.0917,
-    "price": 189.1
+    "price": 194.75
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
     "momentum": 1.008,
-    "price": 273.8
+    "price": 293.26
    },
    {
     "ticker": "CNC",
     "name": "Centene Corporation",
     "sector": "Health Care",
     "momentum": 0.9652,
-    "price": 64.54
+    "price": 65.36
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
     "momentum": 0.8728,
-    "price": 275.77
+    "price": 289.47
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
     "momentum": 0.7332,
-    "price": 264.57
+    "price": 278.17
    },
    {
     "ticker": "ZBRA",
     "name": "Zebra Technologies",
     "sector": "Information Technology",
     "momentum": 0.691,
-    "price": 382.14
+    "price": 387.18
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
     "momentum": 0.671,
-    "price": 298.0
+    "price": 301.79
    },
    {
     "ticker": "FLEX",
     "name": "Flex Ltd.",
     "sector": "Information Technology",
     "momentum": 0.669,
-    "price": 114.74
+    "price": 119.83
    },
    {
     "ticker": "GEN",
     "name": "Gen Digital",
     "sector": "Information Technology",
     "momentum": 0.6624,
-    "price": 22.75
+    "price": 23.25
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
     "momentum": 0.6264,
-    "price": 284.84
+    "price": 296.13
    },
    {
     "ticker": "HPQ",
     "name": "HP Inc.",
     "sector": "Information Technology",
     "momentum": 0.5818,
-    "price": 32.44
+    "price": 30.2
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
     "momentum": 0.5744,
-    "price": 150.57
+    "price": 154.49
    }
   ]
  },
  "latest": {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "top": [
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
-    "momentum": 1.106,
-    "price": 263.01
-   },
-   {
-    "ticker": "DDOG",
-    "name": "Datadog",
-    "sector": "Information Technology",
-    "momentum": 1.0671,
-    "price": 273.8
-   },
-   {
-    "ticker": "HUM",
-    "name": "Humana",
-    "sector": "Health Care",
-    "momentum": 1.032,
-    "price": 387.12
+    "momentum": 1.2042,
+    "price": 275.04
    },
    {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
-    "momentum": 1.0067,
-    "price": 398.5
+    "momentum": 1.1736,
+    "price": 418.78
+   },
+   {
+    "ticker": "DDOG",
+    "name": "Datadog",
+    "sector": "Information Technology",
+    "momentum": 1.1042,
+    "price": 293.26
+   },
+   {
+    "ticker": "HUM",
+    "name": "Humana",
+    "sector": "Health Care",
+    "momentum": 1.0904,
+    "price": 431.87
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
-    "momentum": 0.9492,
-    "price": 189.1
+    "momentum": 1.0711,
+    "price": 194.75
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
-    "momentum": 0.82,
-    "price": 275.77
+    "momentum": 0.9646,
+    "price": 289.47
    },
    {
     "ticker": "HPQ",
     "name": "HP Inc.",
     "sector": "Information Technology",
-    "momentum": 0.801,
-    "price": 32.44
+    "momentum": 0.8319,
+    "price": 30.2
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
-    "momentum": 0.7988,
-    "price": 463.34
+    "momentum": 0.7743,
+    "price": 455.03
    },
    {
     "ticker": "CNC",
     "name": "Centene Corporation",
     "sector": "Health Care",
-    "momentum": 0.706,
-    "price": 64.54
-   },
-   {
-    "ticker": "VLO",
-    "name": "Valero Energy",
-    "sector": "Energy",
-    "momentum": 0.6687,
-    "price": 443.8
+    "momentum": 0.7534,
+    "price": 65.36
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
-    "momentum": 0.6603,
-    "price": 284.84
+    "momentum": 0.7234,
+    "price": 296.13
+   },
+   {
+    "ticker": "GEN",
+    "name": "Gen Digital",
+    "sector": "Information Technology",
+    "momentum": 0.6916,
+    "price": 23.25
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
-    "momentum": 0.6576,
-    "price": 264.57
+    "momentum": 0.6644,
+    "price": 278.17
    },
    {
     "ticker": "WDAY",
     "name": "Workday, Inc.",
     "sector": "Information Technology",
-    "momentum": 0.6456,
-    "price": 187.81
-   },
-   {
-    "ticker": "HOOD",
-    "name": "Robinhood Markets",
-    "sector": "Financials",
-    "momentum": 0.644,
-    "price": 107.01
+    "momentum": 0.6452,
+    "price": 186.59
    },
    {
     "ticker": "PSX",
     "name": "Phillips 66",
     "sector": "Energy",
-    "momentum": 0.6395,
-    "price": 281.6
+    "momentum": 0.6438,
+    "price": 278.18
+   },
+   {
+    "ticker": "HOOD",
+    "name": "Robinhood Markets",
+    "sector": "Financials",
+    "momentum": 0.638,
+    "price": 109.02
    }
   ]
  },
