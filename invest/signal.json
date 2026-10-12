@@ -1,9 +1,9 @@
 {
  "market": "us",
- "updated": "2026-10-10 07:54",
- "price_date": "2026-10-09",
+ "updated": "2026-10-13 07:56",
+ "price_date": "2026-10-12",
  "rule": "S&P500（AI関連を除く）の6ヶ月モメンタム上位10銘柄を均等な金額で持つ。毎月末に入れ替え。",
- "usdjpy": 158.25,
+ "usdjpy": 158.61,
  "dip_rule": false,
  "official": {
   "date": "2026-09-30",
@@ -13,215 +13,215 @@
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
     "momentum": 1.3835,
-    "price": 418.78
+    "price": 403.83
    },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
     "momentum": 1.3667,
-    "price": 275.04
+    "price": 263.01
    },
    {
     "ticker": "HUM",
     "name": "Humana",
     "sector": "Health Care",
     "momentum": 1.2154,
-    "price": 431.87
+    "price": 433.5
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
     "momentum": 1.0917,
-    "price": 194.75
+    "price": 192.94
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
     "momentum": 1.008,
-    "price": 293.26
+    "price": 287.29
    },
    {
     "ticker": "CNC",
     "name": "Centene Corporation",
     "sector": "Health Care",
     "momentum": 0.9652,
-    "price": 65.36
+    "price": 67.02
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
     "momentum": 0.8728,
-    "price": 289.47
+    "price": 282.66
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
     "momentum": 0.7332,
-    "price": 278.17
+    "price": 276.67
    },
    {
     "ticker": "ZBRA",
     "name": "Zebra Technologies",
     "sector": "Information Technology",
     "momentum": 0.691,
-    "price": 387.18
+    "price": 388.12
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
     "momentum": 0.671,
-    "price": 301.79
+    "price": 301.86
    },
    {
     "ticker": "FLEX",
     "name": "Flex Ltd.",
     "sector": "Information Technology",
     "momentum": 0.669,
-    "price": 119.83
+    "price": 117.24
    },
    {
     "ticker": "GEN",
     "name": "Gen Digital",
     "sector": "Information Technology",
     "momentum": 0.6624,
-    "price": 23.25
+    "price": 23.35
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
     "momentum": 0.6264,
-    "price": 296.13
+    "price": 295.85
    },
    {
     "ticker": "HPQ",
     "name": "HP Inc.",
     "sector": "Information Technology",
     "momentum": 0.5818,
-    "price": 30.2
+    "price": 29.87
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
     "momentum": 0.5744,
-    "price": 154.49
+    "price": 155.31
    }
   ]
  },
  "latest": {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "top": [
+   {
+    "ticker": "HUM",
+    "name": "Humana",
+    "sector": "Health Care",
+    "momentum": 1.0722,
+    "price": 433.5
+   },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
-    "momentum": 1.2042,
-    "price": 275.04
+    "momentum": 1.0559,
+    "price": 263.01
    },
    {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
-    "momentum": 1.1736,
-    "price": 418.78
+    "momentum": 1.0346,
+    "price": 403.83
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
-    "momentum": 1.1042,
-    "price": 293.26
-   },
-   {
-    "ticker": "HUM",
-    "name": "Humana",
-    "sector": "Health Care",
-    "momentum": 1.0904,
-    "price": 431.87
+    "momentum": 1.0095,
+    "price": 287.29
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
-    "momentum": 1.0711,
-    "price": 194.75
-   },
-   {
-    "ticker": "TWLO",
-    "name": "Twilio",
-    "sector": "Information Technology",
-    "momentum": 0.9646,
-    "price": 289.47
+    "momentum": 0.9821,
+    "price": 192.94
    },
    {
     "ticker": "HPQ",
     "name": "HP Inc.",
     "sector": "Information Technology",
-    "momentum": 0.8319,
-    "price": 30.2
+    "momentum": 0.8856,
+    "price": 29.87
    },
    {
-    "ticker": "MPC",
-    "name": "Marathon Petroleum",
-    "sector": "Energy",
-    "momentum": 0.7743,
-    "price": 455.03
+    "ticker": "TWLO",
+    "name": "Twilio",
+    "sector": "Information Technology",
+    "momentum": 0.8299,
+    "price": 282.66
    },
    {
     "ticker": "CNC",
     "name": "Centene Corporation",
     "sector": "Health Care",
-    "momentum": 0.7534,
-    "price": 65.36
+    "momentum": 0.7726,
+    "price": 67.02
+   },
+   {
+    "ticker": "MPC",
+    "name": "Marathon Petroleum",
+    "sector": "Energy",
+    "momentum": 0.769,
+    "price": 458.81
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
-    "momentum": 0.7234,
-    "price": 296.13
-   },
-   {
-    "ticker": "GEN",
-    "name": "Gen Digital",
-    "sector": "Information Technology",
-    "momentum": 0.6916,
-    "price": 23.25
-   },
-   {
-    "ticker": "ILMN",
-    "name": "Illumina, Inc.",
-    "sector": "Health Care",
-    "momentum": 0.6644,
-    "price": 278.17
-   },
-   {
-    "ticker": "WDAY",
-    "name": "Workday, Inc.",
-    "sector": "Information Technology",
-    "momentum": 0.6452,
-    "price": 186.59
+    "momentum": 0.656,
+    "price": 295.85
    },
    {
     "ticker": "PSX",
     "name": "Phillips 66",
     "sector": "Energy",
-    "momentum": 0.6438,
-    "price": 278.18
+    "momentum": 0.638,
+    "price": 281.47
+   },
+   {
+    "ticker": "VLO",
+    "name": "Valero Energy",
+    "sector": "Energy",
+    "momentum": 0.6267,
+    "price": 436.0
+   },
+   {
+    "ticker": "ILMN",
+    "name": "Illumina, Inc.",
+    "sector": "Health Care",
+    "momentum": 0.6261,
+    "price": 276.67
+   },
+   {
+    "ticker": "GEN",
+    "name": "Gen Digital",
+    "sector": "Information Technology",
+    "momentum": 0.6159,
+    "price": 23.35
    },
    {
     "ticker": "HOOD",
     "name": "Robinhood Markets",
     "sector": "Financials",
-    "momentum": 0.638,
-    "price": 109.02
+    "momentum": 0.5707,
+    "price": 109.22
    }
   ]
  },
