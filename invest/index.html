@@ -48,7 +48,9 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--sub);font-size:13px}
 .wait{display:inline-block;font-size:11px;padding:0 6px;border-radius:99px;border:1px solid var(--line);color:var(--sub);margin-left:4px}
 button.act{font-size:13px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 #alloc th,#alloc td{padding:6px 3px;font-size:12.5px}
-input.sh{width:58px;font-size:16px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);text-align:right}
+input.sh{width:50px;font-size:16px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);text-align:right}
+.tn{max-width:6em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12.5px}
+#swap .tag{font-size:13px}
 </style>
 </head>
 <body>
@@ -57,17 +59,17 @@ input.sh{width:58px;font-size:16px;padding:4px 6px;border:1px solid var(--line);
 <div class="tabs"><button data-m="us">米国株</button><button data-m="jp">日本株</button></div>
 <div class="meta" id="meta">読み込み中…</div>
 
-<h2>今月持つ10銘柄 <small id="offdate"></small></h2>
-<div class="card" id="official"></div>
-<p class="note" id="offnote"></p>
-
-<h2>入れ替えと買付額の目安</h2>
+<h2>買う株数・売る株数</h2>
 <div class="card plan">
   <div id="swap"></div>
   <div class="budget">予算 <input id="budget" type="number" inputmode="numeric" step="10" value="200"> 万円</div>
   <div style="overflow-x:auto"><table id="alloc"></table></div>
   <p class="note" id="allocnote"></p>
 </div>
+
+<h2>今月持つ10銘柄 <small id="offdate"></small></h2>
+<div class="card" id="official"></div>
+<p class="note" id="offnote"></p>
 
 <h2>最新の暫定ランキング <small id="latdate"></small></h2>
 <div class="card" id="latest"></div>
@@ -105,13 +107,21 @@ const cache = {};
 const money = p => cfg.cur + p.toLocaleString(undefined, { maximumFractionDigits: cfg.cur === "$" ? 2 : 0 });
 const man = y => (y / 10000).toFixed(1) + "万円";
 const tags = l => l.map(t => `<span class="tag">${t}</span>`).join("");
+const nameOf = t => { const r = [...D.official.top, ...D.latest.top].find(x => x.ticker === t);
+  const n = load(cfg.key + "-names") || {}; return (r && r.name) || n[t] || ""; };
+const label = (t, n) => `${nameOf(t)}（${code(t)}）${n}株`;
 const top10 = () => D.official.top.slice(0, 10);
 const yenOf = r => r.price * (D.usdjpy || 1);
 const budget = () => (parseFloat(document.getElementById("budget").value) || 0) * 10000;
 const target = r => Math.max(1, Math.round(budget() / 10 / yenOf(r)));
 const have = t => shares[t] || 0;
 const remain = r => Math.max(0, target(r) - have(r.ticker));
-const saveShares = () => save(cfg.key + "-shares", shares);
+const saveShares = () => {
+  save(cfg.key + "-shares", shares);
+  const n = load(cfg.key + "-names") || {};
+  Object.keys(shares).forEach(t => { const r = D.official.top.find(x => x.ticker === t); if (r) n[t] = r.name; });
+  save(cfg.key + "-names", n);
+};
 
 function badge(r) {
   if (!D.dip_rule || !remain(r)) return "";
@@ -134,13 +144,13 @@ function rowsHTML(list, mine, prevSet) {
 // 表（株数入力欄）は作り直すと入力中のカーソルが外れるので、タブ切替時だけ作る
 function buildTable() {
   const rows = top10().map(r => `<tr>
-      <td>${code(r.ticker)}</td><td>${money(r.price)}</td><td id="tg-${code(r.ticker)}"></td>
+      <td><div class="tn">${r.name}</div><div class="s">${code(r.ticker)}・${money(r.price)}</div></td><td id="tg-${code(r.ticker)}"></td>
       <td><input class="sh" type="number" inputmode="numeric" min="0" step="1" data-t="${r.ticker}"
            value="${have(r.ticker) || ""}" placeholder="0"></td>
       <td id="rm-${code(r.ticker)}"></td><td id="ry-${code(r.ticker)}"></td></tr>`).join("");
   document.getElementById("alloc").innerHTML =
-    `<tr><th>銘柄</th><th>株価</th><th>目標</th><th>保有</th><th>残り</th><th>残り金額</th></tr>${rows}
-     <tr><td><b>合計</b></td><td></td><td id="tg-sum"></td><td id="hv-sum"></td><td></td><td id="ry-sum"></td></tr>`;
+    `<tr><th>銘柄・株価</th><th>目標</th><th>保有</th><th>残り</th><th>金額</th></tr>${rows}
+     <tr><td><b>合計</b></td><td id="tg-sum"></td><td id="hv-sum"></td><td></td><td id="ry-sum"></td></tr>`;
   document.querySelectorAll("input.sh").forEach(el => el.addEventListener("input", e => {
     const n = Math.max(0, parseInt(e.target.value, 10) || 0);
     if (n) shares[e.target.dataset.t] = n; else delete shares[e.target.dataset.t];
@@ -172,10 +182,10 @@ function update() {
   let h = "";
   if (!anyHeld) h = "<p>保有株数が未入力です。下の表の「保有」に持っている株数を入れると、残りに買う株数が分かります。</p>";
   else if (!sell.length && !buy.length) h = "<p>入れ替えなし。今月はこのまま持ち続けます。</p>";
-  if (sell.length) h += `<p class="sell"><b>売る</b>（10銘柄から外れた）: ${tags(sell.map(t => `${code(t)} ${shares[t]}株`))}</p>
+  if (sell.length) h += `<p class="sell"><b>売る</b>（10銘柄から外れた）: ${tags(sell.map(t => label(t, shares[t])))}</p>
       <p><button id="sold" class="act">売却済みにする</button></p>`;
   if (buy.length && anyHeld) {
-    const lab = r => `${code(r.ticker)} ${remain(r)}株`;
+    const lab = r => label(r.ticker, remain(r));
     if (D.dip_rule) {
       const now = buy.filter(r => r.dip), wait = buy.filter(r => !r.dip);
       if (now.length) h += `<p class="buy"><b>買う</b>（押し目が出た・次の営業日に）: ${tags(now.map(lab))}</p>`;
@@ -195,7 +205,7 @@ function render() {
   document.getElementById("meta").textContent = `株価: ${D.price_date} 終値${fxs} ／ 更新 ${D.updated}`;
   document.getElementById("offdate").textContent = `${D.official.date} 月末で確定`;
   document.getElementById("latdate").textContent = `${D.latest.date} 時点`;
-  document.getElementById("offnote").textContent = "保有株数は下の「入れ替えと買付額の目安」の表に入力します（この端末だけに保存）。"
+  document.getElementById("offnote").textContent = "保有株数は上の「買う株数・売る株数」の表に入力します（この端末だけに保存）。"
     + (D.dip_rule ? "「押し目・買い時」は最新の終値が5日線を下回った銘柄です。" : "");
   const offSet = new Set(top10().map(r => r.ticker));
   document.getElementById("latest").innerHTML = rowsHTML(D.latest.top, false, offSet);
