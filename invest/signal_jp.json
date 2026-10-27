@@ -1,7 +1,7 @@
 {
  "market": "jp",
- "updated": "2026-10-26 17:24",
- "price_date": "2026-10-26",
+ "updated": "2026-10-27 17:19",
+ "price_date": "2026-10-27",
  "rule": "TOPIX500（AI関連を除く）の12ヶ月モメンタム上位10銘柄を均等な金額で持つ。新しく入った銘柄は、終値が5日線を下回った翌日に買う（押し目買い）。毎月末に入れ替え。",
  "usdjpy": 1.0,
  "dip_rule": true,
@@ -13,8 +13,8 @@
     "name": "パナソニック　ホールディングス",
     "sector": "電気機器",
     "momentum": 1.8628,
-    "price": 3581.0,
-    "ma5": 3739.0,
+    "price": 3687.0,
+    "ma5": 3700.8,
     "dip": true
    },
    {
@@ -22,8 +22,8 @@
     "name": "三井金属",
     "sector": "非鉄金属",
     "momentum": 1.8318,
-    "price": 2029.0,
-    "ma5": 2136.4,
+    "price": 2054.0,
+    "ma5": 2109.2,
     "dip": true
    },
    {
@@ -31,17 +31,17 @@
     "name": "住友金属鉱山",
     "sector": "非鉄金属",
     "momentum": 1.716,
-    "price": 8077.0,
-    "ma5": 8166.2,
-    "dip": true
+    "price": 8335.0,
+    "ma5": 8174.8,
+    "dip": false
    },
    {
     "ticker": "6134.T",
     "name": "ＦＵＪＩ",
     "sector": "機械",
     "momentum": 1.6498,
-    "price": 5912.0,
-    "ma5": 6255.2,
+    "price": 6135.0,
+    "ma5": 6172.6,
     "dip": true
    },
    {
@@ -49,17 +49,17 @@
     "name": "三菱マテリアル",
     "sector": "非鉄金属",
     "momentum": 1.3604,
-    "price": 4266.0,
-    "ma5": 4371.4,
-    "dip": true
+    "price": 4352.0,
+    "ma5": 4348.4,
+    "dip": false
    },
    {
     "ticker": "5333.T",
     "name": "ＮＧＫ",
     "sector": "ガラス・土石製品",
     "momentum": 1.2526,
-    "price": 4576.0,
-    "ma5": 4752.8,
+    "price": 4687.0,
+    "ma5": 4703.4,
     "dip": true
    },
    {
@@ -67,35 +67,35 @@
     "name": "ほくほくフィナンシャルグループ",
     "sector": "銀行業",
     "momentum": 1.1761,
-    "price": 699.1,
-    "ma5": 715.78,
-    "dip": true
+    "price": 737.7,
+    "ma5": 718.22,
+    "dip": false
    },
    {
     "ticker": "8341.T",
     "name": "七十七銀行",
     "sector": "銀行業",
     "momentum": 1.0686,
-    "price": 3413.0,
-    "ma5": 3491.6,
-    "dip": true
+    "price": 3538.0,
+    "ma5": 3488.4,
+    "dip": false
    },
    {
     "ticker": "6098.T",
     "name": "リクルートホールディングス",
     "sector": "サービス業",
     "momentum": 1.0078,
-    "price": 19055.0,
-    "ma5": 18987.0,
-    "dip": false
+    "price": 18725.0,
+    "ma5": 18972.0,
+    "dip": true
    },
    {
     "ticker": "5076.T",
     "name": "インフロニア・ホールディングス",
     "sector": "建設業",
     "momentum": 0.9987,
-    "price": 2326.0,
-    "ma5": 2267.5,
+    "price": 2352.5,
+    "ma5": 2284.0,
     "dip": false
    },
    {
@@ -103,35 +103,35 @@
     "name": "メルカリ",
     "sector": "情報・通信業",
     "momentum": 0.9978,
-    "price": 3474.0,
-    "ma5": 3549.6,
-    "dip": true
+    "price": 3542.0,
+    "ma5": 3539.8,
+    "dip": false
    },
    {
     "ticker": "6856.T",
     "name": "堀場製作所",
     "sector": "電気機器",
     "momentum": 0.9962,
-    "price": 21620.0,
-    "ma5": 22487.0,
-    "dip": true
+    "price": 22420.0,
+    "ma5": 22377.0,
+    "dip": false
    },
    {
     "ticker": "7189.T",
     "name": "西日本フィナンシャルホールディングス",
     "sector": "銀行業",
     "momentum": 0.9828,
-    "price": 4255.0,
-    "ma5": 4334.6,
-    "dip": true
+    "price": 4380.0,
+    "ma5": 4336.8,
+    "dip": false
    },
    {
     "ticker": "6952.T",
     "name": "カシオ計算機",
     "sector": "電気機器",
     "momentum": 0.9734,
-    "price": 2311.0,
-    "ma5": 2301.6,
+    "price": 2315.0,
+    "ma5": 2314.2,
     "dip": false
    },
    {
@@ -139,149 +139,149 @@
     "name": "ＤＯＷＡホールディングス",
     "sector": "非鉄金属",
     "momentum": 0.9727,
-    "price": 7835.0,
-    "ma5": 7985.4,
-    "dip": true
+    "price": 8016.0,
+    "ma5": 7968.0,
+    "dip": false
    }
   ]
  },
  "latest": {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "top": [
    {
     "ticker": "6134.T",
     "name": "ＦＵＪＩ",
     "sector": "機械",
-    "momentum": 1.5892,
-    "price": 5912.0,
-    "ma5": 6255.2,
+    "momentum": 1.6938,
+    "price": 6135.0,
+    "ma5": 6172.6,
     "dip": true
    },
    {
     "ticker": "6752.T",
     "name": "パナソニック　ホールディングス",
     "sector": "電気機器",
-    "momentum": 1.4166,
-    "price": 3581.0,
-    "ma5": 3739.0,
+    "momentum": 1.472,
+    "price": 3687.0,
+    "ma5": 3700.8,
     "dip": true
    },
    {
     "ticker": "8377.T",
     "name": "ほくほくフィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 1.2441,
-    "price": 699.1,
-    "ma5": 715.78,
-    "dip": true
-   },
-   {
-    "ticker": "5301.T",
-    "name": "東海カーボン",
-    "sector": "ガラス・土石製品",
-    "momentum": 1.1113,
-    "price": 1858.5,
-    "ma5": 1907.3,
-    "dip": true
-   },
-   {
-    "ticker": "5333.T",
-    "name": "ＮＧＫ",
-    "sector": "ガラス・土石製品",
-    "momentum": 1.0942,
-    "price": 4576.0,
-    "ma5": 4752.8,
-    "dip": true
+    "momentum": 1.4169,
+    "price": 737.7,
+    "ma5": 718.22,
+    "dip": false
    },
    {
     "ticker": "8341.T",
     "name": "七十七銀行",
     "sector": "銀行業",
-    "momentum": 1.0549,
-    "price": 3413.0,
-    "ma5": 3491.6,
-    "dip": true
-   },
-   {
-    "ticker": "3132.T",
-    "name": "マクニカホールディングス",
-    "sector": "卸売業",
-    "momentum": 1.0185,
-    "price": 4182.0,
-    "ma5": 4097.6,
+    "momentum": 1.2023,
+    "price": 3538.0,
+    "ma5": 3488.4,
     "dip": false
    },
    {
     "ticker": "7189.T",
     "name": "西日本フィナンシャルホールディングス",
     "sector": "銀行業",
-    "momentum": 1.0003,
-    "price": 4255.0,
-    "ma5": 4334.6,
+    "momentum": 1.1769,
+    "price": 4380.0,
+    "ma5": 4336.8,
+    "dip": false
+   },
+   {
+    "ticker": "5333.T",
+    "name": "ＮＧＫ",
+    "sector": "ガラス・土石製品",
+    "momentum": 1.1756,
+    "price": 4687.0,
+    "ma5": 4703.4,
     "dip": true
+   },
+   {
+    "ticker": "3132.T",
+    "name": "マクニカホールディングス",
+    "sector": "卸売業",
+    "momentum": 1.1708,
+    "price": 4277.0,
+    "ma5": 4137.4,
+    "dip": false
+   },
+   {
+    "ticker": "3105.T",
+    "name": "日清紡ホールディングス",
+    "sector": "電気機器",
+    "momentum": 1.1656,
+    "price": 2380.0,
+    "ma5": 2319.9,
+    "dip": false
+   },
+   {
+    "ticker": "5301.T",
+    "name": "東海カーボン",
+    "sector": "ガラス・土石製品",
+    "momentum": 1.117,
+    "price": 1933.5,
+    "ma5": 1905.0,
+    "dip": false
    },
    {
     "ticker": "8418.T",
     "name": "山口フィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 0.9813,
-    "price": 3022.0,
-    "ma5": 3087.0,
-    "dip": true
-   },
-   {
-    "ticker": "6098.T",
-    "name": "リクルートホールディングス",
-    "sector": "サービス業",
-    "momentum": 0.9682,
-    "price": 19055.0,
-    "ma5": 18987.0,
+    "momentum": 1.1071,
+    "price": 3093.0,
+    "ma5": 3080.6,
     "dip": false
    },
    {
     "ticker": "7180.T",
     "name": "九州フィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 0.9051,
-    "price": 1472.0,
-    "ma5": 1515.8,
-    "dip": true
+    "momentum": 1.0793,
+    "price": 1513.5,
+    "ma5": 1508.7,
+    "dip": false
    },
    {
     "ticker": "8334.T",
     "name": "群馬銀行",
     "sector": "銀行業",
-    "momentum": 0.8881,
-    "price": 2519.0,
-    "ma5": 2562.7,
+    "momentum": 1.0724,
+    "price": 2575.0,
+    "ma5": 2553.8,
+    "dip": false
+   },
+   {
+    "ticker": "6098.T",
+    "name": "リクルートホールディングス",
+    "sector": "サービス業",
+    "momentum": 1.0151,
+    "price": 18725.0,
+    "ma5": 18972.0,
     "dip": true
    },
    {
     "ticker": "7182.T",
     "name": "ゆうちょ銀行",
     "sector": "銀行業",
-    "momentum": 0.8786,
-    "price": 2983.0,
-    "ma5": 2999.9,
-    "dip": true
+    "momentum": 1.0144,
+    "price": 3028.0,
+    "ma5": 3007.3,
+    "dip": false
    },
    {
     "ticker": "8359.T",
     "name": "八十二長野銀行",
     "sector": "銀行業",
-    "momentum": 0.8581,
-    "price": 2326.0,
-    "ma5": 2385.5,
-    "dip": true
-   },
-   {
-    "ticker": "5713.T",
-    "name": "住友金属鉱山",
-    "sector": "非鉄金属",
-    "momentum": 0.8514,
-    "price": 8077.0,
-    "ma5": 8166.2,
-    "dip": true
+    "momentum": 0.9926,
+    "price": 2403.0,
+    "ma5": 2381.9,
+    "dip": false
    }
   ]
  },
@@ -315,5 +315,5 @@
   "ＳＣＲＥＥＮホールディングス (7735.T)",
   "ＳＵＭＣＯ (3436.T)"
  ],
- "universe": 459
+ "universe": 460
 }
