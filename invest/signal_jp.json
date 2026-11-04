@@ -1,7 +1,7 @@
 {
  "market": "jp",
- "updated": "2026-11-03 17:34",
- "price_date": "2026-11-02",
+ "updated": "2026-11-05 00:45",
+ "price_date": "2026-11-04",
  "rule": "TOPIX500（AI関連を除く）の12ヶ月モメンタム上位10銘柄を均等な金額で持つ。新しく入った銘柄は、終値が5日線を下回った翌日に買う（押し目買い）。毎月末に入れ替え。",
  "usdjpy": 1.0,
  "dip_rule": true,
@@ -146,13 +146,13 @@
   ]
  },
  "latest": {
-  "date": "2026-11-02",
+  "date": "2026-11-04",
   "top": [
    {
     "ticker": "6134.T",
     "name": "ＦＵＪＩ",
     "sector": "機械",
-    "momentum": 2.0088,
+    "momentum": 1.9138,
     "price": 5976.0,
     "ma5": 6156.6,
     "dip": true
@@ -161,7 +161,7 @@
     "ticker": "8377.T",
     "name": "ほくほくフィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 1.8433,
+    "momentum": 1.7368,
     "price": 731.9,
     "ma5": 744.68,
     "dip": true
@@ -170,7 +170,7 @@
     "ticker": "6752.T",
     "name": "パナソニック　ホールディングス",
     "sector": "電気機器",
-    "momentum": 1.5602,
+    "momentum": 1.5255,
     "price": 3740.0,
     "ma5": 3689.0,
     "dip": false
@@ -179,7 +179,7 @@
     "ticker": "3105.T",
     "name": "日清紡ホールディングス",
     "sector": "電気機器",
-    "momentum": 1.338,
+    "momentum": 1.3711,
     "price": 2224.5,
     "ma5": 2306.8,
     "dip": true
@@ -188,61 +188,61 @@
     "ticker": "5333.T",
     "name": "ＮＧＫ",
     "sector": "ガラス・土石製品",
-    "momentum": 1.3142,
+    "momentum": 1.2953,
     "price": 5118.0,
     "ma5": 4819.6,
     "dip": false
    },
    {
-    "ticker": "6098.T",
-    "name": "リクルートホールディングス",
-    "sector": "サービス業",
-    "momentum": 1.2654,
-    "price": 17970.0,
-    "ma5": 18717.0,
-    "dip": true
-   },
-   {
     "ticker": "5301.T",
     "name": "東海カーボン",
     "sector": "ガラス・土石製品",
-    "momentum": 1.2306,
+    "momentum": 1.1917,
     "price": 1865.5,
     "ma5": 1942.4,
+    "dip": true
+   },
+   {
+    "ticker": "6098.T",
+    "name": "リクルートホールディングス",
+    "sector": "サービス業",
+    "momentum": 1.1446,
+    "price": 17970.0,
+    "ma5": 18717.0,
     "dip": true
    },
    {
     "ticker": "8341.T",
     "name": "七十七銀行",
     "sector": "銀行業",
-    "momentum": 1.2216,
+    "momentum": 1.1382,
     "price": 3503.0,
     "ma5": 3574.0,
-    "dip": true
-   },
-   {
-    "ticker": "7189.T",
-    "name": "西日本フィナンシャルホールディングス",
-    "sector": "銀行業",
-    "momentum": 1.1624,
-    "price": 4368.0,
-    "ma5": 4446.8,
     "dip": true
    },
    {
     "ticker": "8418.T",
     "name": "山口フィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 1.157,
+    "momentum": 1.0405,
     "price": 3057.0,
     "ma5": 3115.4,
+    "dip": true
+   },
+   {
+    "ticker": "7189.T",
+    "name": "西日本フィナンシャルホールディングス",
+    "sector": "銀行業",
+    "momentum": 1.0398,
+    "price": 4368.0,
+    "ma5": 4446.8,
     "dip": true
    },
    {
     "ticker": "7182.T",
     "name": "ゆうちょ銀行",
     "sector": "銀行業",
-    "momentum": 1.1308,
+    "momentum": 1.0226,
     "price": 2990.0,
     "ma5": 3024.8,
     "dip": true
@@ -251,36 +251,36 @@
     "ticker": "7180.T",
     "name": "九州フィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 1.1174,
+    "momentum": 1.0188,
     "price": 1498.5,
     "ma5": 1516.8,
-    "dip": true
-   },
-   {
-    "ticker": "3132.T",
-    "name": "マクニカホールディングス",
-    "sector": "卸売業",
-    "momentum": 1.0923,
-    "price": 3705.0,
-    "ma5": 4038.8,
-    "dip": true
-   },
-   {
-    "ticker": "8334.T",
-    "name": "群馬銀行",
-    "sector": "銀行業",
-    "momentum": 1.063,
-    "price": 2535.0,
-    "ma5": 2584.5,
     "dip": true
    },
    {
     "ticker": "6856.T",
     "name": "堀場製作所",
     "sector": "電気機器",
-    "momentum": 1.0578,
+    "momentum": 1.0028,
     "price": 21655.0,
     "ma5": 22376.0,
+    "dip": true
+   },
+   {
+    "ticker": "3132.T",
+    "name": "マクニカホールディングス",
+    "sector": "卸売業",
+    "momentum": 0.9969,
+    "price": 3705.0,
+    "ma5": 4038.8,
+    "dip": true
+   },
+   {
+    "ticker": "5393.T",
+    "name": "ニチアス",
+    "sector": "ガラス・土石製品",
+    "momentum": 0.995,
+    "price": 3311.0,
+    "ma5": 3354.6,
     "dip": true
    }
   ]
@@ -315,5 +315,5 @@
   "ＳＣＲＥＥＮホールディングス (7735.T)",
   "ＳＵＭＣＯ (3436.T)"
  ],
- "universe": 460
+ "universe": 459
 }
