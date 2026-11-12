@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T21:30:00+09:00",
+  "updated_at": "2026-11-12T21:30:00+09:00",
   "period": {
-    "from": "2026-11-05",
-    "to": "2026-11-19"
+    "from": "2026-11-12",
+    "to": "2026-11-26"
   },
   "notes": [
     "写真は取れたイベントのみ（取れないものはimage: null）",
@@ -19,68 +19,56 @@
       "is_premiere": true,
       "reason": "高橋一生主演",
       "image": null,
-      "source": "https://www.tvguide.or.jp/news/news-5321651/",
-      "summary": "燃え殻のエッセイを高橋一生主演でドラマ化したオムニバス（脚本・坪田文）。全8話を前編・後編4話ずつ放送し、前編には藤間爽子、橋本淳、山中崇、酒向芳ら、後編には井川遥、光石研らが出演する。"
+      "source": "https://thetv.jp/program/0001079809/1/",
+      "summary": "燃え殻のエッセイを高橋一生主演でドラマ化したオムニバス（脚本・坪田文）。前編の第1話「美味しいと彼女は言った」では、物書きの「僕」が横浜のホテルで一夜を過ごした女性（藤間爽子）と朝がゆを食べに中華街へ向かうが、店は休み。後編（11/21）には井川遥、樋口日奈、光石研らが出演する。"
     },
     {
       "kind": "favorite",
       "title": "ポリティカルパン",
-      "start": "2026-11-11T22:00:00+09:00",
+      "start": "2026-11-18T22:00:00+09:00",
       "slot": "毎週水曜 22:00",
       "channel": "フジテレビ系（長崎：KTN）",
       "is_premiere": false,
       "reason": "野木亜紀子脚本、石原さとみ主演、高橋一生出演",
       "image": "https://www.crank-in.net/img/db/269095242125380_1200.jpg",
-      "source": "https://thetv.jp/program/0001078778/",
-      "summary": "“女ルパン”如月弥生（石原さとみ）が政界に潜り込み、与党の金庫番・夏目将門（高橋一生）と騙し合いながら国の金を奪うオリジナルの怪盗エンタメ。11/11に第6話を放送。"
+      "source": "https://thetv.jp/program/0001078778/7/",
+      "summary": "11/18の第7話では、夏目（高橋一生）が不透明な政治の金をなくすため、補助金の使われ方を透明化する法案づくりに弥生（石原さとみ）の協力を求める。士郎（草刈正雄）が認めるはずのない法案を通すため、弥生らは総理の玉矢（香取慎吾）と雅（河合優実）を巻き込んで作戦を立てる。"
     },
     {
       "kind": "favorite",
       "title": "豊臣兄弟！",
-      "start": "2026-11-08T20:00:00+09:00",
+      "start": "2026-11-15T20:00:00+09:00",
       "slot": "毎週日曜 20:00",
       "channel": "NHK総合",
       "is_premiere": false,
       "reason": "仲野太賀主演（豊臣秀長役）",
       "image": "https://www.crank-in.net/img/db/251104059155135_1200.jpg",
-      "source": "https://mantan-web.jp/article/20261101dog00m200031000a.html",
-      "summary": "11/8の第43回「殿下の刀狩り」では、秀吉が全国に刀狩令を出す。秀長は大仏の資材として領民に武具の提供を呼びかけるが、秀次は力ずくで取り上げようとする。秀長は家康ら諸大名を大和郡山城に招き、本音を探ろうとする。"
-    },
-    {
-      "kind": "favorite",
-      "title": "ブラッサム",
-      "start": "2026-11-06T08:00:00+09:00",
-      "slot": "月〜土 8:00（土曜は1週間の振り返り）",
-      "channel": "NHK総合",
-      "is_premiere": false,
-      "reason": "松たか子が朝ドラ初出演（晩年の主人公を支える秘書・藤川優子役）",
-      "image": "https://www.crank-in.net/img/db/255057293130191_1200.jpg",
-      "source": "https://thetv.jp/program/0001062883/plot/",
-      "summary": "石橋静河主演の連続テレビ小説。11/6の第35回では札幌で始めた珠の仕立て屋が評判になる。11/9〜13は第7週「あばく、書く」。松たか子の役は晩年の珠の秘書なので、この期間に登場するかは未確認。"
+      "source": "https://mantan-web.jp/article/20261108dog00m200013000a.html",
+      "summary": "11/15の第44回「ある家臣の死」では、秀吉が大仏建立の材木を自領の熊野でまかなうと言い出し、切り出し役に秀長を指名。志願を退けられた秀次は秀長への対抗意識を強める。さらに秀長は、材木を任せていた家臣・吉川平助の横流し疑惑を耳にする。"
     },
     {
       "kind": "local_interest",
       "title": "青の花 器の森",
-      "start": "2026-11-05T22:45:00+09:00",
+      "start": "2026-11-12T22:45:00+09:00",
       "slot": "月〜木 22:45",
       "channel": "NHK総合",
       "is_premiere": false,
       "reason": "長崎県波佐見町が舞台・ロケ地",
       "image": "https://www.crank-in.net/img/db/241033264180205_1200.jpg",
-      "source": "https://thetv.jp/program/0001078463/",
-      "summary": "11/5の第8話では、青子（松井玲奈）と龍生（一ノ瀬颯）がペアで作った皿が社内コンペを勝ち抜き量産が決まる。反対する龍生に、社長が2人を波佐見焼ツアーに誘う。第9〜12話は11/9〜12に放送。"
+      "source": "https://thetv.jp/program/0001078463/12/",
+      "summary": "11/12の第12話では雨粒皿の量産が始まり、青子（松井玲奈）と龍生（一ノ瀬颯）は仕事のパートナーとして息の合った姿を見せる。自主制作を再開した龍生は自分の傷も癒えていないと気づく。第13〜16話は11/16〜19に放送。"
     },
     {
       "kind": "discovery",
-      "title": "俺たちの箱根駅伝",
-      "start": "2026-11-07T21:00:00+09:00",
-      "slot": "毎週土曜 21:00",
-      "channel": "日テレ系（長崎：NIB）",
+      "title": "救命病棟24時",
+      "start": "2026-11-16T21:00:00+09:00",
+      "slot": "毎週月曜 21:00",
+      "channel": "フジテレビ系（長崎：KTN）",
       "is_premiere": false,
-      "reason": "出会いの1本：池井戸潤原作・大泉洋主演の話題作。クランクイン！の「2話以降も見続けたい秋ドラマ」7位",
-      "image": "https://www.crank-in.net/img/db/268080123186210_1200.jpg",
-      "source": "https://thetv.jp/program/0001069988/",
-      "summary": "箱根駅伝の生中継を担うテレビ局スポーツ局が舞台。チーフプロデューサーの徳重（大泉洋）が、失敗の許されない生中継の裏で起きるトラブルに立ち向かう。山下智久、伊藤沙莉らが出演。第5話は11/7、第6話は11/14。"
+      "reason": "出会いの1本：1999年から続く江口洋介・松嶋菜々子の救命医療ドラマ、第6シリーズ。クランクイン！の「2話以降も見続けたい秋ドラマ」10位",
+      "image": "https://www.crank-in.net/img/db/268090285106372_1200.jpg",
+      "source": "https://thetv.jp/program/0001078926/6/",
+      "summary": "医師の働き方改革が進む救命救急の現場で、進藤（江口洋介）と小島（松嶋菜々子）がタイパ重視の若手と衝突しながら、医師として失ってはいけないものを伝えていく。11/16の第6話「プライドと情熱の果てに」では、シフト制を守るべきと主張する上級医・鳥羽野（宮野真守）と、すぐに患者を受け入れる進藤が対立する。"
     }
   ],
   "regular_programs": [
@@ -89,19 +77,19 @@
       "channel": "NHK総合",
       "slot": "土曜 19:30",
       "start": "2026-11-14T19:30:00+09:00",
-      "status": "11/14「八ヶ岳の絶景／なぜ人は八ヶ岳の絶景に心ひかれる？」（11/7の放送予定は確認できず）",
+      "status": "11/14「八ヶ岳の絶景」・11/21「八ヶ岳リゾート」",
       "source": "https://thetv.jp/program/0000806274/",
-      "summary": "第392回は八ヶ岳へ。なぜ人は八ヶ岳の絶景に心ひかれるのかを探る。出演はタモリと佐藤茉那、語りはあいみょん。",
+      "summary": "八ヶ岳を2週連続で訪ねる。11/14の第392回は「なぜ人は八ヶ岳の絶景に心ひかれる？」、11/21の第393回は「天空のリゾートはどうできた？清里・白樺湖」。出演はタモリと佐藤茉那、語りはあいみょん。",
       "image": null
     },
     {
       "title": "相棒",
       "channel": "テレビ朝日系（長崎：NCC）",
       "slot": "毎週水曜 21:00",
-      "start": "2026-11-11T21:00:00+09:00",
-      "status": "11/11 第4話「メドゥーサの首」（11/18の放送内容は未確認）",
+      "start": "2026-11-18T21:00:00+09:00",
+      "status": "11/18 第5話「ハルシネーション」（11/25の放送内容は未確認）",
       "source": "https://tvguide.myjcom.jp/program/1011609/",
-      "summary": "大企業の元社員が撲殺され、特命係は遺留品の色鉛筆から被害者が塗り絵教室に通っていたことをつかむ。右京は、受講者の一人の色鉛筆で遺留品と同じ2色だけが短くなっていることに気づく。",
+      "summary": "AI開発を行う大学の研究者・沢田が遺体で見つかる。特命係が調べると他殺の線が強く、同じ大学の研究者・菅原が容疑者として浮上する。",
       "image": "https://www.crank-in.net/img/db/268081272174249_1200.jpg"
     }
   ],
@@ -109,52 +97,92 @@
     {
       "service": "Prime Video",
       "subscribed": true,
-      "title": "デモンズ・クレスト",
-      "start": "2026-11-06",
-      "reason": "新作アニメ（Prime Video独占）",
-      "image": null,
-      "source": "https://news.denfaminicogamer.jp/news/2610302u",
-      "summary": "『ソードアート・オンライン』の川原礫が原作の新作アニメで、MR（複合現実）の世界が舞台。VRMMOのテストプレイに参加するはずだった芦原佑馬が、突然ログアウトして薄暗い建物に一人取り残される。"
-    },
-    {
-      "service": "Prime Video",
-      "subscribed": true,
-      "title": "光が死んだ夏",
-      "start": "2026-11-06",
-      "reason": "期間中に見放題配信が始まるTVアニメ",
-      "image": null,
-      "source": "https://gamebiz.jp/news/434829",
-      "summary": "11/6からPrime Videoで配信が始まるTVアニメ。同じ日に『デモンズ・クレスト』も始まるので、週末にまとめて見るのにちょうどいい。"
-    },
-    {
-      "service": "Prime Video",
-      "subscribed": true,
       "title": "地雷グリコ",
       "start": "2026-11-13",
       "reason": "Prime Originalの注目新作ドラマ（独占配信）",
       "image": null,
-      "source": "https://news.denfaminicogamer.jp/news/2610302u",
-      "summary": "青崎有吾の頭脳バトル小説を森七菜・蒔田彩珠のW主演で実写化。主人公の真兎は学園祭の屋上使用権を懸けた勝負に挑み、「グリコ」などをアレンジしたゲームで天才高校生たちと戦う。"
+      "source": "https://ciatr.jp/topics/340269",
+      "summary": "青崎有吾の頭脳バトル小説を森七菜・蒔田彩珠のW主演で実写化（監督・関和亮）。学園祭の屋上使用権を懸けた勝負から始まり、「グリコ」などをアレンジしたゲームで天才高校生たちと戦う。山下美月、堀田真由も出演。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "デモンズ・クレスト",
+      "start": "2026-11-06",
+      "reason": "新作アニメ（Prime Video世界独占）",
+      "image": null,
+      "source": "https://prtimes.jp/main/html/rd/p/000002152.000004612.html",
+      "summary": "『ソードアート・オンライン』の川原礫が原作の新作アニメ。全感覚没入型VRMMOのテストプレイに参加するはずだった芦原佑馬が薄暗い建物に一人取り残され、現実とゲームが入り混じる世界でモンスターに襲われる。OPはAdo「シンカ」。"
     },
     {
       "service": "Prime Video",
       "subscribed": true,
       "title": "マロニエ王国の七人の騎士",
       "start": "2026-10-04",
-      "reason": "Prime Video世界独占の秋アニメ（期間中も新エピソード配信）",
+      "reason": "Prime Video世界独占の秋アニメ（毎週日曜0時に新エピソード）",
+      "image": "https://www.crank-in.net/img/db/266085109149234_1200.jpg",
+      "source": "https://www.gamespark.jp/release/prtimes/20260907/312337.html",
+      "summary": "岩本ナオの漫画が原作の恋と冒険のファンタジー。女将軍バリバラの七人の息子が七つの国へ大使として旅立ち、運命の相手と出会う。Eテレ土曜18:25の放送後、翌日曜0時にPrime Videoで配信。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "薬屋のひとりごと（第3期）",
+      "start": "2026-10-03",
+      "reason": "人気アニメの第3期（見放題配信）",
       "image": null,
-      "source": "https://gamebiz.jp/news/433310",
-      "summary": "Prime Videoが世界独占配信している2026年秋のTVアニメ。10/4から配信中で、NHK Eテレでも放送されている。"
+      "source": "https://ciatr.jp/topics/339554",
+      "summary": "日本テレビ系で10/2から放送中の第3期。Prime Videoでは放送翌日の10/3から見放題配信が始まっている。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "光が死んだ夏",
+      "start": "2026-11-06",
+      "reason": "11/6から見放題配信のTVアニメ",
+      "image": "https://www.crank-in.net/img/db/253040308111033_1200.jpg",
+      "source": "https://ciatr.jp/topics/340269",
+      "summary": "半年前に山で行方不明になった幼なじみの光が帰ってくるが、よしきは中身が別物だと感じ取る。光を模倣する「ヒカル」との共同生活が始まり、集落では奇怪な事件が相次ぐ青春ホラー。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "Mother",
+      "start": "2026-11-25",
+      "reason": "坂元裕二脚本のドラマ（2010年・日本テレビ）が見放題に",
+      "image": null,
+      "source": "https://ciatr.jp/topics/340269",
+      "summary": "坂元裕二脚本、松雪泰子主演の連続ドラマ。小学校教師の奈緒が、虐待されている少女（芦田愛菜）を救うために誘拐し、母親として逃避行に出る。山本耕史、田中裕子、尾野真千子らが出演。"
+    },
+    {
+      "service": "Prime Video",
+      "subscribed": true,
+      "title": "コントが始まる",
+      "start": "2026-11-25",
+      "reason": "仲野太賀出演（2021年・日本テレビ土曜ドラマ）が見放題に",
+      "image": "https://www.crank-in.net/img/db/1463925_1200.jpg",
+      "source": "https://ciatr.jp/topics/340269",
+      "summary": "菅田将暉、神木隆之介、仲野太賀が売れないお笑いトリオ「マクベス」を演じる群像劇（脚本・金子茂樹）。有村架純がネタ作りに集まるファミレスのウエートレス、古川琴音がその妹役。毎回冒頭のコントが物語の伏線になる。"
     },
     {
       "service": "Prime Video",
       "subscribed": true,
       "title": "犯罪者",
       "start": "2026-07-17",
-      "reason": "高橋一生主演のPrime Originalドラマ（見放題配信中）",
+      "reason": "高橋一生出演のPrime Originalドラマ（見放題配信中）",
       "image": null,
       "source": "https://www.cinematoday.jp/news/N0154609",
       "summary": "太田愛の小説を原作に、高橋一生・斎藤工・水上恒司が共演するドラマ（脚本・櫻井武晴）。無差別殺傷事件でただ一人生き残った修司を、刑事の相馬（高橋）とフリーライターの鑓水（斎藤）が守りながら真相を追う。"
+    },
+    {
+      "service": "Disney+",
+      "subscribed": false,
+      "title": "殺し屋たちの店 2",
+      "start": "2026-07-22",
+      "reason": "参考：岡田将生が韓国ドラマに初出演（Disney+「スター」独占）",
+      "image": "https://img-baila.hpplus.jp/ogp/image/9c/9c8c6402-b4da-4eea-96d2-5c5a351c7077-1280x672.jpg",
+      "source": "https://baila.hpplus.jp/lifestyle/entertainment/81679",
+      "summary": "イ・ドンウク、キム・ヘジュン主演の韓国クライムアクションの第2シーズン（全8話）。岡田将生は殺し屋組織「バビロン」東アジア支部から派遣される傭兵J役で、玄理演じるQとは姉弟の設定。"
     }
   ],
   "movies": [
@@ -164,11 +192,23 @@
       "released": "2026-09-25",
       "reason": "岡山天音が声の出演（坂東龍汰とW主演のアニメ映画）",
       "image": "https://www.crank-in.net/img/p/leaflets/T01a_202388_550.jpg",
-      "source": "https://movie.jorudan.co.jp/film/102283/schedule/",
-      "note": "上映スケジュール一覧に長崎県の上映館としてTOHOシネマズ長崎が載っていることを確認。上映時間・終映日は未確認なので、行く前に劇場サイトで確認を。"
+      "source": "https://movie.jorudan.co.jp/theater/1001900/schedule/",
+      "note": "11/13（金）〜19（木）は毎日21:00の1回上映。20日以降と終映日は未確認なので、行く前に劇場サイトで確認を。"
     }
   ],
   "local": [
+    {
+      "date_from": "2026-09-12",
+      "date_to": "2026-11-23",
+      "category": "other",
+      "genre": "企画展・生きもの",
+      "title": "【長崎バイオパーク】日本の昆虫展",
+      "place": "長崎バイオパーク（西海市）",
+      "image": "https://api.eventbank.jp/image/10639094.jpg",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10639094.htm",
+      "note": "〜11/23・10:00〜16:50（入園16:00まで）／入園料 大人2,100円・中高生1,500円・3歳〜小学生1,100円／西九州道 佐世保大塔ICから約30分・無料駐車場約800台",
+      "summary": "スズムシやコオロギ、クワガタ、キリギリスなど、かつては身近だったのに今は見かけにくくなった日本の昆虫を生体と標本で紹介する企画展。行ったことのあるバイオパークでも、11/23までの期間限定の展示。"
+    },
     {
       "date_from": "2026-10-01",
       "date_to": "2026-11-30",
@@ -179,247 +219,200 @@
       "image": "https://api.eventbank.jp/image/10650186.jpg",
       "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10650186.htm",
       "note": "〜11/30・営業時間や料金は各店による／西九州道 大塔ICから国道202号を長崎方面へ約30分／駐車場がない店もあり",
-      "summary": "西海市の海の幸・山の幸を使った海鮮・肉・スイーツの丼を参加店で味わえる。スタンプラリーもあり、国道202号のドライブがてら行ける。"
-    },
-    {
-      "date_from": "2026-11-01",
-      "date_to": "2027-01-31",
-      "category": "food",
-      "genre": "冬の味覚・クエ鍋",
-      "title": "平戸天然あら鍋まつり",
-      "place": "平戸市内のホテル・旅館・飲食店（平戸市）",
-      "image": "https://api.eventbank.jp/image/10652068.jpg",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10652068.htm",
-      "note": "実施期間・料金は店舗により異なる／西九州道 佐々ICから約40分",
-      "summary": "九州で「あら」と呼ばれる高級魚クエを、旬の秋冬に参加宿や飲食店であら鍋などで楽しめる。市場にあまり出回らない魚なので、平戸への泊まりがけドライブの目的にも。"
-    },
-    {
-      "date_from": "2026-11-06",
-      "date_to": "2026-12-06",
-      "category": "other",
-      "genre": "紅葉・ライトアップ",
-      "title": "御船山楽園 紅葉まつり",
-      "place": "御船山楽園（武雄市）",
-      "image": "https://image.walkerplus.com/wpimg/walkertouch/wtd/event/76/l2/13276.jpg",
-      "source": "https://koyo.walkerplus.com/detail/ar1041e13276/data.html",
-      "note": "昼8:00〜17:30・夜ライトアップ17:30〜22:00／昼または夜 大人600円、昼夜共通 大人900円",
-      "summary": "武雄の大庭園で開かれる秋の紅葉まつり。夜は池に映る紅葉のライトアップがあり、昼夜共通券で両方楽しめる。12/6までなので色づきを見て日を決められる。"
-    },
-    {
-      "date_from": "2026-11-07",
-      "date_to": "2026-11-08",
-      "category": "other",
-      "genre": "伝統芸能・祭り",
-      "title": "丸山華まつり",
-      "place": "梅園身代り天満宮など丸山地区周辺（長崎市）",
-      "image": "https://api.eventbank.jp/image/10650498.jpg",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10650498.htm",
-      "note": "入場無料／路面電車「思案橋」「崇福寺」電停から徒歩約8分／駐車場なし（時間は掲載なし）",
-      "summary": "花街・丸山の、女性が主役の華やかな祭り。花魁道中や長崎検番の奉納舞、芸妓の舞、落語の寄席などがあり、7日は子ども神輿、8日はミニコンサート。市内から電車で気軽に行ける。"
-    },
-    {
-      "date_from": "2026-11-08",
-      "date_to": "2026-11-08",
-      "category": "food",
-      "genre": "ご当地スイーツ・工場まつり",
-      "title": "クルスまつり",
-      "place": "小浜食糧株式会社（雲仙市小浜町）",
-      "image": "https://www.nagasaki-press.com/press/wp-content/uploads/2026/10/kurusumatsuri-eye-catch.jpg",
-      "source": "https://www.nagasaki-press.com/event/post-197967/",
-      "note": "10:00〜15:00（予定）／「クルスdeフォンデュ」試食無料／駐車場は徒歩約5分の「ジスコいるか」",
-      "summary": "長崎銘菓クルスの小浜食糧による感謝祭。クルスのつかみどりやチョコをつけて食べる無料試食、限定スイーツ、太鼓演奏やフリーマーケットがある。小浜温泉ドライブと組み合わせると楽しい。"
-    },
-    {
-      "date_from": "2026-11-08",
-      "date_to": "2026-11-08",
-      "category": "food",
-      "genre": "海鮮・魚市",
-      "title": "西海の恵 佐世保漁港 お魚まつり",
-      "place": "佐世保魚市場（佐世保市）",
-      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/event/84/l2/618784.jpg",
-      "source": "https://www.walkerplus.com/event/ar1042e618784/",
-      "note": "8:30〜14:00／朝早めの到着がおすすめ",
-      "summary": "鮮魚・水産加工品の販売、魚のバーベキュー、マグロの解体即売、模擬セリ、刺身の試食、海鮮汁の無料配布がある市場の祭り。車で出かけて海鮮を買い込みたい日に。"
-    },
-    {
-      "date_from": "2026-11-14",
-      "date_to": "2026-11-14",
-      "category": "other",
-      "genre": "怪談ナイトツアー（普段選ばないジャンル）",
-      "title": "逢魔が時 湯にも地獄の物語",
-      "place": "集合：50周年広場（雲仙お山の情報館となり）・雲仙地獄（雲仙市）",
-      "image": null,
-      "source": "https://www.iwafu.com/jp/events/1142455",
-      "note": "毎月第2・第4土曜開催（期間内は11/14）・18:00集合／1人3,000円・小学生以上／飲酒者・5cm以上のヒールは参加不可／問合せ 雲仙温泉観光協会 0957-73-3434",
-      "summary": "提灯を手に夜の雲仙地獄を歩き、着物姿の語り部がキリシタン秘史や妖怪話など4つの怪談を三味線の生演奏とともに語るツアー。いつもと違う夜の雲仙を味わえる。"
-    },
-    {
-      "date_from": "2026-11-14",
-      "date_to": "2026-11-14",
-      "category": "other",
-      "genre": "花火",
-      "title": "【ハウステンボス】第13回 九州一 大花火まつり",
-      "place": "ハウステンボス（佐世保市）",
-      "image": "https://res.iwafu.com/public/photo/20260608/69fd1bd8efdf4272af79e9a822051f04/69fd1bd8efdf4272af79e9a822051f04.jpg",
-      "source": "https://www.iwafu.com/jp/events/1136932",
-      "note": "花火18:45〜20:30（予定）／入場チケット必要（事前購入推奨）・観覧席20種類／JRハウステンボス駅から徒歩約7分",
-      "summary": "約22,000発、西日本最大級の花火大会。幅約300mの尺玉やフィナーレが見どころ。11/6からは新しいイルミネーション「ザ・スターライト・ミリオン」も始まっているので、行ったことがあっても新鮮。"
+      "summary": "西海市の海の幸・山の幸を使った海鮮・肉・スイーツの丼を参加店で味わえる。11/30までなので、バイオパークの昆虫展と組み合わせて国道202号をドライブするのもいい。"
     },
     {
       "date_from": "2026-11-14",
       "date_to": "2026-11-15",
-      "category": "food",
-      "genre": "物産まつり・佐賀牛",
-      "title": "武雄の物産まつり",
-      "place": "CableOne SPORTS PARK（武雄市民体育館）（武雄市）",
-      "image": null,
-      "source": "https://rurubu.jp/andmore/spot/20000828",
-      "note": "入場無料／JR武雄温泉駅から徒歩約15分／武雄北方ICから約10分・無料駐車場約1,000台",
-      "summary": "武雄の農産物や特産品、姉妹都市の名産品が並び、佐賀牛や若楠ポークを特別価格で買える。抽選会や伝統芸能祭もあり、御船山楽園の紅葉と同じ日に回れる。"
-    },
-    {
-      "date_from": "2026-11-14",
-      "date_to": "2026-11-29",
       "category": "other",
-      "genre": "紅葉・名勝庭園",
-      "title": "国の名勝 九年庵 秋の一般公開",
-      "place": "九年庵（神埼市）",
+      "genre": "音楽・ジャズ",
+      "title": "NAGASAKI CITY JAZZ 2026",
+      "place": "アミュプラザ長崎 かもめ広場ほか市内の連携会場（長崎市）",
       "image": null,
-      "source": "https://rurubu.jp/andmore/spot/80039025/koyo",
-      "note": "8:00〜16:00・期間中無休／高校生以上1,000円／JR神埼駅からバス約10分／東脊振ICから約10分・駐車場約800台（1日500円）",
-      "summary": "佐賀の実業家の別荘庭園で、公開は秋の16日間だけ。土日祝はとても混むので、平日か朝早くがおすすめ。"
+      "source": "https://nagasaki.goguynet.jp/2026/11/04/city-jazz/",
+      "note": "10:00〜20:00・全会場入場無料／かもめ広場は14日 野宮真貴（19:00）、15日 安田レイ（15:30）・平戸祐介 Project（19:00）など／連携会場は浜町・新大工・ココウォーク・スタジアムシティ・県美術館など／連携会場の公演後に電車かバスの片道券を配布（先着）",
+      "summary": "長崎出身のジャズピアニスト平戸祐介が手がける街なかジャズフェスで、4回目の今年は駅前から浜町まで10会場に広がる。かもめ広場にはクラフトビールや餃子などのフード出店もあり、無料で気軽にはしごできる。"
     },
     {
-      "date_from": "2026-11-14",
+      "date_from": "2026-11-19",
+      "date_to": "2026-11-23",
+      "category": "food",
+      "genre": "パン・食べ比べ",
+      "title": "TSUTAYA×全国パン博覧会",
+      "place": "みらい長崎ココウォーク 5階 駐車場側イベントスペース（長崎市）",
+      "image": "https://cdn.bestcalendar.jp/press-release-images/164982/1-large.webp",
+      "source": "https://bestcalendar.jp/press/164982",
+      "note": "10:00〜20:00（売り切れ次第終了）／会場は書店内ではなく5階の駐車場側スペース／1個から購入可・日替わり商品あり／問合せ 095-842-5509",
+      "summary": "全国のご当地パン約120種類がココウォークに集まる即売会。1個から買えて日替わりの商品もあるので、何度かのぞいて食べ比べるのも楽しい。"
+    },
+    {
+      "date_from": "2026-11-19",
       "date_to": "2026-11-23",
       "category": "other",
-      "genre": "紅葉",
-      "title": "寿福寺「逆さ紅葉」",
-      "place": "寿福寺（佐世保市江迎町）",
-      "image": "https://api.eventbank.jp/image/10651269.jpg",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10651269.htm",
-      "note": "12:00〜16:00／拝観料500円／佐々ICから約20分・駐車場60台",
-      "summary": "紅葉の時期だけの特別公開で、床に入れたアクリル板に庭の紅葉が逆さに映り、額縁の絵のように見える。午後だけの公開なので、平戸や佐世保へのドライブと組み合わせて。"
+      "genre": "陶器市・紅葉",
+      "title": "第22回 秋の有田陶磁器まつり（茶わん供養・有田のちゃわん祭り同時開催）",
+      "place": "有田町内各所・アリタセラ（有田町）",
+      "image": "https://www.j-jti.com/Storage/Image/Product/EventImage/M/EV_20003731_9728.jpg",
+      "source": "https://rurubu.jp/andmore/spot/20003731",
+      "note": "入場無料（一部有料）／JR有田駅・上有田駅から徒歩約10分／波佐見有田ICから約10分・町内に無料駐車場約3,000台／同期間、アリタセラ・有田焼卸団地で茶わん供養・有田のちゃわん祭り（無料・駐車場800台）／問合せ 有田観光協会 0955-43-2121",
+      "summary": "紅葉の有田で器探しと町歩きを楽しむ秋の焼き物まつり。国の天然記念物の大イチョウの黄葉、登り窯の窯焚き公開、期間限定メニューなどがある。アリタセラでは茶わん供養や大抽選会のちゃわん祭りが同時に開かれる。"
     },
     {
-      "date_from": "2026-11-15",
-      "date_to": "2026-11-15",
-      "category": "food",
-      "genre": "スイーツ・食べ歩き",
-      "title": "第11回 日本一！ようかん祭り",
-      "place": "ゆめぷらっと小城・JR小城駅 発着（小城市）",
-      "image": null,
-      "source": "https://www.iwafu.com/en/events/1156987",
-      "note": "受付・スタートはゆめぷらっと小城またはJR小城駅／小城スマートICから5〜10分／問合せ 0952-73-3314",
-      "summary": "ようかん店の数が日本一の小城で、20店以上を回って食べ比べるスタンプラリー。日本遺産「シュガーロード」の町歩きも楽しめ、全部集めると抽選会に参加できる。"
+      "date_from": "2026-11-20",
+      "date_to": "2026-11-23",
+      "category": "other",
+      "genre": "焼き物・陶器市",
+      "title": "三川内陶器市",
+      "place": "三川内皿山一帯（佐世保市）",
+      "image": "https://api.eventbank.jp/image/10652327.jpg",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10652327.htm",
+      "note": "9:00〜16:00・入場無料／会場に駐車場なし。JR三川内駅などから20分間隔のシャトルバスあり／西九州道 佐世保三川内ICから約10分／絵付け体験は毎日9:00〜16:00",
+      "summary": "400年以上の歴史がある国の伝統的工芸品・三川内焼の陶器市。三川内・木原・江永の3つの窯業地の器が並び、値段の交渉もできる。絵付け体験もあり、有田の陶器市と同じ時期なので焼き物めぐりにも。"
     },
     {
-      "date_from": "2026-11-15",
-      "date_to": "2026-11-15",
+      "date_from": "2026-11-21",
+      "date_to": "2026-11-22",
       "category": "food",
-      "genre": "もち・郷土グルメ",
-      "title": "しろいしぺったんこ祭",
-      "place": "有明スカイパーク ふれあい郷（白石町）",
+      "genre": "地元の農水産物・旬の味覚",
+      "title": "ながさき実り・恵みの感謝祭2026",
+      "place": "長崎駅前多目的広場（長崎市）",
+      "image": "https://nagasaki.goguynet.jp/wp-content/uploads/sites/233/2026/11/minori-megumi-festival-20261109192219.png",
+      "source": "https://nagasaki.goguynet.jp/2026/11/10/minori-megumi-festival/",
+      "note": "21日 9:00〜16:00、22日 9:00〜15:00／長崎駅前／出店は変更の可能性あり／各日2回 伊勢エビなどが当たる抽選会",
+      "summary": "長崎市の旬の野菜・米・果物や魚が駅前に集まる感謝祭。きびなごフライやアジフライ、橘漁協の鯛めし、ちゃんぽん・皿うどん、かんころ餅、焼き牡蠣コーナーなどがあり、花のセリや花の販売もある。"
+    },
+    {
+      "date_from": "2026-11-21",
+      "date_to": "2026-11-22",
+      "category": "food",
+      "genre": "産業まつり・魚のセリ市",
+      "title": "島原ふるさと産業まつり",
+      "place": "島原復興アリーナ（島原市）",
       "image": null,
-      "source": "https://www.asobo-saga.jp/files/download/news_blocks/f1f0c9ed-5b65-48db-a089-4335c85830db/value01/value02",
-      "note": "JR肥前竜王駅から徒歩約3分／問合せ 白石町商工観光課 0952-84-7123",
-      "summary": "もちがテーマの町の祭りで、もちの無料配布やぜんざいのふるまい、キッチンカーや農産物の販売がある。JR長崎本線の駅から近く、電車でも行ける。"
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10647634.htm",
+      "note": "21日 10:00〜16:00、22日 10:00〜15:00／入場無料／島鉄バス「アリーナ入口」から徒歩10分／駐車場500台（アリーナ周辺4か所）",
+      "summary": "島原の農産物・水産物・畜産物、菓子や鍛冶製品の店が多数並ぶ産業まつり。野菜の販売、魚のセリ市や「魚の詰め放題」、「肉と魚の大セリ市」が人気で、ステージイベントもある。"
+    },
+    {
+      "date_from": "2026-11-21",
+      "date_to": "2026-11-22",
+      "category": "food",
+      "genre": "お茶・スイーツ",
+      "title": "SAGA茶祭2026（第80回全国お茶まつり佐賀大会）",
+      "place": "佐賀県立博物館・美術館前、SAGA ART PATH（佐賀市）",
+      "image": "https://www.asobo-saga.jp/files/EventMetaData/8b004aca-ae21-446e-9740-d67206df0c05/ogp_image/9e7634a0699f6e69551646e3176c9965.jpg",
+      "source": "https://www.asobo-saga.jp/events/detail/8b004aca-ae21-446e-9740-d67206df0c05",
+      "note": "入場無料（一部有料・予約制のコンテンツあり）／JR佐賀駅から市営バス約15分「博物館前」下車／佐賀大和ICから約25分・駐車場あり（一部無料・台数限定、イベント用駐車場から徒歩約8分）（時間は掲載なし）",
+      "summary": "全国の茶産地が集まるお茶の祭典で、佐賀での開催は27年ぶり。嬉野茶など県内外のお茶の飲み比べや利き茶体験、お茶のスイーツ・グルメ販売がある。お茶のテントサウナや足湯といった変わった企画も。"
+    },
+    {
+      "date_from": "2026-11-21",
+      "date_to": "2027-01-03",
+      "category": "other",
+      "genre": "イルミネーション",
+      "title": "いさはや灯りファンタジア",
+      "place": "諫早市役所前中央交流広場・本町ポケットパーク（諫早市）",
+      "image": "https://api.eventbank.jp/image/10652071.jpg",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10652071.htm",
+      "note": "17:00〜21:45・無料／21・22日は市役所前広場で「灯明地上絵・うないさんバースデイ祭」／JR本諫早駅から徒歩約6分／諫早ICから約15分・駐車場50台（市役所駐車場も利用可）",
+      "summary": "約20万個の電飾で彩られる諫早の冬のイルミネーションが11/21に始まる。初日と2日目は灯明の地上絵などの特別イベントがあり、点灯直後に行くのがおすすめ。"
+    },
+    {
+      "date_from": "2026-11-22",
+      "date_to": "2026-11-22",
+      "category": "food",
+      "genre": "海鮮・魚市",
+      "title": "唐津お魚まつり",
+      "place": "唐津港沿岸物市場周辺（唐津市）",
+      "image": "https://rstatic.enjoytokyo.jp/assets/images/event_draft/5e/2091006/img_1.jpg?1793595018&p=t&w=1200",
+      "source": "https://www.enjoytokyo.jp/event/2091006/",
+      "note": "9:00〜13:00／入場無料／最寄り駅 JR西唐津駅／問合せ 玄海地区水産物消費拡大協議会 0955-72-9196",
+      "summary": "玄界灘の旬の魚が集まる市場の祭りで、とれたての魚介の販売や魚の袋詰め放題がある。昼過ぎに終わるので朝早めに出かけたい。"
+    },
+    {
+      "date_from": "2026-11-22",
+      "date_to": "2026-11-22",
+      "category": "other",
+      "genre": "茶の湯・伝統文化（普段選ばないジャンル）",
+      "title": "第6回 名護屋城大茶会",
+      "place": "名護屋城跡（唐津市）",
+      "image": null,
+      "source": "https://saga-museum.jp/nagoya/docs/nagoyacastle_schedule2026.pdf",
+      "note": "時間・料金はスケジュール表に掲載なし（名護屋城博物館HPで要確認）／名護屋城博物館では〜11/29「名護屋城跡並陣跡史蹟指定100周年記念」展示",
+      "summary": "150を超える大名が集い、茶の湯や能などの文化が花開いた名護屋城跡で開かれる大茶会。お茶や能などの伝統文化を体験しながら、「奇跡の城」の価値を感じられる。"
+    },
+    {
+      "date_from": "2026-11-23",
+      "date_to": "2026-11-23",
+      "category": "food",
+      "genre": "マルシェ・収穫体験",
+      "title": "SAGAこだわりマルシェキャラバン in しろいし",
+      "place": "ふくどみマイランド公園（白石町）",
+      "image": null,
+      "source": "https://www.asobo-saga.jp/events/detail/7cc7b641-3ea9-4732-a6cc-dbee0b8f2a38",
+      "note": "9:00〜15:00／入場無料／無料駐車場400台／白石町役場から車で約10分",
+      "summary": "マルシェを中心に、餅投げ（ひっとんげ）、熱気球の係留、ステージ、丸太切り競争、れんこん掘り体験、はたらく車の展示まである町のイベント。白石の野菜やれんこんを買いに行くのにちょうどいい。"
     },
     {
       "date_from": null,
       "date_to": null,
       "category": "day_trip",
       "genre": "日帰り定番",
-      "title": "有田 ― 九州陶磁文化館「柿右衛門とマイセン 旅する花文様」",
-      "place": "佐賀県立九州陶磁文化館（有田町）",
-      "image": "https://www.museum.or.jp/storage/article_objects/2026/09/07/aca519a92696.jpg",
-      "source": "https://www.museum.or.jp/event/126780",
-      "note": "会期〜12/6／9:00〜17:00（入館16:30まで）／月曜休館（祝日の場合翌日）／一般800円・高校生以下無料",
-      "summary": "柿右衛門窯跡の発掘50周年を記念した特別企画展で、有田の柿右衛門とドイツのマイセンの花模様を見比べられる。焼き物の町めぐりと合わせて。11/19からは有田のちゃわん祭り・秋の陶磁器まつりも始まる。"
+      "title": "唐津城・虹の松原",
+      "place": "唐津城（唐津市）",
+      "image": "https://images.microcms-assets.io/assets/c6dcd61b4ff84cdfac20625a620f2322/a0069d44cd6f4df0a14dacf4d1d6140c/00652_OGP.png",
+      "source": "https://plus.rurubu.jp/article/850559927",
+      "note": "9:00〜17:00（入館16:40まで）／入場500円／休みなし／JR唐津駅から車で約7分・駐車場170台（1時間100円〜）（2024年8月時点の情報）",
+      "summary": "唐津湾に面して建つ唐津城の天守閣から、虹の松原や城下町を見渡せる。城下町歩きと合わせて回りやすい。11/21・22は唐津窯元ツーリズム、22日は唐津お魚まつりや名護屋城大茶会もあり、行くならこの週末がおすすめ。"
     },
     {
       "date_from": null,
       "date_to": null,
       "category": "day_trip",
       "genre": "テーマパーク",
-      "title": "おおむら夢ファーム シュシュ",
-      "place": "おおむら夢ファーム シュシュ（大村市）",
-      "image": "https://ms-cache.walkerplus.com/walkertouch/wtd/images/l2/55617.jpg",
-      "source": "https://www.walkerplus.com/spot/ar1042s37948/data.html",
-      "note": "10:00〜18:00／レストラン11:00〜15:00（夜は前日までの予約制）／期間中の休みは11/18（水）／大村ICから約15分・無料駐車場100台",
-      "summary": "大村湾を見下ろす体験型観光農園で、農産物直売所、パン工房、レストランがある。長崎市から近く、ランチと買い物の気軽な日帰りに向く。"
+      "title": "佐賀県立宇宙科学館（ゆめぎんが）",
+      "place": "佐賀県立宇宙科学館（武雄市）",
+      "image": "https://www.museum.or.jp/storage/article_objects/2024/07/18/368c8c298875.jpg",
+      "source": "https://www.museum.or.jp/museum/7109",
+      "note": "平日9:15〜17:15・土日祝9:15〜18:00／月曜休館（祝日の場合は翌日。期間中は11/16・11/24が休み）／大人520円・高校生310円・小中学生200円・4歳以上100円／長崎道 武雄北方ICから車で約15分、JR武雄温泉駅からバス・タクシーで約10分",
+      "summary": "武雄の山あいにある宇宙と科学の体験型ミュージアム。大人520円と手頃で、雨の日でも楽しめる。御船山楽園の紅葉や武雄温泉と組み合わせた一日コースに向く。"
     }
   ],
   "coming_soon": [
-    {
-      "date_from": "2026-11-19",
-      "date_to": "2026-11-23",
-      "title": "茶わん供養・有田のちゃわん祭り",
-      "place": "アリタセラ・有田焼卸団地（有田町）",
-      "source": "https://rurubu.jp/andmore/spot/20000613"
-    },
-    {
-      "date_from": "2026-11-20",
-      "date_to": "2026-11-23",
-      "title": "三川内陶器市",
-      "place": "三川内皿山一帯（佐世保市）",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10652327.htm"
-    },
-    {
-      "date_from": "2026-11-20",
-      "date_to": "2026-11-24",
-      "title": "鍋島藩窯秋祭り",
-      "place": "大川内山（伊万里市）",
-      "source": "https://www.jalan.net/event/410000/"
-    },
-    {
-      "date_from": "2026-11-20",
-      "date_to": "2026-12-25",
-      "title": "きらきらフェスティバル",
-      "place": "島瀬公園・さるくシティ4〇3アーケードほか（佐世保市）",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10651267.htm"
-    },
-    {
-      "date_from": "2026-11-21",
-      "date_to": "2026-11-22",
-      "title": "BRIDGE 2026（音楽フェス）",
-      "place": "長崎スタジアムシティ HAPPINESS ARENA（長崎市）",
-      "source": "https://www.nagasakistadiumcity.com/en/bridge_2026/"
-    },
-    {
-      "date_from": "2026-11-21",
-      "date_to": "2026-11-23",
-      "title": "Bakery & Coffee Marche",
-      "place": "長崎スタジアムシティ 2F SOUTH前広場（長崎市）",
-      "source": "https://www.nagasakistadiumcity.com/en/bakery-coffee-marche/"
-    },
-    {
-      "date_from": "2026-11-21",
-      "date_to": "2027-01-03",
-      "title": "いさはや灯りファンタジア",
-      "place": "諫早市役所前中央交流広場ほか（諫早市）",
-      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10652071.htm"
-    },
-    {
-      "date_from": "2026-11-22",
-      "date_to": "2026-11-22",
-      "title": "唐津お魚まつり",
-      "place": "唐津港 市場周辺（唐津市）",
-      "source": "https://www.asobo-saga.jp/files/download/news_blocks/f1f0c9ed-5b65-48db-a089-4335c85830db/value01/value02"
-    },
-    {
-      "date_from": "2026-11-22",
-      "date_to": "2026-11-22",
-      "title": "第6回 名護屋城大茶会",
-      "place": "名護屋城跡（唐津市）",
-      "source": "https://www.asobo-saga.jp/files/download/news_blocks/f1f0c9ed-5b65-48db-a089-4335c85830db/value01/value02"
-    },
     {
       "date_from": "2026-11-26",
       "date_to": "2027-02-28",
       "title": "カピバラの露天風呂",
       "place": "長崎バイオパーク（西海市）",
       "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10649643.htm"
+    },
+    {
+      "date_from": "2026-11-28",
+      "date_to": "2026-12-13",
+      "title": "吉野ヶ里 光の響（11/28・29、12/5・6、12/12・13の土日のみ）",
+      "place": "吉野ヶ里歴史公園（吉野ヶ里町・神埼市）",
+      "source": "https://bestcalendar.jp/press/164085"
+    },
+    {
+      "date_from": "2026-11-29",
+      "date_to": "2026-12-25",
+      "title": "カピバラのベジタブルクリスマスツリー",
+      "place": "長崎バイオパーク（西海市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
+    },
+    {
+      "date_from": "2026-12-01",
+      "date_to": "2026-12-25",
+      "title": "イマリ・キャンドル・クリスマス2026（特別イベントは12/12・13）",
+      "place": "大川内山（伊万里市）",
+      "source": "https://www.iwafu.com/jp/events/1162669"
+    },
+    {
+      "date_from": "2026-12-05",
+      "date_to": "2026-12-05",
+      "title": "フェスティビタス ナタリス",
+      "place": "南島原市立有馬小学校グラウンド（南島原市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/nagasaki.htm"
     },
     {
       "date_from": "2026-12-05",
@@ -429,11 +422,25 @@
       "source": "https://www.asobo-saga.jp/files/download/news_blocks/f1f0c9ed-5b65-48db-a089-4335c85830db/value01/value02"
     },
     {
-      "date_from": "2026-12-12",
+      "date_from": "2026-12-07",
+      "date_to": "2027-01-09",
+      "title": "島原ウィンターナイトファンタジア",
+      "place": "中央公園ほか（島原市）",
+      "source": "https://www.nta.co.jp/kokunai/special/eventinfo/10653898.htm"
+    },
+    {
+      "date_from": "2026-12-07",
+      "date_to": "2026-12-08",
+      "title": "鹿島市特産品まつり",
+      "place": "祐徳稲荷神社 参集殿（鹿島市）",
+      "source": "https://rurubu.jp/andmore/spot/20006158"
+    },
+    {
+      "date_from": "2026-12-11",
       "date_to": "2026-12-13",
-      "title": "イマリ・キャンドル・クリスマス",
-      "place": "大川内山（伊万里市）",
-      "source": "https://www.jalan.net/event/410000/"
+      "title": "水産加工振興祭 with ふるさと物産まつり",
+      "place": "おくんち広場（ゆめタウン夢彩都前）（長崎市）",
+      "source": "https://www.iwafu.com/jp/events/1169631"
     },
     {
       "date_from": "2026-12-19",
