@@ -1,9 +1,9 @@
 {
  "market": "us",
- "updated": "2026-11-13 11:54",
- "price_date": "2026-11-12",
+ "updated": "2026-11-14 11:41",
+ "price_date": "2026-11-13",
  "rule": "S&P500（AI関連を除く）の6ヶ月モメンタム上位10銘柄を均等な金額で持つ。毎月末に入れ替え。",
- "usdjpy": 159.91,
+ "usdjpy": 159.88,
  "dip_rule": false,
  "official": {
   "date": "2026-10-30",
@@ -13,215 +13,215 @@
     "name": "Okta, Inc.",
     "sector": "Information Technology",
     "momentum": 1.8059,
-    "price": 182.54
+    "price": 182.87
    },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
     "momentum": 1.336,
-    "price": 229.87
+    "price": 226.61
    },
    {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
     "momentum": 1.1883,
-    "price": 322.66
+    "price": 322.24
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
     "momentum": 1.0712,
-    "price": 129.54
+    "price": 127.22
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
     "momentum": 0.9673,
-    "price": 184.46
+    "price": 184.16
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
     "momentum": 0.957,
-    "price": 209.55
+    "price": 207.01
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
     "momentum": 0.8728,
-    "price": 110.1
+    "price": 107.99
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
     "momentum": 0.7302,
-    "price": 340.81
+    "price": 337.97
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
     "momentum": 0.7207,
-    "price": 157.02
+    "price": 154.39
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
     "momentum": 0.7181,
-    "price": 412.85
+    "price": 414.65
    },
    {
     "ticker": "VLO",
     "name": "Valero Energy",
     "sector": "Energy",
     "momentum": 0.6688,
-    "price": 374.95
+    "price": 379.83
    },
    {
     "ticker": "ZBRA",
     "name": "Zebra Technologies",
     "sector": "Information Technology",
     "momentum": 0.6534,
-    "price": 317.83
+    "price": 324.0
    },
    {
     "ticker": "IQV",
     "name": "IQVIA",
     "sector": "Health Care",
     "momentum": 0.6525,
-    "price": 271.11
+    "price": 265.12
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
     "momentum": 0.6432,
-    "price": 212.21
+    "price": 211.21
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
     "momentum": 0.6429,
-    "price": 302.42
+    "price": 301.53
    }
   ]
  },
  "latest": {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "top": [
    {
     "ticker": "OKTA",
     "name": "Okta, Inc.",
     "sector": "Information Technology",
-    "momentum": 1.6146,
-    "price": 182.54
-   },
-   {
-    "ticker": "MPC",
-    "name": "Marathon Petroleum",
-    "sector": "Energy",
-    "momentum": 0.9617,
-    "price": 412.85
-   },
-   {
-    "ticker": "VEEV",
-    "name": "Veeva Systems",
-    "sector": "Health Care",
-    "momentum": 0.903,
-    "price": 302.42
+    "momentum": 1.5193,
+    "price": 182.87
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
-    "momentum": 0.8979,
-    "price": 340.81
+    "momentum": 1.0301,
+    "price": 337.97
+   },
+   {
+    "ticker": "VEEV",
+    "name": "Veeva Systems",
+    "sector": "Health Care",
+    "momentum": 0.9705,
+    "price": 301.53
+   },
+   {
+    "ticker": "MPC",
+    "name": "Marathon Petroleum",
+    "sector": "Energy",
+    "momentum": 0.8823,
+    "price": 414.65
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
-    "momentum": 0.8972,
-    "price": 209.55
+    "momentum": 0.8797,
+    "price": 207.01
    },
    {
     "ticker": "VLO",
     "name": "Valero Energy",
     "sector": "Energy",
-    "momentum": 0.8946,
-    "price": 374.95
-   },
-   {
-    "ticker": "PSX",
-    "name": "Phillips 66",
-    "sector": "Energy",
-    "momentum": 0.7552,
-    "price": 262.91
-   },
-   {
-    "ticker": "CRWD",
-    "name": "CrowdStrike",
-    "sector": "Information Technology",
-    "momentum": 0.7194,
-    "price": 229.87
-   },
-   {
-    "ticker": "P",
-    "name": "Everpure",
-    "sector": "Information Technology",
-    "momentum": 0.6884,
-    "price": 110.1
+    "momentum": 0.7863,
+    "price": 379.83
    },
    {
     "ticker": "MRNA",
     "name": "Moderna",
     "sector": "Health Care",
-    "momentum": 0.6331,
-    "price": 231.35
-   },
-   {
-    "ticker": "TECH",
-    "name": "Bio-Techne",
-    "sector": "Health Care",
-    "momentum": 0.6253,
-    "price": 72.84
+    "momentum": 0.7412,
+    "price": 223.37
    },
    {
     "ticker": "BBY",
     "name": "Best Buy",
     "sector": "Consumer Discretionary",
-    "momentum": 0.6096,
-    "price": 103.41
+    "momentum": 0.7133,
+    "price": 104.07
    },
    {
-    "ticker": "WDAY",
-    "name": "Workday, Inc.",
-    "sector": "Information Technology",
-    "momentum": 0.5896,
-    "price": 190.64
+    "ticker": "TECH",
+    "name": "Bio-Techne",
+    "sector": "Health Care",
+    "momentum": 0.6798,
+    "price": 72.8
+   },
+   {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "momentum": 0.662,
+    "price": 264.9
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
-    "momentum": 0.5793,
-    "price": 157.02
+    "momentum": 0.6474,
+    "price": 154.39
    },
    {
-    "ticker": "PANW",
-    "name": "Palo Alto Networks",
+    "ticker": "CRWD",
+    "name": "CrowdStrike",
     "sector": "Information Technology",
-    "momentum": 0.5744,
-    "price": 322.66
+    "momentum": 0.6467,
+    "price": 226.61
+   },
+   {
+    "ticker": "P",
+    "name": "Everpure",
+    "sector": "Information Technology",
+    "momentum": 0.6433,
+    "price": 107.99
+   },
+   {
+    "ticker": "IQV",
+    "name": "IQVIA",
+    "sector": "Health Care",
+    "momentum": 0.6026,
+    "price": 265.12
+   },
+   {
+    "ticker": "TMO",
+    "name": "Thermo Fisher Scientific",
+    "sector": "Health Care",
+    "momentum": 0.5917,
+    "price": 700.22
    }
   ]
  },
@@ -270,5 +270,5 @@
   "Vistra Corp. (VST)",
   "Western Digital (WDC)"
  ],
- "universe": 455
+ "universe": 456
 }
