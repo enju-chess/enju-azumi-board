@@ -1,9 +1,9 @@
 {
  "market": "us",
- "updated": "2026-11-17 13:47",
- "price_date": "2026-11-16",
+ "updated": "2026-11-18 12:51",
+ "price_date": "2026-11-17",
  "rule": "S&P500（AI関連を除く）の6ヶ月モメンタム上位10銘柄を均等な金額で持つ。毎月末に入れ替え。",
- "usdjpy": 159.28,
+ "usdjpy": 159.36,
  "dip_rule": false,
  "official": {
   "date": "2026-10-30",
@@ -13,215 +13,215 @@
     "name": "Okta, Inc.",
     "sector": "Information Technology",
     "momentum": 1.8059,
-    "price": 178.22
+    "price": 174.54
    },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
     "momentum": 1.336,
-    "price": 223.21
+    "price": 219.58
    },
    {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
     "momentum": 1.1883,
-    "price": 316.09
+    "price": 309.29
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
     "momentum": 1.0712,
-    "price": 123.27
+    "price": 124.5
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
     "momentum": 0.9673,
-    "price": 172.86
+    "price": 165.18
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
     "momentum": 0.957,
-    "price": 198.0
+    "price": 202.61
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
     "momentum": 0.8728,
-    "price": 103.68
+    "price": 101.79
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
     "momentum": 0.7302,
-    "price": 335.52
+    "price": 332.16
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
     "momentum": 0.7207,
-    "price": 148.85
+    "price": 147.79
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
     "momentum": 0.7181,
-    "price": 402.19
+    "price": 395.61
    },
    {
     "ticker": "VLO",
     "name": "Valero Energy",
     "sector": "Energy",
     "momentum": 0.6688,
-    "price": 369.73
+    "price": 363.77
    },
    {
     "ticker": "ZBRA",
     "name": "Zebra Technologies",
     "sector": "Information Technology",
     "momentum": 0.6534,
-    "price": 320.13
+    "price": 312.21
    },
    {
     "ticker": "IQV",
     "name": "IQVIA",
     "sector": "Health Care",
     "momentum": 0.6525,
-    "price": 264.73
+    "price": 257.6
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
     "momentum": 0.6432,
-    "price": 199.42
+    "price": 194.13
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
     "momentum": 0.6429,
-    "price": 299.28
+    "price": 288.41
    }
   ]
  },
  "latest": {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "top": [
    {
     "ticker": "OKTA",
     "name": "Okta, Inc.",
     "sector": "Information Technology",
-    "momentum": 1.1514,
-    "price": 178.22
+    "momentum": 1.2162,
+    "price": 174.54
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
-    "momentum": 1.0019,
-    "price": 335.52
+    "momentum": 0.9682,
+    "price": 332.16
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
-    "momentum": 0.8942,
-    "price": 299.28
+    "momentum": 0.9399,
+    "price": 288.41
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
-    "momentum": 0.8553,
-    "price": 198.0
+    "momentum": 0.8539,
+    "price": 202.61
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
-    "momentum": 0.8542,
-    "price": 402.19
-   },
-   {
-    "ticker": "VLO",
-    "name": "Valero Energy",
-    "sector": "Energy",
-    "momentum": 0.7351,
-    "price": 369.73
-   },
-   {
-    "ticker": "PSX",
-    "name": "Phillips 66",
-    "sector": "Energy",
-    "momentum": 0.6392,
-    "price": 260.62
-   },
-   {
-    "ticker": "BBY",
-    "name": "Best Buy",
-    "sector": "Consumer Discretionary",
-    "momentum": 0.6387,
-    "price": 103.35
+    "momentum": 0.8128,
+    "price": 395.61
    },
    {
     "ticker": "MRNA",
     "name": "Moderna",
     "sector": "Health Care",
-    "momentum": 0.6361,
-    "price": 215.27
-   },
-   {
-    "ticker": "TECH",
-    "name": "Bio-Techne",
-    "sector": "Health Care",
-    "momentum": 0.6352,
-    "price": 72.79
+    "momentum": 0.7917,
+    "price": 206.8
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
-    "momentum": 0.6091,
-    "price": 103.68
+    "momentum": 0.6716,
+    "price": 101.79
+   },
+   {
+    "ticker": "VLO",
+    "name": "Valero Energy",
+    "sector": "Energy",
+    "momentum": 0.6642,
+    "price": 363.77
+   },
+   {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "momentum": 0.6016,
+    "price": 256.93
+   },
+   {
+    "ticker": "TECH",
+    "name": "Bio-Techne",
+    "sector": "Health Care",
+    "momentum": 0.596,
+    "price": 72.63
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
-    "momentum": 0.5997,
-    "price": 148.85
+    "momentum": 0.5754,
+    "price": 147.79
    },
    {
-    "ticker": "TMO",
-    "name": "Thermo Fisher Scientific",
+    "ticker": "BBY",
+    "name": "Best Buy",
+    "sector": "Consumer Discretionary",
+    "momentum": 0.5738,
+    "price": 98.4
+   },
+   {
+    "ticker": "MTD",
+    "name": "Mettler Toledo",
     "sector": "Health Care",
-    "momentum": 0.5638,
-    "price": 691.33
+    "momentum": 0.5472,
+    "price": 1712.95
    },
    {
     "ticker": "A",
     "name": "Agilent Technologies",
     "sector": "Health Care",
-    "momentum": 0.5481,
-    "price": 172.92
+    "momentum": 0.5418,
+    "price": 172.22
    },
    {
     "ticker": "IQV",
     "name": "IQVIA",
     "sector": "Health Care",
-    "momentum": 0.5445,
-    "price": 264.73
+    "momentum": 0.5353,
+    "price": 257.6
    }
   ]
  },
