@@ -1,9 +1,9 @@
 {
  "market": "us",
- "updated": "2026-11-18 12:51",
- "price_date": "2026-11-17",
+ "updated": "2026-11-19 12:51",
+ "price_date": "2026-11-18",
  "rule": "S&P500（AI関連を除く）の6ヶ月モメンタム上位10銘柄を均等な金額で持つ。毎月末に入れ替え。",
- "usdjpy": 159.36,
+ "usdjpy": 159.55,
  "dip_rule": false,
  "official": {
   "date": "2026-10-30",
@@ -13,215 +13,215 @@
     "name": "Okta, Inc.",
     "sector": "Information Technology",
     "momentum": 1.8059,
-    "price": 174.54
+    "price": 195.61
    },
    {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "Information Technology",
     "momentum": 1.336,
-    "price": 219.58
+    "price": 237.03
    },
    {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "sector": "Information Technology",
     "momentum": 1.1883,
-    "price": 309.29
+    "price": 339.92
    },
    {
     "ticker": "FTNT",
     "name": "Fortinet",
     "sector": "Information Technology",
     "momentum": 1.0712,
-    "price": 124.5
+    "price": 131.81
    },
    {
     "ticker": "DDOG",
     "name": "Datadog",
     "sector": "Information Technology",
     "momentum": 0.9673,
-    "price": 165.18
+    "price": 167.11
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
     "momentum": 0.957,
-    "price": 202.61
+    "price": 210.01
    },
    {
     "ticker": "P",
     "name": "Everpure",
     "sector": "Information Technology",
     "momentum": 0.8728,
-    "price": 101.79
+    "price": 100.74
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
     "momentum": 0.7302,
-    "price": 332.16
+    "price": 333.25
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
     "momentum": 0.7207,
-    "price": 147.79
+    "price": 152.43
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
     "momentum": 0.7181,
-    "price": 395.61
+    "price": 373.86
    },
    {
     "ticker": "VLO",
     "name": "Valero Energy",
     "sector": "Energy",
     "momentum": 0.6688,
-    "price": 363.77
+    "price": 343.7
    },
    {
     "ticker": "ZBRA",
     "name": "Zebra Technologies",
     "sector": "Information Technology",
     "momentum": 0.6534,
-    "price": 312.21
+    "price": 319.61
    },
    {
     "ticker": "IQV",
     "name": "IQVIA",
     "sector": "Health Care",
     "momentum": 0.6525,
-    "price": 257.6
+    "price": 257.84
    },
    {
     "ticker": "TWLO",
     "name": "Twilio",
     "sector": "Information Technology",
     "momentum": 0.6432,
-    "price": 194.13
+    "price": 195.93
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
     "momentum": 0.6429,
-    "price": 288.41
+    "price": 277.2
    }
   ]
  },
  "latest": {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "top": [
    {
     "ticker": "OKTA",
     "name": "Okta, Inc.",
     "sector": "Information Technology",
-    "momentum": 1.2162,
-    "price": 174.54
+    "momentum": 1.179,
+    "price": 195.61
    },
    {
     "ticker": "CRL",
     "name": "Charles River Laboratories",
     "sector": "Health Care",
-    "momentum": 0.9682,
-    "price": 332.16
+    "momentum": 1.0217,
+    "price": 333.25
    },
    {
     "ticker": "VEEV",
     "name": "Veeva Systems",
     "sector": "Health Care",
-    "momentum": 0.9399,
-    "price": 288.41
+    "momentum": 0.9318,
+    "price": 277.2
    },
    {
     "ticker": "ILMN",
     "name": "Illumina, Inc.",
     "sector": "Health Care",
-    "momentum": 0.8539,
-    "price": 202.61
+    "momentum": 0.8879,
+    "price": 210.01
    },
    {
     "ticker": "MPC",
     "name": "Marathon Petroleum",
     "sector": "Energy",
-    "momentum": 0.8128,
-    "price": 395.61
+    "momentum": 0.8436,
+    "price": 373.86
    },
    {
     "ticker": "MRNA",
     "name": "Moderna",
     "sector": "Health Care",
-    "momentum": 0.7917,
-    "price": 206.8
-   },
-   {
-    "ticker": "P",
-    "name": "Everpure",
-    "sector": "Information Technology",
-    "momentum": 0.6716,
-    "price": 101.79
+    "momentum": 0.8164,
+    "price": 196.79
    },
    {
     "ticker": "VLO",
     "name": "Valero Energy",
     "sector": "Energy",
-    "momentum": 0.6642,
-    "price": 363.77
-   },
-   {
-    "ticker": "PSX",
-    "name": "Phillips 66",
-    "sector": "Energy",
-    "momentum": 0.6016,
-    "price": 256.93
-   },
-   {
-    "ticker": "TECH",
-    "name": "Bio-Techne",
-    "sector": "Health Care",
-    "momentum": 0.596,
-    "price": 72.63
+    "momentum": 0.7227,
+    "price": 343.7
    },
    {
     "ticker": "RVTY",
     "name": "Revvity",
     "sector": "Health Care",
-    "momentum": 0.5754,
-    "price": 147.79
+    "momentum": 0.6467,
+    "price": 152.43
+   },
+   {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "momentum": 0.6314,
+    "price": 244.83
+   },
+   {
+    "ticker": "P",
+    "name": "Everpure",
+    "sector": "Information Technology",
+    "momentum": 0.6235,
+    "price": 100.74
+   },
+   {
+    "ticker": "WDAY",
+    "name": "Workday, Inc.",
+    "sector": "Information Technology",
+    "momentum": 0.6111,
+    "price": 177.45
+   },
+   {
+    "ticker": "ZBRA",
+    "name": "Zebra Technologies",
+    "sector": "Information Technology",
+    "momentum": 0.5775,
+    "price": 319.61
    },
    {
     "ticker": "BBY",
     "name": "Best Buy",
     "sector": "Consumer Discretionary",
-    "momentum": 0.5738,
-    "price": 98.4
-   },
-   {
-    "ticker": "MTD",
-    "name": "Mettler Toledo",
-    "sector": "Health Care",
-    "momentum": 0.5472,
-    "price": 1712.95
-   },
-   {
-    "ticker": "A",
-    "name": "Agilent Technologies",
-    "sector": "Health Care",
-    "momentum": 0.5418,
-    "price": 172.22
+    "momentum": 0.5765,
+    "price": 100.31
    },
    {
     "ticker": "IQV",
     "name": "IQVIA",
     "sector": "Health Care",
-    "momentum": 0.5353,
-    "price": 257.6
+    "momentum": 0.5618,
+    "price": 257.84
+   },
+   {
+    "ticker": "TECH",
+    "name": "Bio-Techne",
+    "sector": "Health Care",
+    "momentum": 0.5559,
+    "price": 72.75
    }
   ]
  },
@@ -260,7 +260,6 @@
   "Nvidia (NVDA)",
   "ON Semiconductor (ON)",
   "Qualcomm (QCOM)",
-  "Sandisk (SNDK)",
   "Seagate Technology (STX)",
   "Skyworks Solutions (SWKS)",
   "Supermicro (SMCI)",
