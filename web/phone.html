@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14161B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="今週のふたり">
+<title>今週のふたり</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14161B;--card:#1F232B;--line:#2B303A;--ink:#F2EFE8;--sub:#CFCAC0;--mute:#9D998F;--amber:#F2B84B;--teal:#7FD3C1}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',system-ui,sans-serif}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+header{padding:calc(14px + env(safe-area-inset-top)) 16px 10px;display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+header h1{margin:0;font-size:24px;font-weight:900}
+header span{font-size:13px;color:var(--mute)}
+main{padding:0 16px}
+h2{font-size:15px;color:var(--mute);font-weight:700;margin:22px 0 10px;letter-spacing:.04em}
+.card{background:var(--card);border-radius:14px;overflow:hidden;margin-bottom:12px}
+.card summary{list-style:none;display:flex;gap:12px;padding:12px;cursor:pointer;align-items:stretch}
+.card summary::-webkit-details-marker{display:none}
+.thumb{width:92px;min-height:72px;flex-shrink:0;border-radius:10px;background:#2a2e36 center/cover no-repeat;position:relative}
+.date{display:flex;flex-direction:column;justify-content:center;align-items:center;width:72px;flex-shrink:0;border-radius:10px;background:#2a2e36}
+.date b{font-size:20px;font-weight:900;line-height:1.1}
+.date span{font-size:13px;color:var(--sub)}
+.body{min-width:0;display:flex;flex-direction:column;gap:3px;justify-content:center}
+.when{font-size:14px;font-weight:700;color:var(--amber)}
+.t{font-size:17px;font-weight:700;line-height:1.35}
+.r{font-size:13px;color:var(--sub)}
+.chip{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;color:#14161B;margin-right:6px;vertical-align:2px}
+.more{padding:0 14px 14px;font-size:15px;line-height:1.75;color:var(--sub)}
+.more img{width:100%;border-radius:10px;margin-bottom:10px;display:block}
+.more a{color:var(--teal);font-size:14px}
+.dim{opacity:.6}
+.trip{box-shadow:inset 0 0 0 2px var(--teal)}
+.empty{color:var(--mute);font-size:14px;padding:12px;background:var(--card);border-radius:12px}
+nav{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(20,22,27,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{background:none;border:0;color:var(--mute);font:inherit;font-size:13px;font-weight:700;padding:10px 0 12px;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:58px}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+nav button[aria-selected="true"]{color:var(--amber)}
+.ti{display:flex;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+.ti:last-child{border-bottom:0}
+.ti i{width:16px;height:16px;border:2px solid var(--sub);border-radius:4px;flex-shrink:0;margin-top:4px}
+.ti.urgent{color:var(--amber);font-weight:700}
+.ti.urgent i{border-color:var(--amber)}
+.ti small{display:block;font-size:13px;color:var(--mute);font-weight:400}
+.sc{display:flex;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+.sc:last-child{border-bottom:0}
+.sc b{width:96px;flex-shrink:0;color:var(--teal)}
+.sc small{display:block;font-size:13px;color:var(--mute)}
+.lock{display:flex;flex-direction:column;gap:12px;padding:20px 16px;background:var(--card);border-radius:14px}
+.lock label{font-size:15px;color:var(--sub)}
+.lock input{font:inherit;font-size:22px;letter-spacing:.2em;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.lock button{font:inherit;font-size:16px;font-weight:700;padding:13px;border-radius:10px;border:0;background:var(--amber);color:#14161B}
+.lock p{margin:0;font-size:14px;color:#F08A7A;min-height:1em}
+.err{padding:40px 16px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header><h1>今週のふたり</h1><span id="upd"></span></header>
+<main id="main"><div class="err">読み込み中…</div></main>
+<nav role="tablist">
+  <button role="tab" data-tab="tv" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>番組</button>
+  <button role="tab" data-tab="vod"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg>配信・映画</button>
+  <button role="tab" data-tab="local"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>おでかけ</button>
+  <button role="tab" data-tab="tasks"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg>タスク</button>
+</nav>
+<script>
+(function(){
+  var DOW = ['日','月','火','水','木','金','土'];
+  var PH = ['#4A3A2E','#3E4A35','#4B3F4F','#2F4555','#5A3434','#3A3550','#4E4A2E','#2E4A44'];
+  var main = document.getElementById('main');
+  var DATA = null, TAB = 'tv';
+  try { TAB = localStorage.getItem('ptab') || 'tv'; } catch(e){}
+
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function d(s){ var p = s.slice(0,10).split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function md(x){ return (x.getMonth()+1) + '/' + x.getDate(); }
+  var TODAY = (function(){ var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+  function upcoming(e){ var end = e.date_to || e.date_from; return !end || d(end) >= TODAY; }
+  function sortBy(list, key){ return list.slice().sort(function(a,b){ var x = a[key] || '9999', y = b[key] || '9999'; return x < y ? -1 : x > y ? 1 : 0; }); }
+  function dateParts(from, to){
+    if(!from) return { main:'いつでも', sub:'' };
+    var a = d(from), b = to ? d(to) : a;
+    if(a < TODAY && b >= TODAY) return { main:'開催中', sub:'〜' + md(b) };
+    if(+a === +b) return { main: md(a), sub: DOW[a.getDay()] };
+    return { main: md(a), sub: DOW[a.getDay()] + '〜' + (a.getMonth() === b.getMonth() ? b.getDate() : md(b)) };
+  }
+  function shortCh(c){ return String(c || '').replace(/（長崎：(.+?)）/, '／$1'); }
+  function more(x){
+    var h = '';
+    if(x.image) h += '<img loading="lazy" alt="" src="' + esc(x.image) + '">';
+    h += esc(x.summary || x.note || '（概要はまだありません）');
+    if(x.source) h += '<br><a href="' + esc(x.source) + '" target="_blank" rel="noopener">くわしく見る</a>';
+    return '<div class="more">' + h + '</div>';
+  }
+  function thumb(img, i){ return '<div class="thumb" style="background-color:' + PH[i % PH.length] + (img ? ";background-image:url('" + esc(img) + "')" : '') + '"></div>'; }
+
+  function tvTab(){
+    var list = sortBy(DATA.recording || [], 'start');
+    (DATA.regular_programs || []).forEach(function(p){ if(p.start) list.push({ title:p.title, start:p.start, slot:p.slot, channel:p.channel, reason:'いつもの番組', summary:p.summary, image:p.image, source:p.source }); });
+    list = list.filter(function(r){ return !r.start || d(r.start) >= TODAY; });
+    var h = '<h2>録画候補</h2>';
+    h += list.map(function(r, i){
+      var w = r.start ? (function(){ var x = d(r.start); return md(x) + '（' + DOW[x.getDay()] + '）' + r.start.slice(11,16); })() : (r.slot || '');
+      var chip = r.kind === 'discovery' ? '<span class="chip" style="background:var(--teal)">出会いの1本</span>' : (r.is_premiere ? '<span class="chip" style="background:var(--amber)">新番組</span>' : '');
+      return '<details class="card"><summary>' + thumb(r.image, i) + '<div class="body"><div class="when">' + esc(w) + '</div><div class="t">' + chip + esc(r.title) + '</div><div class="r">' + esc(shortCh(r.channel)) + '　' + esc(r.reason) + '</div></div></summary>' + more(r) + '</details>';
+    }).join('') || '<div class="empty">今週の録画候補はありません</div>';
+    return h;
+  }
+  function vodTab(){
+    var h = '<h2>配信</h2>';
+    h += (DATA.streaming || []).map(function(s, i){
+      var chip = '<span class="chip" style="background:' + (s.subscribed ? 'var(--amber)' : '#B5B2AC') + '">' + esc(s.service + (s.subscribed ? '' : ' 参考')) + '</span>';
+      return '<details class="card' + (s.subscribed ? '' : ' dim') + '"><summary>' + thumb(s.image, i + 3) + '<div class="body"><div class="t">' + chip + esc(s.title) + '</div><div class="r">' + esc(s.reason) + (s.start ? '　' + esc(md(d(s.start))) + '〜' : '') + '</div></div></summary>' + more(s) + '</details>';
+    }).join('') || '<div class="empty">配信の新作はありません</div>';
+    h += '<h2>映画（長崎で上映中）</h2>';
+    h += (DATA.movies || []).map(function(m, i){
+      return '<details class="card"><summary>' + thumb(m.image, i + 5) + '<div class="body"><div class="t">' + esc(m.title) + '</div><div class="r">' + esc(m.theater) + '　' + esc(m.reason) + '</div></div></summary>' + more(m) + '</details>';
+    }).join('') || '<div class="empty">お気に入りの人の上映作品はありません</div>';
+    return h;
+  }
+  function localTab(){
+    var ev = sortBy((DATA.local || []).filter(function(e){ return e.category !== 'day_trip' && upcoming(e); }), 'date_from');
+    var trips = (DATA.local || []).filter(function(e){ return e.category === 'day_trip'; });
+    var card = function(e, i, cls){
+      var dp = dateParts(e.date_from, e.date_to);
+      var color = e.category === 'food' ? 'var(--amber)' : 'var(--teal)';
+      return '<details class="card' + (cls || '') + '"><summary><div class="date"><b>' + esc(dp.main) + '</b><span>' + esc(dp.sub) + '</span></div><div class="body"><div class="r" style="color:' + color + ';font-weight:700">' + esc(e.genre) + '</div><div class="t">' + esc(e.title) + '</div><div class="r">' + esc(e.place) + '</div></div></summary>' + more(e) + '</details>';
+    };
+    var h = '<h2>長崎・佐賀のイベント</h2>' + (ev.map(function(e, i){ return card(e, i); }).join('') || '<div class="empty">イベント情報はありません</div>');
+    if(trips.length) h += '<h2>日帰りでどう？</h2>' + trips.map(function(e, i){ return card(e, i, ' trip'); }).join('');
+    var soon = (DATA.coming_soon || []).filter(upcoming);
+    if(soon.length) h += '<h2>近日</h2>' + soon.map(function(e, i){ return card(e, i); }).join('');
+    return h;
+  }
+
+  // ---- タスク（暗号化データを合言葉で復号） ----
+  function b64(s){ return Uint8Array.from(atob(s), function(c){ return c.charCodeAt(0); }); }
+  function decrypt(enc, code){
+    var te = new TextEncoder();
+    return crypto.subtle.importKey('raw', te.encode(code), 'PBKDF2', false, ['deriveKey'])
+      .then(function(base){ return crypto.subtle.deriveKey({ name:'PBKDF2', salt:b64(enc.salt), iterations:enc.iter, hash:'SHA-256' }, base, { name:'AES-GCM', length:256 }, false, ['decrypt']); })
+      .then(function(key){ return crypto.subtle.decrypt({ name:'AES-GCM', iv:b64(enc.iv) }, key, b64(enc.ct)); })
+      .then(function(buf){ return JSON.parse(new TextDecoder().decode(buf)); });
+  }
+  function getCode(){ try { return localStorage.getItem('tk'); } catch(e){ return null; } }
+  function setCode(c){ try { c ? localStorage.setItem('tk', c) : localStorage.removeItem('tk'); } catch(e){} }
+  function lockForm(msg){
+    main.innerHTML = '<h2>タスク</h2><form class="lock" id="lk"><label for="pc">合言葉（数字）を入力してください。このスマホでは次回から入力不要です。</label>' +
+      '<input id="pc" inputmode="numeric" autocomplete="off" pattern="[0-9]*"><button type="submit">開く</button><p>' + esc(msg || '') + '</p></form>';
+    document.getElementById('lk').onsubmit = function(ev){ ev.preventDefault(); var v = document.getElementById('pc').value.trim(); if(v) openTasks(v); };
+  }
+  function renderTasks(t){
+    var sch = (t.schedule || []).filter(function(s){ return d(s.date_to || s.date_from) >= TODAY; }).slice(0, 12);
+    main.innerHTML = '<h2>やること　<span style="font-weight:400">' + esc(md(d(t.updated_at))) + ' 時点</span></h2><div class="card">' +
+      ((t.tasks || []).map(function(x){ return '<div class="ti' + (x.urgent ? ' urgent' : '') + '"><i></i><div>' + esc(x.title) + (x.detail ? '<small>' + esc(x.detail) + '</small>' : '') + '</div></div>'; }).join('') || '<div class="ti">なし</div>') + '</div>' +
+      '<h2>これからの予定</h2><div class="card">' + sch.map(function(s){ var p = dateParts(s.date_from, s.date_to); return '<div class="sc"><b>' + esc(p.main + ' ' + p.sub) + '</b><div>' + esc(s.title) + (s.status ? '<small>' + esc(s.status) + '</small>' : '') + '</div></div>'; }).join('') + '</div>' +
+      '<h2>行きたい場所</h2><div class="card">' + (t.wishlist || []).map(function(w){ return '<div class="sc" style="display:block"><div>' + esc(w.title) + '</div>' + ((w.dates || w.memo) ? '<small>' + esc([w.dates, w.memo].filter(Boolean).join('　')) + '</small>' : '') + '</div>'; }).join('') + '</div>';
+  }
+  function openTasks(code){
+    main.innerHTML = '<div class="err">読み込み中…</div>';
+    fetch('../data/tasks.enc.json?t=' + Date.now()).then(function(r){ if(!r.ok) throw new Error('nodata'); return r.json(); })
+      .then(function(enc){ return decrypt(enc, code); })
+      .then(function(t){ setCode(code); renderTasks(t); })
+      .catch(function(err){ setCode(null); lockForm(err.message === 'nodata' ? 'タスクのデータがまだありません' : '合言葉が違うようです'); });
+  }
+
+  function show(tab){
+    TAB = tab;
+    try { localStorage.setItem('ptab', tab); } catch(e){}
+    Array.prototype.forEach.call(document.querySelectorAll('nav button'), function(b){ b.setAttribute('aria-selected', b.dataset.tab === tab ? 'true' : 'false'); });
+    window.scrollTo(0, 0);
+    if(tab === 'tasks'){ var c = getCode(); c ? openTasks(c) : lockForm(); return; }
+    if(!DATA){ main.innerHTML = '<div class="err">読み込み中…</div>'; return; }
+    main.innerHTML = tab === 'vod' ? vodTab() : tab === 'local' ? localTab() : tvTab();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('nav button'), function(b){ b.onclick = function(){ show(b.dataset.tab); }; });
+
+  fetch('../data/board.json?t=' + Date.now()).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(data){ DATA = data; var u = d(data.updated_at); document.getElementById('upd').textContent = md(u) + '（' + DOW[u.getDay()] + '）更新'; show(TAB); })
+    .catch(function(err){ if(TAB !== 'tasks') main.innerHTML = '<div class="err">データを読み込めませんでした（' + esc(err.message) + '）</div>'; });
+  show(TAB);
+})();
+</script>
+</body>
+</html>
