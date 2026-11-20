@@ -14,6 +14,7 @@
 - 新番組の初回（is_premiere: true）を優先し、続いている番組は slot に「毎週◯曜」と書く
 - `kind`: favorite / local_interest（長崎・佐賀が舞台など）/ discovery
 - **discovery は毎週1本だけ**：好みと関係なく、その週に話題の番組を選ぶ。前週と同じものは避ける
+- **大河ドラマ・朝ドラなど長期の番組**は、初回・最終回（最終週）・特別編のときだけ載せる。`favorites.json` の `hide_ongoing` を参照（例：豊臣兄弟！は毎週は出さない）
 - いつもの番組（regular_programs）は、期間内に放送がある回だけ放送日を入れる。なければ status に「今週の放送なし」
 
 - 写真：クランクイン！の作品ページ（crank-in.net/drama/…）のog:image（メイン画像）URLを `image` に入れる。放送局の公式サイトは取得できないので使わない
