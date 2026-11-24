@@ -1,7 +1,7 @@
 {
  "market": "jp",
- "updated": "2026-11-24 04:28",
- "price_date": "2026-11-20",
+ "updated": "2026-11-25 04:05",
+ "price_date": "2026-11-24",
  "rule": "TOPIX500（AI関連を除く）の12ヶ月モメンタム上位10銘柄を均等な金額で持つ。新しく入った銘柄は、終値が5日線を下回った翌日に買う（押し目買い）。毎月末に入れ替え。",
  "usdjpy": 1.0,
  "dip_rule": true,
@@ -146,13 +146,13 @@
   ]
  },
  "latest": {
-  "date": "2026-11-20",
+  "date": "2026-11-24",
   "top": [
    {
     "ticker": "8050.T",
     "name": "セイコーグループ",
     "sector": "精密機器",
-    "momentum": 1.8831,
+    "momentum": 1.8139,
     "price": 7701.0,
     "ma5": 8023.2,
     "dip": true
@@ -161,16 +161,25 @@
     "ticker": "6098.T",
     "name": "リクルートホールディングス",
     "sector": "サービス業",
-    "momentum": 1.5846,
+    "momentum": 1.2655,
     "price": 16835.0,
     "ma5": 17551.0,
+    "dip": true
+   },
+   {
+    "ticker": "8368.T",
+    "name": "百五銀行",
+    "sector": "銀行業",
+    "momentum": 1.246,
+    "price": 1718.0,
+    "ma5": 1891.6,
     "dip": true
    },
    {
     "ticker": "6134.T",
     "name": "ＦＵＪＩ",
     "sector": "機械",
-    "momentum": 1.3158,
+    "momentum": 1.1837,
     "price": 4312.0,
     "ma5": 4614.4,
     "dip": true
@@ -179,61 +188,43 @@
     "ticker": "6752.T",
     "name": "パナソニック　ホールディングス",
     "sector": "電気機器",
-    "momentum": 1.3081,
+    "momentum": 1.18,
     "price": 2687.0,
     "ma5": 2937.8,
-    "dip": true
-   },
-   {
-    "ticker": "8368.T",
-    "name": "百五銀行",
-    "sector": "銀行業",
-    "momentum": 1.3019,
-    "price": 1718.0,
-    "ma5": 1891.6,
     "dip": true
    },
    {
     "ticker": "7762.T",
     "name": "シチズン時計",
     "sector": "精密機器",
-    "momentum": 1.1622,
+    "momentum": 1.1457,
     "price": 1781.0,
     "ma5": 1897.9,
-    "dip": true
-   },
-   {
-    "ticker": "8366.T",
-    "name": "滋賀銀行",
-    "sector": "銀行業",
-    "momentum": 1.1472,
-    "price": 1926.5,
-    "ma5": 2062.6,
     "dip": true
    },
    {
     "ticker": "7380.T",
     "name": "十六フィナンシャルグループ",
     "sector": "銀行業",
-    "momentum": 1.1095,
+    "momentum": 1.0684,
     "price": 2041.5,
     "ma5": 2183.9,
     "dip": true
    },
    {
-    "ticker": "3105.T",
-    "name": "日清紡ホールディングス",
-    "sector": "電気機器",
-    "momentum": 1.0227,
-    "price": 1743.0,
-    "ma5": 1841.9,
+    "ticker": "8366.T",
+    "name": "滋賀銀行",
+    "sector": "銀行業",
+    "momentum": 1.0572,
+    "price": 1926.5,
+    "ma5": 2062.6,
     "dip": true
    },
    {
     "ticker": "5301.T",
     "name": "東海カーボン",
     "sector": "ガラス・土石製品",
-    "momentum": 1.0143,
+    "momentum": 0.9598,
     "price": 1408.0,
     "ma5": 1519.0,
     "dip": true
@@ -242,45 +233,54 @@
     "ticker": "6952.T",
     "name": "カシオ計算機",
     "sector": "電気機器",
-    "momentum": 0.9611,
+    "momentum": 0.934,
     "price": 1968.0,
     "ma5": 2010.8,
-    "dip": true
-   },
-   {
-    "ticker": "6324.T",
-    "name": "ハーモニック・ドライブ・システムズ",
-    "sector": "機械",
-    "momentum": 0.9327,
-    "price": 3722.0,
-    "ma5": 4127.8,
     "dip": true
    },
    {
     "ticker": "6448.T",
     "name": "ブラザー工業",
     "sector": "電気機器",
-    "momentum": 0.8925,
+    "momentum": 0.8997,
     "price": 4129.0,
     "ma5": 4329.0,
+    "dip": true
+   },
+   {
+    "ticker": "3132.T",
+    "name": "マクニカホールディングス",
+    "sector": "卸売業",
+    "momentum": 0.8675,
+    "price": 2776.5,
+    "ma5": 2903.0,
+    "dip": true
+   },
+   {
+    "ticker": "9147.T",
+    "name": "ＮＩＰＰＯＮ　ＥＸＰＲＥＳＳホールディングス",
+    "sector": "陸運業",
+    "momentum": 0.8401,
+    "price": 5693.0,
+    "ma5": 5834.8,
     "dip": true
    },
    {
     "ticker": "6724.T",
     "name": "セイコーエプソン",
     "sector": "電気機器",
-    "momentum": 0.8639,
+    "momentum": 0.8152,
     "price": 2580.5,
     "ma5": 2705.6,
     "dip": true
    },
    {
-    "ticker": "3110.T",
-    "name": "日東紡績",
-    "sector": "ガラス・土石製品",
-    "momentum": 0.8539,
-    "price": 2098.5,
-    "ma5": 2345.7,
+    "ticker": "6324.T",
+    "name": "ハーモニック・ドライブ・システムズ",
+    "sector": "機械",
+    "momentum": 0.8127,
+    "price": 3722.0,
+    "ma5": 4127.8,
     "dip": true
    }
   ]
@@ -318,5 +318,5 @@
   "ＳＵＭＣＯ (3436.T)",
   "ＳＷＣＣ (5805.T)"
  ],
- "universe": 465
+ "universe": 464
 }
